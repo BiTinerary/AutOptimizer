@@ -8,7 +8,7 @@ The alternative of having an 'offline' library of known portable progs organized
 * then `doubleclick` the executable to load the desired prog.<br>
 * `exit` then rinse and repeat for each desired task. <br>
 
-(Then running this, rudimentary/repetitive, series of programs across thousands of computers to conduct diagnostics and repair)
+(Then running this, rudimentary/repetitive, series of diagnostics/repairs across several hundred/thousands of computers)
 <p align="center">
 <img src='http://s16.postimg.org/gxucqw6k5/Untitled.png'>
 </center>
