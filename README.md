@@ -2,8 +2,7 @@
 <p align="center">
 <img src='http://s16.postimg.org/gxucqw6k5/Untitled.png'>
 </p>
-
-<br><br>
+<br>
 A Tkinter GUI for quickly running basic optimization/cleanup programs. It's still a work in progress but the premise is to combine several powerful opensource/freeware tools into <b>one</b> location. Make that software conveniently executable by cutting down on overall clicks, window navigation and HID swapping. While maintaining the utmost concern for portability, offline access and minimalism to performance ratio.
 
 It will be later expanded to include other projects like my Hardware tester, Auto Listing process, Diagnostic/Repair progs, I'm considering even a possible Symbaloo style GUI + Portable Firefox (Adblock, Selenium, LastPass...) Combo.
