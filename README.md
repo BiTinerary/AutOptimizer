@@ -2,11 +2,13 @@
 <p align="center">
 <img src='http://s16.postimg.org/gxucqw6k5/Untitled.png'>
 </p>
-A Tkinter GUI for quickly running basic optimization/cleanup programs.<br><br>
-A work in progress program that is combining several powerful opensource/freeware tools into one, conveniently executable, place. Cuts the required "click/wait/load" time in half, at least. (exponentially more so if a Client's computer is an older model)
 
+<br><br>
+A Tkinter GUI for quickly running basic optimization/cleanup programs. It's still work in progress program but the premise is to combine several powerful opensource/freeware tools into <u>one</> location. Make that software conveniently executable by cutting down on overall clicks, window navigation and HID swapping. While maintaining the utmost concern for portability, offline access and minimalism to performance ratio.
 
-<u>An Example:</u>
+It will be later expanded to include other projects like my Hardware tester, Auto Listing process, Diagnostic/Repair progs, I'm considering even a possible www.Symbaloo.com + Portable Firefox (Adblock, Selenium, LastPass...) Combo.
+
+<u>Example of My Current process:</u>
 
 Having an 'offline' library of known portable progs organized into individual folders, on a Jump Drive. <br>
 * `Win+E` (My Computer), `double click` external USB.
@@ -18,9 +20,8 @@ Having an 'offline' library of known portable progs organized into individual fo
 * then rinse and repeat for each additional task. <br>
 [12 clicks + 2 keystrokes + 4 Window/Directory Changes]
 
-<u>Compared to:</u>
+<u>Compared to what this repo offers:</u><br>
 
-Alternatively, (this repo) offers a process slightly more stream lined and would be similar to the following:
 * `Win+E` > `Double Click` Jump Drive
 * `double click` Main .Py/.EXE script.
 * `single click` desired diagnostic prog.
