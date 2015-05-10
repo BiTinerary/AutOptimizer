@@ -1,5 +1,7 @@
 # Automated_Optimizer
-
+<p align="center">
+<img src='http://s16.postimg.org/gxucqw6k5/Untitled.png'>
+</center>
 A Tkinter GUI for quickly running basic optimization/cleanup programs.<br><br>
 A work in progress program that is combining several powerful opensource/freeware tools into one, conveniently executable, place. Cuts the number of required "clicks" in half, at least. ie:
 
@@ -22,7 +24,3 @@ Alternatively, (this repo) offers a process slightly more stream lined and would
 * `exit` (no need to `back` out of the directory)
 * `single click` secondary diag prog.<br>
 [7 clicks + 2 Keystrokes + 2 Window/Directory Changes + Consolidates HID swapping]
-
-<p align="center">
-<img src='http://s16.postimg.org/gxucqw6k5/Untitled.png'>
-</center>
