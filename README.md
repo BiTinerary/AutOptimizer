@@ -5,7 +5,10 @@
 A Tkinter GUI for quickly running basic optimization/cleanup programs.<br><br>
 A work in progress program that is combining several powerful opensource/freeware tools into one, conveniently executable, place. Cuts the required "click/wait/load" time in half, at least. (exponentially more so if a Client's computer is an older model)
 
-An alternative would be having an 'offline' library of known portable progs organized into individual folders, on a Jump Drive. <br>
+
+<u>An Example:</u>
+
+Having an 'offline' library of known portable progs organized into individual folders, on a Jump Drive. <br>
 * `Win+E` (My Computer), `double click` external USB.
 * `doubleclick` the specific prog folder<br>
 * `doubleclick` the executable to load the desired prog.<br>
@@ -15,7 +18,7 @@ An alternative would be having an 'offline' library of known portable progs orga
 * then rinse and repeat for each additional task. <br>
 [12 clicks + 2 keystrokes + 4 Window/Directory Changes]
 
-(Then running this, rudimentary/repetitive, series of diagnostics/repairs across several hundred/thousands of computers)
+<u>Compared to:</u>
 
 Alternatively, (this repo) offers a process slightly more stream lined and would be similar to the following:
 * `Win+E` > `Double Click` Jump Drive
@@ -24,3 +27,5 @@ Alternatively, (this repo) offers a process slightly more stream lined and would
 * `exit` (no need to `back` out of the directory)
 * `single click` secondary diag prog.<br>
 [7 clicks + 2 Keystrokes + 2 Window/Directory Changes + Consolidates HID swapping]
+
+(Then running this, rudimentary/repetitive, process of diagnostics and repairs, across several thousand computers)
