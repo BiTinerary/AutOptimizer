@@ -27,4 +27,4 @@ Having an 'offline' library of known portable progs organized into individual fo
 * `single click` secondary diag prog.<br>
 [7 clicks + 2 Keystrokes + 2 Window/Directory Changes + Consolidates HID swapping]
 
-(Then running this, rudimentary/repetitive, process of diagnostics and repairs, across several thousand computers)
+It's worth mentioning if AutOptimizer is burned to a CD (B.L.D.Z.R compat. implied) then a simple `autorun.inf` file will subtract 4 clicks and 2 keystrokes.
