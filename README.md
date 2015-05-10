@@ -3,7 +3,7 @@
 <img src='http://s16.postimg.org/gxucqw6k5/Untitled.png'>
 </p>
 A Tkinter GUI for quickly running basic optimization/cleanup programs.<br><br>
-A work in progress program that is combining several powerful opensource/freeware tools into one, conveniently executable, place. Cuts the number of required "clicks" in half, at least. ie:
+A work in progress program that is combining several powerful opensource/freeware tools into one, conveniently executable, place. Cuts the required "click/wait/load" time in half, at least. ie:
 
 Having an 'offline' library of known portable progs organized into individual folders, on a Jump Drive. <br>
 * `Win+E` (My Computer), `double click` external USB.
