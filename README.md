@@ -3,9 +3,9 @@
 <img src='http://s16.postimg.org/gxucqw6k5/Untitled.png'>
 </p>
 A Tkinter GUI for quickly running basic optimization/cleanup programs.<br><br>
-A work in progress program that is combining several powerful opensource/freeware tools into one, conveniently executable, place. Cuts the required "click/wait/load" time in half, at least. (exponentially more so if a Client's computer is an older model) ie:
+A work in progress program that is combining several powerful opensource/freeware tools into one, conveniently executable, place. Cuts the required "click/wait/load" time in half, at least. (exponentially more so if a Client's computer is an older model)
 
-Having an 'offline' library of known portable progs organized into individual folders, on a Jump Drive. <br>
+An alternative would be having an 'offline' library of known portable progs organized into individual folders, on a Jump Drive. <br>
 * `Win+E` (My Computer), `double click` external USB.
 * `doubleclick` the specific prog folder<br>
 * `doubleclick` the executable to load the desired prog.<br>
