@@ -1,7 +1,7 @@
 # Automated_Optimizer
 <p align="center">
 <img src='http://s16.postimg.org/gxucqw6k5/Untitled.png'>
-</center>
+</p>
 A Tkinter GUI for quickly running basic optimization/cleanup programs.<br><br>
 A work in progress program that is combining several powerful opensource/freeware tools into one, conveniently executable, place. Cuts the number of required "clicks" in half, at least. ie:
 
