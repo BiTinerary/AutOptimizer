@@ -4,7 +4,7 @@
 </p>
 
 <br><br>
-A Tkinter GUI for quickly running basic optimization/cleanup programs. It's still work in progress program but the premise is to combine several powerful opensource/freeware tools into <u>one</u> location. Make that software conveniently executable by cutting down on overall clicks, window navigation and HID swapping. While maintaining the utmost concern for portability, offline access and minimalism to performance ratio.
+A Tkinter GUI for quickly running basic optimization/cleanup programs. It's still work in progress program but the premise is to combine several powerful opensource/freeware tools into <b>one</b> location. Make that software conveniently executable by cutting down on overall clicks, window navigation and HID swapping. While maintaining the utmost concern for portability, offline access and minimalism to performance ratio.
 
 It will be later expanded to include other projects like my Hardware tester, Auto Listing process, Diagnostic/Repair progs, I'm considering even a possible www.Symbaloo.com + Portable Firefox (Adblock, Selenium, LastPass...) Combo.
 
