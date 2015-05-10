@@ -11,17 +11,17 @@ Having an 'offline' library of known portable progs organized into individual fo
 * `double click` secondary diagnostic prog folder
 * `double click` executable
 * then rinse and repeat for each additional task. <br>
-[12 clicks + 2 keystrokes]
+[12 clicks + 2 keystrokes + 4 Window/Directory Changes]
 
 (Then running this, rudimentary/repetitive, series of diagnostics/repairs across several hundred/thousands of computers)
 
 Alternatively, (this repo) offers a process slightly more stream lined and would be similar to the following:
-* `Win+E` > Double Click Jump Drive
+* `Win+E` > `Double Click` Jump Drive
 * `double click` Main .Py/.EXE script.
 * `single click` desired diagnostic prog.
 * `exit` (no need to `back` out of the directory)
-* `single click` secondary diag prog.
-[5 clicks + 2 Keystrokes] + Additionally offers time saved switching between HID's.
+* `single click` secondary diag prog.<br>
+[7 clicks + 2 Keystrokes + 2 Window/Directory Changes + Consolidates HID swapping]
 
 <p align="center">
 <img src='http://s16.postimg.org/gxucqw6k5/Untitled.png'>
