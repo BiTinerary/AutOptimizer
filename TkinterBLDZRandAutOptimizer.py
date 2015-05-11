@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import Tkinter as tk
 import subprocess
-
+############################################################## Secondary Window Being Predefined ##########################################################################
 class AutOptimizer(tk.Frame):
 	
 	def start_optimizer_gui(self,ok = True):
@@ -15,56 +15,56 @@ class AutOptimizer(tk.Frame):
 		#Create the set of initial widgets.
 		# Create the label
 
-		self.title = tk.Label(self, width = 80)
-		self.title.grid(row=0, column=0,columnspan=6, sticky = tk.E+tk.W )
+		self.title = tk.Label(self, width = 100)
+		self.title.grid(row=0, column=0,columnspan=3, sticky = tk.E+tk.W )
 
 		# Create the buttons
 
-		self.zero = tk.Button(self, width = 17, height = 5)
+		self.zero = tk.Button(self, width = 30, height = 5)
 		self.zero["text"] = "Run All Progs"
-		self.zero.grid(row=1, column=2)
+		self.zero.grid(row=1, column=1)
 
-		self.title = tk.Label(self, width = 80)
-		self.title.grid(row=2, column=0,columnspan=6, sticky = tk.E+tk.W )
+		self.title = tk.Label(self, width = 10)
+		self.title.grid(row=2, column=0,columnspan=2, sticky = tk.E+tk.W )
 
-		self.one = tk.Button(self, width = 17, height = 5)
+		self.one = tk.Button(self, width = 20, height = 5)
 		self.one["text"] = "Startup\nPrograms"
-		self.one.grid(row=3, column=1)
+		self.one.grid(row=3, column=0)
 
-		self.two = tk.Button(self, width = 17, height = 5)
+		self.two = tk.Button(self, width = 20, height = 5)
 		self.two["text"] = "Scheduled Tasks"
-		self.two.grid(row=4, column=1)
+		self.two.grid(row=4, column=0)
 
-		self.three = tk.Button(self, width = 17, height = 5)
+		self.three = tk.Button(self, width = 20, height = 5)
 		self.three["text"] = "Services"
-		self.three.grid(row=5, column=1)
+		self.three.grid(row=5, column=0)
 	 
-		self.four = tk.Button(self, width = 17, height = 5)
+		self.four = tk.Button(self, width = 20, height = 5)
 		self.four["text"] = "Bulk Uninstall"
-		self.four.grid(row=3, column=2)
+		self.four.grid(row=3, column=1)
 
-		self.five = tk.Button(self, width = 17, height = 5)
+		self.five = tk.Button(self, width = 20, height = 5)
 		self.five["text"] = "Windows Directory\nStatistics"
-		self.five.grid(row=4, column=2)
+		self.five.grid(row=4, column=1)
 
-		self.six = tk.Button(self, width = 17, height = 5)
+		self.six = tk.Button(self, width = 20, height = 5)
 		self.six["text"] = "Remove Toolbars"
-		self.six.grid(row=5, column=2)
+		self.six.grid(row=5, column=1)
 
-		self.seven = tk.Button(self, width = 17, height = 5)
+		self.seven = tk.Button(self, width = 20, height = 5)
 		self.seven["text"] = "Tweaking's\n Windows Repair"
-		self.seven.grid(row=3, column=3)
+		self.seven.grid(row=3, column=2)
 
-		self.eight = tk.Button(self, width = 17, height = 5)
+		self.eight = tk.Button(self, width = 20, height = 5)
 		self.eight["text"] = "Rkill and TDSSKiller"
-		self.eight.grid(row=4, column=3)
+		self.eight.grid(row=4, column=2)
 
-		self.nine = tk.Button(self, width = 17, height = 5)
+		self.nine = tk.Button(self, width = 20, height = 5)
 		self.nine["text"] = "Backup and\nRestore Drivers"
-		self.nine.grid(row=5, column=3)
+		self.nine.grid(row=5, column=2)
 
-		self.title = tk.Label(self, width = 80)
-		self.title.grid(row=6, column=0,columnspan=6, sticky = tk.E+tk.W )
+		self.title = tk.Label(self, width = 100)
+		self.title.grid(row=6, column=0,columnspan=3, sticky = tk.E+tk.W )
 
 	def __init__(self, master=None):
 		tk.Frame.__init__(self, master)
@@ -72,6 +72,7 @@ class AutOptimizer(tk.Frame):
 		# option is needed to put the main label in the window
 		self.createOptimizerWidgets()
 
+######################################################################## Secondary Window Being Predefined ###########################################################
 class AutOptimizerController(object):
 
 	def winzero(self):
@@ -134,6 +135,7 @@ def AutOptimizerMain():
 
 	AutoController.init_view(root)
 
+###################################### Main Window GUI, First to be executed ################
 class MainWindow(tk.Frame):
 	
 	def start_mainwindow_gui(self,ok = True):
@@ -144,17 +146,17 @@ class MainWindow(tk.Frame):
 			self.master.destroy()
 
 	def createMainWindowWidgets(self):
-		#Create the set of initial widgets.
-		# Create the label
+		# Create set of Main Window widgets.
+		# Create labels
 
-		self.title = tk.Label(self, width = 80)
+		self.title = tk.Label(self, width=80)
 		self.title.grid(row=0, column=0,columnspan=6, sticky = tk.E+tk.W )
 
 		# Create the buttons
 
 		self.mainzero = tk.Button(self, width = 17, height = 5)
 		self.mainzero["text"] = "AutOptimizer"
-		self.mainzero.grid(row=1, column=2)
+		self.mainzero.grid(row=0, column=3)
 
 	def __init__(self, master=None):
 		tk.Frame.__init__(self, master)
@@ -164,7 +166,7 @@ class MainWindow(tk.Frame):
 
 class MainWindowController(object):
 
-	def mainzero(self):
+	def mainzero(self): # First Window, First Button > Executing Secondary (AutOptimizer/HWTester/DiagProg) Window.
 		if __name__ == "__main__":
 			AutOptimizerMain()
 
@@ -182,9 +184,9 @@ def MainWindowMain():
 
 	MainController = MainWindowController()
 
-	# Build Gui and start it
+	# Building Main Window GUI
 	root = tk.Tk()
-	root.title('Auto Optimizer')
+	root.title('B.L.D.Z.R')
 
 	MainController.init_view(root)
 
