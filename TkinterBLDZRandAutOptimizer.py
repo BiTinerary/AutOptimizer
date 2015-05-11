@@ -134,5 +134,59 @@ def AutOptimizerMain():
 
 	AutoController.init_view(root)
 
+class MainWindow(tk.Frame):
+	
+	def start_mainwindow_gui(self,ok = True):
+		
+		if ok:
+			self.mainloop()
+		else:
+			self.master.destroy()
+
+	def createMainWindowWidgets(self):
+		#Create the set of initial widgets.
+		# Create the label
+
+		self.title = tk.Label(self, width = 80)
+		self.title.grid(row=0, column=0,columnspan=6, sticky = tk.E+tk.W )
+
+		# Create the buttons
+
+		self.mainzero = tk.Button(self, width = 17, height = 5)
+		self.mainzero["text"] = "AutOptimizer"
+		self.mainzero.grid(row=1, column=2)
+
+	def __init__(self, master=None):
+		tk.Frame.__init__(self, master)
+		self.grid()
+		# option is needed to put the main label in the window
+		self.createMainWindowWidgets()
+
+class MainWindowController(object):
+
+	def mainzero(self):
+		if __name__ == "__main__":
+			AutOptimizerMain()
+
+	def init_view(self,root):
+
+		self.view = MainWindow(master=root)   
+	
+		# Bind buttons with callback methods
+		self.view.mainzero["command"] = self.mainzero
+
+		#start the GUI
+		self.view.start_mainwindow_gui()
+
+def MainWindowMain():
+
+	MainController = MainWindowController()
+
+	# Build Gui and start it
+	root = tk.Tk()
+	root.title('Auto Optimizer')
+
+	MainController.init_view(root)
+
 if __name__ == "__main__":
-	AutOptimizerMain()
+	MainWindowMain()
