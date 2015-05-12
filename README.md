@@ -1,6 +1,7 @@
 # Automated_Optimizer
 <p align="center">
-<img src='http://s16.postimg.org/gxucqw6k5/Untitled.png'>
+<img src='http://s11.postimg.org/rx4t36cnn/rootwin.png'>
+<img src='http://s11.postimg.org/h9124c2oj/autochildwin.png'>
 </p>
 A Tkinter GUI for quickly running basic optimization/cleanup programs. It's still a work in progress but the premise is to combine several powerful opensource/freeware tools into <b>one</b> location. Make that software conveniently executable by cutting down on overall clicks, window navigation and HID swapping. While maintaining the utmost concern for portability, offline access and minimalism to performance ratio.
 
