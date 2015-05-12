@@ -59,7 +59,7 @@ class MainWindowController(object):
 				self.title.grid(row=0, column=0,columnspan=3, sticky = tk.E+tk.W )
 
 				self.zero = tk.Button(self, width = 30, height = 5)
-				self.zero["text"] = "Run All Progs\nSequentially"
+				self.zero["text"] = "Run All Progs\nSequentially (still gnarly)"
 				self.zero.grid(row=1, column=1)
 
 				self.title = tk.Label(self, width = 100)
@@ -89,7 +89,7 @@ class MainWindowController(object):
 				self.five.grid(row=4, column=1)
 
 				self.six = tk.Button(self, width = 20, height = 5)
-				self.six["text"] = "Remove Toolbars"
+				self.six["text"] = "Is Windows \nActivated?"
 				self.six.grid(row=5, column=1)
 
 				self.seven = tk.Button(self, width = 20, height = 5)
@@ -115,15 +115,7 @@ class MainWindowController(object):
 		class AutOptimizerController(object): # defining commands which will be bound to buttons, next.
 
 			def winzero(self):
-				subprocess.Popen('%CD%/ProgFiles/whatinstartup/whatinstartup.exe', shell=True)
-				subprocess.Popen('taskschd.msc', shell=True)
-				subprocess.Popen('services.msc', shell=True)
-				subprocess.Popen('%CD%/ProgFiles/myuninst/myuninst.exe', shell=True)
-				subprocess.Popen('%CD%/ProgFiles/windirstat/WinDirStatPortable.exe', shell=True)
-				subprocess.Popen('%CD%/ProgFiles/tweaking/Repair_Windows.exe', shell=True)
-				subprocess.Popen('slmgr/xpr', shell=True)
-				subprocess.Popen('%CD%/ProgFiles/rkill/rkill.exe && %CD%/ProgFiles/tdsskiller/tdsskiller.exe', shell=True)
-				subprocess.Popen('%CD%/ProgFiles/doubledriver/dd.exe', shell=True)
+				subprocess.Popen('start /WAIT %CD%/ProgFiles/whatinstartup/whatinstartup.exe && taskschd.msc && services.msc && %CD%/ProgFiles/myuninst/myuninst.exe && %CD%/ProgFiles/windirstat/WinDirStatPortable.exe && %CD%/ProgFiles/tweaking/Repair_Windows.exe && slmgr/xpr && %CD%/ProgFiles/rkill/rkill.exe && %CD%/ProgFiles/tdsskiller/tdsskiller.exe && %CD%/ProgFiles/doubledriver/dd.exe', shell=True)
 
 			def winone(self):
 				subprocess.Popen('%CD%/ProgFiles/whatinstartup/whatinstartup.exe', shell=True)
