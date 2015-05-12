@@ -20,7 +20,15 @@ class MainWindow(tk.Frame):
 
 		self.mainzero = tk.Button(self, width = 20, height = 5)
 		self.mainzero["text"] = "AutOptimizer"
-		self.mainzero.grid(row=1, column=1)
+		self.mainzero.grid(row=1, column=0)
+
+		self.mainone = tk.Button(self, width = 20, height = 5)
+		self.mainone["text"] = "Diagnostic & Repair\nProgs"
+		self.mainone.grid(row=1, column=1)
+
+		self.maintwo = tk.Button(self, width = 20, height = 5)
+		self.maintwo["text"] = "Hardware Testing"
+		self.maintwo.grid(row=1, column=2)
 
 		self.title = tk.Label(self, width = 100, height=10)
 		self.title.grid(row=6, column=0,columnspan=3, sticky = tk.E+tk.W )
@@ -49,7 +57,7 @@ class MainWindowController(object):
 				self.title.grid(row=0, column=0,columnspan=3, sticky = tk.E+tk.W )
 
 				self.zero = tk.Button(self, width = 30, height = 5)
-				self.zero["text"] = "Run All Progs"
+				self.zero["text"] = "Run All Progs\nSequentially"
 				self.zero.grid(row=1, column=1)
 
 				self.title = tk.Label(self, width = 100)
