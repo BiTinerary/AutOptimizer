@@ -2,7 +2,7 @@
 import Tkinter as tk
 import subprocess
 
-###################################### Main Window GUI, First to be executed ################
+###################################### Main Root GUI, First to be executed ######################################
 
 class MainWindow(tk.Frame):
 	
@@ -41,6 +41,8 @@ class MainWindow(tk.Frame):
 class MainWindowController(object):
 
 	def mainzero(self): # First Window, First Button > Executing Secondary (AutOptimizer/HWTester/DiagProg) Window.
+
+###################################### Secondary AutOptimizer GUI ######################################
 
 		class AutOptimizer(tk.Frame): # Defining AutOptimizer Class and pertaining functions.
 	
@@ -110,10 +112,18 @@ class MainWindowController(object):
 				self.grid()
 				self.createOptimizerWidgets()
 		
-		class AutOptimizerController(object):
+		class AutOptimizerController(object): # defining commands which will be bound to buttons, next.
 
 			def winzero(self):
-				subprocess.Popen('', shell=True)
+				subprocess.Popen('%CD%/ProgFiles/whatinstartup/whatinstartup.exe', shell=True)
+				subprocess.Popen('taskschd.msc', shell=True)
+				subprocess.Popen('services.msc', shell=True)
+				subprocess.Popen('%CD%/ProgFiles/myuninst/myuninst.exe', shell=True)
+				subprocess.Popen('%CD%/ProgFiles/windirstat/WinDirStatPortable.exe', shell=True)
+				subprocess.Popen('%CD%/ProgFiles/tweaking/Repair_Windows.exe', shell=True)
+				subprocess.Popen('slmgr/xpr', shell=True)
+				subprocess.Popen('%CD%/ProgFiles/rkill/rkill.exe && %CD%/ProgFiles/tdsskiller/tdsskiller.exe', shell=True)
+				subprocess.Popen('%CD%/ProgFiles/doubledriver/dd.exe', shell=True)
 
 			def winone(self):
 				subprocess.Popen('%CD%/ProgFiles/whatinstartup/whatinstartup.exe', shell=True)
@@ -171,7 +181,7 @@ class MainWindowController(object):
 		if __name__ == "__main__":
 			AutOptimizerMain()
 
-	def init_view(self,root): # Bind MainWindow commands to initial Widgets Class
+	def init_view(self,root): # Bind MainWindow commands to initial (Root GUI) Widgets Class
 
 		self.view = MainWindow(master=root)   
 	
@@ -179,7 +189,7 @@ class MainWindowController(object):
 
 		self.view.start_mainwindow_gui()
 
-def MainWindowMain(): # Build MainWindow GUI and call it.
+def MainWindowMain(): # Build MainWindow GUI and run it.
 
 	MainController = MainWindowController()
 
