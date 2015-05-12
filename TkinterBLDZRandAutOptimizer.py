@@ -15,12 +15,15 @@ class MainWindow(tk.Frame):
 
 	def createMainWindowWidgets(self):
 
-		self.title = tk.Label(self, width=80)
-		self.title.grid(row=0, column=0,columnspan=6, sticky = tk.E+tk.W )
+		self.maintitle = tk.Label(self, width=100, height=10)
+		self.maintitle.grid(row=0, column=0,columnspan=3, sticky = tk.E+tk.W )
 
-		self.mainzero = tk.Button(self, width = 17, height = 5)
+		self.mainzero = tk.Button(self, width = 20, height = 5)
 		self.mainzero["text"] = "AutOptimizer"
-		self.mainzero.grid(row=0, column=3)
+		self.mainzero.grid(row=1, column=1)
+
+		self.title = tk.Label(self, width = 100, height=10)
+		self.title.grid(row=6, column=0,columnspan=3, sticky = tk.E+tk.W )
 
 	def __init__(self, master=None): # option is needed to put the main label in the window (???)
 		tk.Frame.__init__(self, master)
@@ -49,8 +52,8 @@ class MainWindowController(object):
 				self.zero["text"] = "Run All Progs"
 				self.zero.grid(row=1, column=1)
 
-				self.title = tk.Label(self, width = 10)
-				self.title.grid(row=2, column=0,columnspan=2, sticky = tk.E+tk.W )
+				self.title = tk.Label(self, width = 100)
+				self.title.grid(row=2, column=0,columnspan=3, sticky = tk.E+tk.W )
 
 				self.one = tk.Button(self, width = 20, height = 5)
 				self.one["text"] = "Startup\nPrograms"
@@ -59,6 +62,9 @@ class MainWindowController(object):
 				self.two = tk.Button(self, width = 20, height = 5)
 				self.two["text"] = "Scheduled Tasks"
 				self.two.grid(row=4, column=0)
+
+				self.title = tk.Label(self, width = 100)
+				self.title.grid(row=0, column=0,columnspan=3, sticky = tk.E+tk.W )
 
 				self.three = tk.Button(self, width = 20, height = 5)
 				self.three["text"] = "Services"
@@ -157,7 +163,7 @@ class MainWindowController(object):
 		if __name__ == "__main__":
 			AutOptimizerMain()
 
-	def init_view(self,root): # Bind MainWindow commands to initially specified Widgets Class
+	def init_view(self,root): # Bind MainWindow commands to initial Widgets Class
 
 		self.view = MainWindow(master=root)   
 	
