@@ -42,13 +42,13 @@ class StartPage(tk.Frame):
 		label = tk.Label(self, text="B.L.D.Z.R", font=TITLE_FONT)
 		label.pack(side="top", fill="x", pady=10, padx=250)
 
-		StartPageButton1 = tk.Button(self, width=20, height=5, text="AutOptimizer", command=lambda: controller.show_frame(AutOptimizer))
-		StartPageButton2 = tk.Button(self, width=20, height=5, text="HardwareTester", command=lambda: controller.show_frame(HardwareTester))
-		StartPageButton3 = tk.Button(self, width=20, height=5, text="Diagnostic and\nRepair Progs", command=lambda: controller.show_frame(RepairProgs))
+		StartPageButton1 = tk.Button(self, width=20, height=5, text="Diagnostic and\nRepair Progs", command=lambda: controller.show_frame(RepairProgs))
+		StartPageButton2 = tk.Button(self, width=20, height=5, text="AutOptimizer", command=lambda: controller.show_frame(AutOptimizer))
+		StartPageButton3 = tk.Button(self, width=20, height=5, text="HardwareTester", command=lambda: controller.show_frame(HardwareTester))
 		
-		StartPageButton1.pack(side="right", padx=25, pady=25)
-		StartPageButton2.pack(side="left", padx=25, pady=25)
-		StartPageButton3.pack(side="top", padx=25, pady=25)
+		StartPageButton1.pack(side="top", padx=20, pady=5, anchor="n")
+		StartPageButton2.pack(side="left", padx=20, pady=20, anchor="sw")
+		StartPageButton3.pack(side="right", padx=20, pady=20, anchor="se")
 
 
 class AutOptimizer(tk.Frame):
