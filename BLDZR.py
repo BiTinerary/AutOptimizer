@@ -89,8 +89,8 @@ class AutOptimizer(tk.Frame):
 		PageTwoButton6 = tk.Button(self, width=20, height=5, text="Backup and\nRestore Drivers", command=lambda: subprocess.Popen('%CD%/ProgFiles/doubledriver/dd.exe', shell=True))
 
 		PageTwoButton7 = tk.Button(self, width=20, height=5, text="Tweaking's\n Windows Repair", command=lambda: subprocess.Popen('%CD%/ProgFiles/tweaking/Repair_Windows.exe', shell=True))
-		PageTwoButton8 = tk.Button(self, width=20, height=5, text="Rkill (Silent, Wait for Log)", command=lambda: subprocess.Popen('%CD%/ProgFiles/rkill/rkill.exe', shell=True))
-		PageTwoButton9 = tk.Button(self, width=20, height=5, text="TDSSKiller", command=lambda: subprocess.Popen('%CD%/ProgFiles/tdsskiller/tdsskiller.exe', shell=True))
+		PageTwoButton8 = tk.Button(self, width=20, height=5, text="Rkill (Silent, Wait for Log)", command=lambda: subprocess.Popen('%CD%/ProgFiles/rkill.exe', shell=True))
+		PageTwoButton9 = tk.Button(self, width=20, height=5, text="Rootkit Scanner", command=lambda: subprocess.Popen('%CD%/ProgFiles/aswMBR.exe', shell=True))
 
 		BackButton0.grid(row=3, column=2, padx=10, pady=10)
 
