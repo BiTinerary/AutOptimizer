@@ -31,8 +31,8 @@ class StartPage(tk.Frame):
 	def __init__(self, parent, controller):
 		tk.Frame.__init__(self, parent)
 
-		label = tk.Label(self)
-		label.grid(column=9, row=2)
+		#label = tk.Label(self)
+		#label.grid(column=9, row=2)
 
 		StartPageButton1 = tk.Button(self, width=20, height=5, text="Page One", fg="blue", bg="orange", command=lambda: controller.show_frame(PageOne))
 		StartPageButton2 = tk.Button(self, width=20, height=5, text="Page Two", command=lambda: controller.show_frame(PageTwo))
@@ -46,11 +46,40 @@ class PageOne(tk.Frame):
 
 	def __init__(self, parent, controller):
 		tk.Frame.__init__(self, parent)
-		label = tk.Label(self, text="Page 1", font=TITLE_FONT)
-		label.pack(side="top", fill="x", pady=10)
 
-		button = tk.Button(self, width =20, height = 5, text="Go Back", command=lambda: controller.show_frame(StartPage))
-		button.pack()
+		BackButton0 = tk.Button(self, width =20, height = 5, text="Go Back", command=lambda: controller.show_frame(StartPage))
+
+		PageOneButton1 = tk.Button(self, width=20, height=5, text="Function1", fg="white", bg="blue", command=lambda: subprocess.Popen('', shell=True))
+		PageOneButton2 = tk.Button(self, width=20, height=5, text="Function2", command=lambda: subprocess.Popen('', shell=True))
+		PageOneButton3 = tk.Button(self, width=20, height=5, text="Function3", command=lambda: subprocess.Popen('', shell=True))
+
+		PageOneButton4 = tk.Button(self, width=20, height=5, text="Function4", fg="white", bg="blue", command=lambda: subprocess.Popen('', shell=True))
+		PageOneButton5 = tk.Button(self, width=20, height=5, text="Function5", command=lambda: subprocess.Popen('', shell=True))
+		PageOneButton6 = tk.Button(self, width=20, height=5, text="Function6", command=lambda: subprocess.Popen('', shell=True))
+
+		PageOneButton7 = tk.Button(self, width=20, height=5, text="Function7", fg="white", bg="blue", command=lambda: subprocess.Popen('', shell=True))
+		PageOneButton8 = tk.Button(self, width=20, height=5, text="Function8", command=lambda: subprocess.Popen('', shell=True))
+		PageOneButton9 = tk.Button(self, width=20, height=5, text="Function9", command=lambda: subprocess.Popen('', shell=True))
+
+		BackButton0.grid(row=0, column=2, padx=10, pady=10)
+
+		PageOneButton1.grid(row=1, column=1, padx=10, pady=10)
+		PageOneButton2.grid(row=1, column=2, padx=10, pady=10)
+		PageOneButton3.grid(row=1, column=3, padx=10, pady=10)
+
+		PageOneButton4.grid(row=2, column=1, padx=10, pady=10)
+		PageOneButton5.grid(row=2, column=2, padx=10, pady=10)
+		PageOneButton6.grid(row=2, column=3, padx=10, pady=10)
+
+		PageOneButton7.grid(row=3, column=1, padx=10, pady=10)
+		PageOneButton8.grid(row=3, column=2, padx=10, pady=10)
+		PageOneButton9.grid(row=3, column=3, padx=10, pady=10)
+
+		#label = tk.Label(self, text="Page 1", font=TITLE_FONT)
+		#label.pack(side="top", fill="x", pady=10)
+
+		#button = tk.Button(self, width =20, height = 5, text="Go Back", command=lambda: controller.show_frame(StartPage))
+		#button.pack()
 
 class PageTwo(tk.Frame):
 
