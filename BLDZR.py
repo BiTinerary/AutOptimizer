@@ -33,8 +33,8 @@ class StartPage(tk.Frame):
 		StartPageButton0 = tk.Button(self, width=20, height=5, text="Repair Programs", fg="black", bg="orange", command=lambda: controller.show_frame(DiagnosticRepairProgs))
 		StartPageButton1 = tk.Button(self, width=20, height=5, text="AutOptimizer", fg="black", bg="orange", command=lambda: controller.show_frame(AutOptimizer))
 		StartPageButton2 = tk.Button(self, width=20, height=5, text="Hardware Tester", fg="black", bg="orange", command=lambda: controller.show_frame(HardwareTester))
-		StartPageButton3 = tk.Button(self, width=20, height=5, text="Eject USB", fg="black", bg="orange", command=lambda: controller.show_frame(HardwareTester))
-		StartPageButton4 = tk.Button(self, width=20, height=5, text="Close All Windows", fg="black", bg="orange", command=lambda: controller.show_frame(HardwareTester))
+		StartPageButton3 = tk.Button(self, width=20, height=5, text="Eject USB", fg="black", bg="orange", command=lambda: subprocess.Popen('"%CD%/ProgFiles/USBDiskEject.exe" /NOSAVE /REMOVETHIS', shell=True))
+		StartPageButton4 = tk.Button(self, width=20, height=5, text="Close All Windows", fg="black", bg="orange", command=lambda: subprocess.Popen('"%CD%/ProgFiles/CloseAll.exe"', shell=True))
 
 		StartPageLabel0 = tk.Label(self, width=20, height=5)
 		StartPageLabel0.grid(row=1, column=2, padx=10, pady=10)
@@ -135,7 +135,6 @@ class HardwareTester(tk.Frame):
 		PageThreeButton8 = tk.Button(self, width=20, height=5, text="Shutdown into\nRefresh or Reset", command=lambda: subprocess.Popen('"shutdown -r -t 1 -f"', shell=True))
 		PageThreeButton9 = tk.Button(self, width=20, height=5, text="Activation", command=lambda: subprocess.Popen('slmgr /xpr', shell=True))
 
-		# USB EJECT
 		# CHECK DRIVERS
 		# "Keyboard" gets it's own Class so as to load Keyboard input window within same window as other classes
 		#Close all (main screen)
