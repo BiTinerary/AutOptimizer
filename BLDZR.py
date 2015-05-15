@@ -17,7 +17,7 @@ class MainApp(tk.Tk):
 		for F in (StartPage, DiagnosticRepairProgs, AutOptimizer, HardwareTester):
 			frame = F(container, self)
 			self.frames[F] = frame
-			frame.grid(row=0, column=0, sticky="nsew")
+			frame.grid(row=0, column=0, sticky="nswe")
 
 		self.show_frame(StartPage)
 
@@ -33,17 +33,26 @@ class StartPage(tk.Frame):
 		StartPageButton0 = tk.Button(self, width=20, height=5, text="Repair Programs", fg="black", bg="orange", command=lambda: controller.show_frame(DiagnosticRepairProgs))
 		StartPageButton1 = tk.Button(self, width=20, height=5, text="AutOptimizer", fg="black", bg="orange", command=lambda: controller.show_frame(AutOptimizer))
 		StartPageButton2 = tk.Button(self, width=20, height=5, text="Hardware Tester", fg="black", bg="orange", command=lambda: controller.show_frame(HardwareTester))
+		StartPageButton3 = tk.Button(self, width=20, height=5, text="Eject USB", fg="black", bg="orange", command=lambda: controller.show_frame(HardwareTester))
+		StartPageButton4 = tk.Button(self, width=20, height=5, text="Close All Windows", fg="black", bg="orange", command=lambda: controller.show_frame(HardwareTester))
+
+		StartPageLabel0 = tk.Label(self, width=20, height=5)
+		StartPageLabel0.grid(row=1, column=2, padx=10, pady=10)
+		StartPageLabel1 = tk.Label(self, width=20, height=5)
+		StartPageLabel1.grid(row=2, column=2, padx=10, pady=10)
 
 		StartPageButton0.grid(row=0, column=2, padx=10, pady=10)
-		StartPageButton1.grid(row=4, column=1, padx=10, pady=116)
-		StartPageButton2.grid(row=4, column=3, padx=10, pady=116)
+		StartPageButton1.grid(row=0, column=1, padx=10, pady=10) #116
+		StartPageButton2.grid(row=0, column=3, padx=10, pady=10)
+		StartPageButton3.grid(row=3, column=1, padx=10, pady=10)
+		StartPageButton4.grid(row=3, column=3, padx=10, pady=10)
 
 class DiagnosticRepairProgs(tk.Frame):
 
 	def __init__(self, parent, controller):
 		tk.Frame.__init__(self, parent)
 
-		BackButton0 = tk.Button(self, width =20, height = 5, text="Go Back", command=lambda: controller.show_frame(StartPage))
+		BackButton0 = tk.Button(self, width=20, height=5, text="Go Back", command=lambda: controller.show_frame(StartPage))
 
 		PageOneButton1 = tk.Button(self, width=20, height=5, text="MalwareBytes", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Malwarebytes.cameyo.exe" -SafeMode', shell=True))
 		PageOneButton2 = tk.Button(self, width=20, height=5, text="Rootkit Scanner", command=lambda: subprocess.Popen('"%CD%/ProgFiles/aswMBR.exe"', shell=True))
