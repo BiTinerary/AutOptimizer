@@ -1,6 +1,5 @@
 import Tkinter as tk
 import subprocess
-import os
 
 TITLE_FONT = ("Helvetica", 18, "bold")
 
@@ -89,7 +88,7 @@ class AutOptimizer(tk.Frame):
 		PageTwoButton5 = tk.Button(self, width=20, height=5, text="Windows Directory\nStatistics", command=lambda: subprocess.Popen('"%CD%/ProgFiles/WinDirStat.cameyo.exe" -SafeMode', shell=True))
 		PageTwoButton6 = tk.Button(self, width=20, height=5, text="EMPTY", command=lambda: subprocess.Popen('""', shell=True))
 
-		PageTwoButton7 = tk.Button(self, width=20, height=5, text="EMPTY", command=lambda: subprocess.Popen('""', shell=True))
+		PageTwoButton7 = tk.Button(self, width=20, height=5, text="Cleanup All\nBrowser Add-Ons", command=lambda: subprocess.Popen('"%CD%/ProgFiles/avastbrowsercleanup.exe"', shell=True))
 		PageTwoButton8 = tk.Button(self, width=20, height=5, text="EMPTY", command=lambda: subprocess.Popen('""', shell=True))
 		PageTwoButton9 = tk.Button(self, width=20, height=5, text="EMPTY", command=lambda: subprocess.Popen('""', shell=True))
 
