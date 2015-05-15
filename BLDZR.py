@@ -30,7 +30,9 @@ class StartPage(tk.Frame):
 	def __init__(self, parent, controller):
 		tk.Frame.__init__(self, parent)
 
-		StartPageButton0 = tk.Button(self, width=20, height=5, text="Repair Programs", fg="black", bg="orange", command=lambda: controller.show_frame(DiagnosticRepairProgs))
+		self.photoz = tk.PhotoImage(file='adbicontestgif.gif')
+
+		StartPageButton0 = tk.Button(self, compound="left", image=self.photoz, text="Repair Programs", fg="black", bg="orange", command=lambda: controller.show_frame(DiagnosticRepairProgs)) # width=20, height=5,
 		StartPageButton1 = tk.Button(self, width=20, height=5, text="AutOptimizer", fg="black", bg="orange", command=lambda: controller.show_frame(AutOptimizer))
 		StartPageButton2 = tk.Button(self, width=20, height=5, text="Hardware Tester", fg="black", bg="orange", command=lambda: controller.show_frame(HardwareTester))
 		StartPageButton3 = tk.Button(self, width=20, height=5, text="Eject USB", fg="black", bg="orange", command=lambda: subprocess.Popen('"%CD%/ProgFiles/USBDiskEject.exe" /NOSAVE /REMOVETHIS', shell=True))
@@ -58,12 +60,12 @@ class DiagnosticRepairProgs(tk.Frame):
 		PageOneButton2 = tk.Button(self, width=20, height=5, text="Rootkit Scanner", command=lambda: subprocess.Popen('"%CD%/ProgFiles/aswMBR.exe"', shell=True))
 		PageOneButton3 = tk.Button(self, width=20, height=5, text="SuperAntiSpyware", command=lambda: subprocess.Popen('"%CD%/ProgFiles/SuperAntiSpyware.cameyo.exe" -SafeMode', shell=True))
 
-		PageOneButton4 = tk.Button(self, width=20, height=5, text="Tweaking's\n Windows Repair", command=lambda: subprocess.Popen('"%CD%/ProgFiles/tweaking/Repair_Windows.exe"', shell=True))
-		PageOneButton5 = tk.Button(self, width=20, height=5, text="Rkill (Silent, Wait for Log)", command=lambda: subprocess.Popen('"%CD%/ProgFiles/rkill.exe"', shell=True))
+		PageOneButton4 = tk.Button(self, width=20, height=5, text="Rkill (Silent, Wait for Log)", command=lambda: subprocess.Popen('"%CD%/ProgFiles/rkill.exe"', shell=True))
+		PageOneButton5 = tk.Button(self, width=20, height=5, text="Tweaking's\n Windows Repair", command=lambda: subprocess.Popen('"%CD%/ProgFiles/tweaking/Repair_Windows.exe"', shell=True))
 		PageOneButton6 = tk.Button(self, width=20, height=5, text="Shadow Explorer", command=lambda: subprocess.Popen('"%CD%/ProgFiles/shadowexplorer/ShadowExplorerPortable.exe"', shell=True))
 
-		PageOneButton7 = tk.Button(self, width=20, height=5, text="Backup and\nRestore Drivers", command=lambda: subprocess.Popen('"%CD%/ProgFiles/doubledriver/dd.exe"', shell=True))
-		PageOneButton8 = tk.Button(self, width=20, height=5, text="Driver Identifier", command=lambda: subprocess.Popen('"%CD%/ProgFiles/driveridentifierportable.exe"', shell=True))
+		PageOneButton7 = tk.Button(self, width=20, height=5, text="Driver Identifier", command=lambda: subprocess.Popen('"%CD%/ProgFiles/driveridentifierportable.exe"', shell=True))
+		PageOneButton8 = tk.Button(self, width=20, height=5, text="Backup and\nRestore Drivers", command=lambda: subprocess.Popen('"%CD%/ProgFiles/doubledriver/dd.exe"', shell=True))
 		PageOneButton9 = tk.Button(self, width=20, height=5, text="PCI-Z Driver Lookup", command=lambda: subprocess.Popen('"%CD%/ProgFiles/PCI-Z.exe"', shell=True))
 
 		BackButton0.grid(row=3, column=2, padx=10, pady=10)
@@ -138,7 +140,6 @@ class HardwareTester(tk.Frame):
 		# CHECK DRIVERS
 		# "Keyboard" gets it's own Class so as to load Keyboard input window within same window as other classes
 		#Close all (main screen)
-		#Eject drive? (main screen)
 		#Synergy
 		#Process Hacker
 		#Portable VirtualBox
