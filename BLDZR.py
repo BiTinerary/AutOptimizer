@@ -124,7 +124,7 @@ class HardwareTester(tk.Frame):
 
 		PageThreeButton7 = tk.Button(self, width=20, height=5, text="WiFi Import/Export", command=lambda: subprocess.Popen('""', shell=True))
 		PageThreeButton8 = tk.Button(self, width=20, height=5, text="Shutdown into\nRefresh or Reset", command=lambda: subprocess.Popen('"shutdown -r -t 1 -f"', shell=True))
-		PageThreeButton9 = tk.Button(self, width=20, height=5, text="Activation", command=lambda: subprocess.Popen('"slmgr /xpr"', shell=True))
+		PageThreeButton9 = tk.Button(self, width=20, height=5, text="Activation", command=lambda: subprocess.Popen('slmgr /xpr', shell=True))
 
 		# USB EJECT
 		# CHECK DRIVERS
