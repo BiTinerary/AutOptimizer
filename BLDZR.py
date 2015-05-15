@@ -86,7 +86,7 @@ class AutOptimizer(tk.Frame):
 		PageTwoButton3 = tk.Button(self, width=20, height=5, text="Services", command=lambda: subprocess.Popen('"services.msc"', shell=True))
 
 		PageTwoButton4 = tk.Button(self, width=20, height=5, text="Bulk Uninstall", command=lambda: subprocess.Popen('"%CD%/ProgFiles/myuninst/myuninst.exe"', shell=True))
-		PageTwoButton5 = tk.Button(self, width=20, height=5, text="Windows Directory\nStatistics", command=lambda: subprocess.Popen('"%CD%/ProgFiles/windirstat/WinDirStatPortable.exe"', shell=True))
+		PageTwoButton5 = tk.Button(self, width=20, height=5, text="Windows Directory\nStatistics", command=lambda: subprocess.Popen('"%CD%/ProgFiles/WinDirStat.cameyo.exe" -SafeMode', shell=True))
 		PageTwoButton6 = tk.Button(self, width=20, height=5, text="EMPTY", command=lambda: subprocess.Popen('""', shell=True))
 
 		PageTwoButton7 = tk.Button(self, width=20, height=5, text="EMPTY", command=lambda: subprocess.Popen('""', shell=True))
