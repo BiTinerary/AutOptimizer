@@ -80,7 +80,7 @@ class AutOptimizer(tk.Frame):
 		
 		BackButton0 = tk.Button(self, width =20, height = 5, text="Go Back", command=lambda: controller.show_frame(StartPage))
 
-		PageTwoButton1 = tk.Button(self, width=20, height=5, text="Startup Porgams", command=lambda: subprocess.Popen('"%CD%/ProgFiles/whatinstartup/whatinstartup.exe && taskmgr /0 /startup"', shell=True))
+		PageTwoButton1 = tk.Button(self, width=20, height=5, text="Startup Porgams", command=lambda: subprocess.Popen('"%CD%/ProgFiles/whatinstartup/whatinstartup.exe" && taskmgr /0 /startup', shell=True))
 		PageTwoButton2 = tk.Button(self, width=20, height=5, text="Scheduled Tasks", command=lambda: subprocess.Popen('"taskschd.msc"', shell=True))
 		PageTwoButton3 = tk.Button(self, width=20, height=5, text="Services", command=lambda: subprocess.Popen('"services.msc"', shell=True))
 
