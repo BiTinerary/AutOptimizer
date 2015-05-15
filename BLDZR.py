@@ -46,17 +46,17 @@ class DiagnosticRepairProgs(tk.Frame):
 
 		BackButton0 = tk.Button(self, width =20, height = 5, text="Go Back", command=lambda: controller.show_frame(StartPage))
 
-		PageOneButton1 = tk.Button(self, width=20, height=5, text="MalwareBytes Scanner", command=lambda: subprocess.Popen('""', shell=True))
-		PageOneButton2 = tk.Button(self, width=20, height=5, text="SuperAntiSpyware Scanner", command=lambda: subprocess.Popen('""', shell=True))
-		PageOneButton3 = tk.Button(self, width=20, height=5, text="Rootkit Scanner", command=lambda: subprocess.Popen('"%CD%/ProgFiles/aswMBR.exe"', shell=True))
+		PageOneButton1 = tk.Button(self, width=20, height=5, text="MalwareBytes", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Malwarebytes.cameyo.exe" -SafeMode', shell=True))
+		PageOneButton2 = tk.Button(self, width=20, height=5, text="Rootkit Scanner", command=lambda: subprocess.Popen('"%CD%/ProgFiles/aswMBR.exe"', shell=True))
+		PageOneButton3 = tk.Button(self, width=20, height=5, text="SuperAntiSpyware", command=lambda: subprocess.Popen('"%CD%/ProgFiles/SuperAntiSpyware.cameyo.exe" -SafeMode', shell=True))
 
 		PageOneButton4 = tk.Button(self, width=20, height=5, text="Tweaking's\n Windows Repair", command=lambda: subprocess.Popen('"%CD%/ProgFiles/tweaking/Repair_Windows.exe"', shell=True))
 		PageOneButton5 = tk.Button(self, width=20, height=5, text="Rkill (Silent, Wait for Log)", command=lambda: subprocess.Popen('"%CD%/ProgFiles/rkill.exe"', shell=True))
-		PageOneButton6 = tk.Button(self, width=20, height=5, text="Shadow Explorer", command=lambda: subprocess.Popen('""', shell=True))
+		PageOneButton6 = tk.Button(self, width=20, height=5, text="Shadow Explorer", command=lambda: subprocess.Popen('"%CD%/ProgFiles/shadowexplorer/ShadowExplorerPortable.exe"', shell=True))
 
 		PageOneButton7 = tk.Button(self, width=20, height=5, text="Backup and\nRestore Drivers", command=lambda: subprocess.Popen('"%CD%/ProgFiles/doubledriver/dd.exe"', shell=True))
-		PageOneButton8 = tk.Button(self, width=20, height=5, text="Driver Identifier", command=lambda: subprocess.Popen('""', shell=True))
-		PageOneButton9 = tk.Button(self, width=20, height=5, text="PCI-Z Driver Lookup", command=lambda: subprocess.Popen('""', shell=True))
+		PageOneButton8 = tk.Button(self, width=20, height=5, text="Driver Identifier", command=lambda: subprocess.Popen('"%CD%/ProgFiles/driveridentifierportable.exe"', shell=True))
+		PageOneButton9 = tk.Button(self, width=20, height=5, text="PCI-Z Driver Lookup", command=lambda: subprocess.Popen('"%CD%/ProgFiles/PCI-Z.exe"', shell=True))
 
 		BackButton0.grid(row=3, column=2, padx=10, pady=10)
 
@@ -87,11 +87,11 @@ class AutOptimizer(tk.Frame):
 
 		PageTwoButton4 = tk.Button(self, width=20, height=5, text="Bulk Uninstall", command=lambda: subprocess.Popen('"%CD%/ProgFiles/myuninst/myuninst.exe"', shell=True))
 		PageTwoButton5 = tk.Button(self, width=20, height=5, text="Windows Directory\nStatistics", command=lambda: subprocess.Popen('"%CD%/ProgFiles/windirstat/WinDirStatPortable.exe"', shell=True))
-		PageTwoButton6 = tk.Button(self, width=20, height=5, text="", command=lambda: subprocess.Popen('""', shell=True))
+		PageTwoButton6 = tk.Button(self, width=20, height=5, text="EMPTY", command=lambda: subprocess.Popen('""', shell=True))
 
-		PageTwoButton7 = tk.Button(self, width=20, height=5, text="", command=lambda: subprocess.Popen('""', shell=True))
-		PageTwoButton8 = tk.Button(self, width=20, height=5, text="", command=lambda: subprocess.Popen('""', shell=True))
-		PageTwoButton9 = tk.Button(self, width=20, height=5, text="", command=lambda: subprocess.Popen('""', shell=True))
+		PageTwoButton7 = tk.Button(self, width=20, height=5, text="EMPTY", command=lambda: subprocess.Popen('""', shell=True))
+		PageTwoButton8 = tk.Button(self, width=20, height=5, text="EMPTY", command=lambda: subprocess.Popen('""', shell=True))
+		PageTwoButton9 = tk.Button(self, width=20, height=5, text="EMPTY", command=lambda: subprocess.Popen('""', shell=True))
 
 		BackButton0.grid(row=3, column=2, padx=10, pady=10)
 
