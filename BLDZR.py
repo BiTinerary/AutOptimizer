@@ -1,5 +1,6 @@
 import Tkinter as tk
 import subprocess
+from PIL import ImageTk
 
 TITLE_FONT = ("Helvetica", 18, "bold")
 
@@ -30,13 +31,19 @@ class StartPage(tk.Frame):
 	def __init__(self, parent, controller):
 		tk.Frame.__init__(self, parent)
 
-		self.photoz = tk.PhotoImage(file='adbicontestgif.gif')
+		icondirectory = "./ProgFiles/Icons/"
 
-		StartPageButton0 = tk.Button(self, compound="left", image=self.photoz, text="Repair Programs", fg="black", bg="orange", command=lambda: controller.show_frame(DiagnosticRepairProgs)) # width=20, height=5,
-		StartPageButton1 = tk.Button(self, width=20, height=5, text="AutOptimizer", fg="black", bg="orange", command=lambda: controller.show_frame(AutOptimizer))
-		StartPageButton2 = tk.Button(self, width=20, height=5, text="Hardware Tester", fg="black", bg="orange", command=lambda: controller.show_frame(HardwareTester))
-		StartPageButton3 = tk.Button(self, width=20, height=5, text="Eject USB", fg="black", bg="orange", command=lambda: subprocess.Popen('"%CD%/ProgFiles/USBDiskEject.exe" /NOSAVE /REMOVETHIS', shell=True))
-		StartPageButton4 = tk.Button(self, width=20, height=5, text="Close All Windows", fg="black", bg="orange", command=lambda: subprocess.Popen('"%CD%/ProgFiles/CloseAll.exe"', shell=True))
+		self.StartImage0 = ImageTk.PhotoImage(file=icondirectory + 'aswMBR.png')
+		self.StartImage1 = ImageTk.PhotoImage(file=icondirectory + 'adbicontestgif.gif')
+		self.StartImage2 = ImageTk.PhotoImage(file=icondirectory + 'adbicontestgif.gif')
+		self.StartImage3 = ImageTk.PhotoImage(file=icondirectory + 'UsbDiskEjector.png')
+		self.StartImage4 = ImageTk.PhotoImage(file=icondirectory + 'CloseAll.png')
+
+		StartPageButton0 = tk.Button(self, compound="left", image=self.StartImage0, text="Repair Programs", fg="black", bg="orange", command=lambda: controller.show_frame(DiagnosticRepairProgs)) # width=20, height=5,
+		StartPageButton1 = tk.Button(self, compound="left", image=self.StartImage1, text="AutOptimizer", fg="black", command=lambda: controller.show_frame(AutOptimizer))
+		StartPageButton2 = tk.Button(self, compound="left", image=self.StartImage2, text="Hardware Tester", fg="black", command=lambda: controller.show_frame(HardwareTester))
+		StartPageButton3 = tk.Button(self, compound="left", image=self.StartImage3, text="Eject USB", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/USBDiskEject.exe" /NOSAVE /REMOVETHIS', shell=True))
+		StartPageButton4 = tk.Button(self, compound="left", image=self.StartImage4, text="Close All Windows", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/CloseAll.exe"', shell=True))
 
 		StartPageLabel0 = tk.Label(self, width=20, height=5)
 		StartPageLabel0.grid(row=1, column=2, padx=10, pady=10)
@@ -86,9 +93,9 @@ class AutOptimizer(tk.Frame):
 
 	def __init__(self, parent, controller):
 		tk.Frame.__init__(self, parent)
-		
+
 		label = tk.Label(self, text="Page 2", bg="orange", font=TITLE_FONT)
-		
+
 		BackButton0 = tk.Button(self, width =20, height = 5, text="Go Back", command=lambda: controller.show_frame(StartPage))
 
 		PageTwoButton1 = tk.Button(self, width=20, height=5, text="Startup Progams", command=lambda: subprocess.Popen('taskmgr /0 /startup', shell=True)) # "%CD%/ProgFiles/whatinstartup/whatinstartup.exe" && taskmgr /0 /startup
