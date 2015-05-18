@@ -63,15 +63,15 @@ class DiagnosticRepairProgs(tk.Frame):
 	def __init__(self, parent, controller):
 		tk.Frame.__init__(self, parent)
 
-		self.PageOneImage1 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.PageOneImage2 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.PageOneImage3 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.PageOneImage4 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.PageOneImage5 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.PageOneImage6 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.PageOneImage7 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.PageOneImage8 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.PageOneImage9 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
+		self.PageOneImage1 = ImageTk.PhotoImage(file=icondirectory + 'MalwareBytes.png')
+		self.PageOneImage2 = ImageTk.PhotoImage(file=icondirectory + 'aswMBR.png')
+		self.PageOneImage3 = ImageTk.PhotoImage(file=icondirectory + 'SuperAntiSpyware.png')
+		self.PageOneImage4 = ImageTk.PhotoImage(file=icondirectory + 'Rkill.png')
+		self.PageOneImage5 = ImageTk.PhotoImage(file=icondirectory + 'TweakingsWindowsRepair.png')
+		self.PageOneImage6 = ImageTk.PhotoImage(file=icondirectory + 'ShadowExplorer.png')
+		self.PageOneImage7 = ImageTk.PhotoImage(file=icondirectory + 'DriverIdentifier.png')
+		self.PageOneImage8 = ImageTk.PhotoImage(file=icondirectory + 'DoubleDriver.png')
+		self.PageOneImage9 = ImageTk.PhotoImage(file=icondirectory + 'PCI-Z.png')
 
 		BackButton0 = tk.Button(self, width=55, height=2, text="Go Back", command=lambda: controller.show_frame(StartPage))
 
@@ -106,13 +106,13 @@ class AutOptimizer(tk.Frame):
 	def __init__(self, parent, controller):
 		tk.Frame.__init__(self, parent)
 
-		self.PageTwoImage1 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.PageTwoImage2 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.PageTwoImage3 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
+		self.PageTwoImage1 = ImageTk.PhotoImage(file=icondirectory + 'TaskManager.png')
+		self.PageTwoImage2 = ImageTk.PhotoImage(file=icondirectory + 'TaskScheduler.png')
+		self.PageTwoImage3 = ImageTk.PhotoImage(file=icondirectory + 'Services.png')
 		self.PageTwoImage4 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.PageTwoImage5 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
+		self.PageTwoImage5 = ImageTk.PhotoImage(file=icondirectory + 'WinDirStat.png')
 		self.PageTwoImage6 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.PageTwoImage7 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
+		self.PageTwoImage7 = ImageTk.PhotoImage(file=icondirectory + 'AvastBrowserCleanup.png')
 		self.PageTwoImage8 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
 		self.PageTwoImage9 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
 
@@ -152,13 +152,13 @@ class HardwareTester(tk.Frame):
 		tk.Frame.__init__(self, parent)
 		label = tk.Label(self, text="Page 3", font=TITLE_FONT)
 
-		self.PageThreeImage1 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
+		self.PageThreeImage1 = ImageTk.PhotoImage(file=icondirectory + 'BatteryInfoView.png')
 		self.PageThreeImage2 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.PageThreeImage3 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
+		self.PageThreeImage3 = ImageTk.PhotoImage(file=icondirectory + 'Camera.png')
 		self.PageThreeImage4 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
 		self.PageThreeImage5 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
 		self.PageThreeImage6 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.PageThreeImage7 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
+		self.PageThreeImage7 = ImageTk.PhotoImage(file=icondirectory + 'WiFi.png')
 		self.PageThreeImage8 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
 		self.PageThreeImage9 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
 
