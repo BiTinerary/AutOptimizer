@@ -2,7 +2,7 @@
 <p align="center">
 <img src='http://s7.postimg.org/kcbprgjqj/Untitled.png'><br>
 </p>
-A Tkinter GUI for quickly running basic optimization/cleanup programs. It's still a work in progress but the premise is to combine several powerful opensource/freeware tools into <b>one</b> location. Make that software conveniently executable by cutting down on overall clicks, window navigation and HID swapping. While maintaining the utmost concern for portability, offline access and minimalism to performance ratio.
+A Tkinter GUI for quickly running basic optimization/cleanup programs. It's still a work in progress but the premise is to combine several powerful opensource/freeware tools into <b>one</b> location. Make that software conveniently executable by cutting down on overall clicks, window navigation and HID swapping. While maintaining the utmost concern for portability, offline access and minimalism to performance ratio. The top priorities when repairing constantly changing systems and setups.
 
 Intended to be used by computer repair technicians that use a select number of tools and services to perform a repetative series of repairs. Ultimately, resulting in saving countless labor hours over time and faster turn around time for clients.
 
