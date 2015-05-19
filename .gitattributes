@@ -20,4 +20,4 @@
 *.c linguist-vendored
 *.css linguist-vendored
 *.bat linguist-vendored
-*.nsis linguist-vendored
+*.NSIS linguist-vendored
