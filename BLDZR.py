@@ -117,10 +117,10 @@ class AutOptimizer(tk.Frame):
 		self.PageTwoImage3 = ImageTk.PhotoImage(file=icondirectory + 'Services.png')
 		self.PageTwoImage4 = ImageTk.PhotoImage(file=icondirectory + 'iobituninstaller.png')
 		self.PageTwoImage5 = ImageTk.PhotoImage(file=icondirectory + 'WinDirStat.png')
-		self.PageTwoImage6 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
+		self.PageTwoImage6 = ImageTk.PhotoImage(file=icondirectory + 'grayduck.png')
 		self.PageTwoImage7 = ImageTk.PhotoImage(file=icondirectory + 'AvastBrowserCleanup.png')
-		self.PageTwoImage8 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.PageTwoImage9 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
+		self.PageTwoImage8 = ImageTk.PhotoImage(file=icondirectory + 'DiagFlowIcon.png')
+		self.PageTwoImage9 = ImageTk.PhotoImage(file=icondirectory + 'synergy.png')
 
 		label = tk.Label(self, text="Page 2", bg="orange", font=TITLE_FONT)
 
@@ -128,15 +128,15 @@ class AutOptimizer(tk.Frame):
 
 		PageTwoButton1 = tk.Button(self, compound="top", image=self.PageTwoImage1, text="Startup Progams", command=lambda: subprocess.Popen('taskmgr /0 /startup', shell=True)) # "%CD%/ProgFiles/whatinstartup/whatinstartup.exe" && taskmgr /0 /startup
 		PageTwoButton2 = tk.Button(self, compound="top", image=self.PageTwoImage2, text="Scheduled Tasks", command=lambda: subprocess.Popen('"taskschd.msc"', shell=True))
-		PageTwoButton3 = tk.Button(self, compound="top", image=self.PageTwoImage3, text="Services", bg="orange", command=lambda: subprocess.Popen('"services.msc"', shell=True))
+		PageTwoButton3 = tk.Button(self, compound="top", image=self.PageTwoImage3, text="Services", command=lambda: subprocess.Popen('"services.msc"', shell=True))
 
-		PageTwoButton4 = tk.Button(self, compound="top", image=self.PageTwoImage4, text="Bulk Uninstall", command=lambda: subprocess.Popen('"%CD%/ProgFiles/iobituninstaller.exe"', shell=True))
+		PageTwoButton4 = tk.Button(self, compound="top", image=self.PageTwoImage4, text="Bulk Uninstall", command=lambda: subprocess.Popen('"%CD%/ProgFiles/iobituninstaller/iobituninstaller.exe"', shell=True))
 		PageTwoButton5 = tk.Button(self, compound="top", image=self.PageTwoImage5, text="WinDirStat", command=lambda: subprocess.Popen('"%CD%/ProgFiles/WinDirStat.cameyo.exe" -SafeMode', shell=True))
 		PageTwoButton6 = tk.Button(self, compound="top", image=self.PageTwoImage6, text="EMPTY", command=lambda: subprocess.Popen('""', shell=True))
 
 		PageTwoButton7 = tk.Button(self, compound="top", image=self.PageTwoImage7, text="Browser Addons", command=lambda: subprocess.Popen('"%CD%/ProgFiles/avastbrowsercleanup.exe"', shell=True))
-		PageTwoButton8 = tk.Button(self, compound="top", image=self.PageTwoImage8, text="EMPTY", command=lambda: subprocess.Popen('""', shell=True))
-		PageTwoButton9 = tk.Button(self, compound="top", image=self.PageTwoImage9, text="EMPTY", command=lambda: subprocess.Popen('""', shell=True))
+		PageTwoButton8 = tk.Button(self, compound="top", image=self.PageTwoImage8, text="Diagnostic Chart", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Icons/DiagnosticFlowChart.jpg"', shell=True))
+		PageTwoButton9 = tk.Button(self, compound="top", image=self.PageTwoImage9, text="Synergy", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Synergy.cameyo.exe"', shell=True))
 
 		BackButton0.grid(row=0, column=0, columnspan=4)
 
@@ -159,14 +159,14 @@ class HardwareTester(tk.Frame):
 		label = tk.Label(self, text="Page 3", font=TITLE_FONT)
 
 		self.PageThreeImage1 = ImageTk.PhotoImage(file=icondirectory + 'BatteryInfoView.png')
-		self.PageThreeImage2 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
+		self.PageThreeImage2 = ImageTk.PhotoImage(file=icondirectory + 'keyboard.png')
 		self.PageThreeImage3 = ImageTk.PhotoImage(file=icondirectory + 'Camera.png')
 		self.PageThreeImage4 = ImageTk.PhotoImage(file=icondirectory + 'SpeakerIconLeft.png')
 		self.PageThreeImage5 = ImageTk.PhotoImage(file=icondirectory + 'CrystalDiskInfo.png')
 		self.PageThreeImage6 = ImageTk.PhotoImage(file=icondirectory + 'SpeakerIconRight.png')
 		self.PageThreeImage7 = ImageTk.PhotoImage(file=icondirectory + 'WiFi.png')
-		self.PageThreeImage8 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.PageThreeImage9 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
+		self.PageThreeImage8 = ImageTk.PhotoImage(file=icondirectory + 'Folding@Home.png')
+		self.PageThreeImage9 = ImageTk.PhotoImage(file=icondirectory + 'activation.png')
 
 		BackButton0 = tk.Button(self, width=60, height=2, text="Go Back", command=lambda: controller.show_frame(StartPage))
 
