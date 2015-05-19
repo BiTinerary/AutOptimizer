@@ -16,5 +16,5 @@
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
 
-special-vendored-path/* linguist-vendored
-AutOptimizer/ProgFiles/crystaldiskinfo/dialog/Graph*.html linguist-vendored=false
+cat .gitattributes
+*.rb linguist-language=html
