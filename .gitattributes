@@ -17,4 +17,4 @@
 *.RTF	 diff=astextplain
 
 special-vendored-path/* linguist-vendored
-/ProgFiles/crystaldiskinfo/dialog/Graph*.html linguist-vendored=false
+AutOptimizer/ProgFiles/crystaldiskinfo/dialog/Graph*.html linguist-vendored=false
