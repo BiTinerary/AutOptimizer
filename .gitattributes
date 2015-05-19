@@ -17,7 +17,5 @@
 *.RTF	 diff=astextplain
 
 *.html linguist-vendored
-
-#*.html linguist-unvendored
-#*.c linguist-unvendored
-#*.css linguist-unvendored
+*.c linguist-vendored
+*.css linguist-vendored
