@@ -132,7 +132,7 @@ class AutOptimizer(tk.Frame):
 
 		PageTwoButton4 = tk.Button(self, compound="top", image=self.PageTwoImage4, text="Bulk Uninstall", command=lambda: subprocess.Popen('"%CD%/ProgFiles/iobituninstaller/iobituninstaller.exe"', shell=True))
 		PageTwoButton5 = tk.Button(self, compound="top", image=self.PageTwoImage5, text="WinDirStat", command=lambda: subprocess.Popen('"%CD%/ProgFiles/WinDirStat.cameyo.exe" -SafeMode', shell=True))
-		PageTwoButton6 = tk.Button(self, compound="top", image=self.PageTwoImage6, text="EMPTY", command=lambda: subprocess.Popen('""', shell=True))
+		PageTwoButton6 = tk.Button(self, compound="top", image=self.PageTwoImage6, text="Mr. GrayDuck", command=lambda: subprocess.Popen('""', shell=True))
 
 		PageTwoButton7 = tk.Button(self, compound="top", image=self.PageTwoImage7, text="Browser Addons", command=lambda: subprocess.Popen('"%CD%/ProgFiles/avastbrowsercleanup.exe"', shell=True))
 		PageTwoButton8 = tk.Button(self, compound="top", image=self.PageTwoImage8, text="Diagnostic Chart", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Icons/DiagnosticFlowChart.jpg"', shell=True))
