@@ -1,5 +1,6 @@
 import Tkinter as tk
 import subprocess
+import os
 from PIL import ImageTk
 
 global icondirectory
@@ -32,10 +33,11 @@ class MainApp(tk.Tk):
 class StartPage(tk.Frame):
 
 	def __init__(self, parent, controller):
+
 		tk.Frame.__init__(self, parent)
 
-		TopAutOptimizerButton0 = tk.Button(self, width=15, height=2, text="Quick Start AutOptimizer", command=lambda: controller.show_frame(StartPage))
-		TopAutoHardwareButton1 = tk.Button(self, width=15, height=2, text="Quick Start Hardware Tester", command=lambda: controller.show_frame(StartPage))
+		TopAutOptimizerButton0 = tk.Button(self, width=15, height=2, text="Quick Start AutOptimizer", command=lambda: subprocess.Popen('""'))
+		TopAutoHardwareButton1 = tk.Button(self, width=15, height=2, text="Quick Start Hardware Tester", command=lambda: subprocess.Popen('""'))
 
 		self.StartImage0 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
 		self.StartImage1 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
@@ -172,7 +174,7 @@ class HardwareTester(tk.Frame):
 		BackButton0 = tk.Button(self, width=60, height=2, text="Go Back", command=lambda: controller.show_frame(StartPage))
 
 		PageThreeButton1 = tk.Button(self, compound="top", image=self.PageThreeImage1, text="Battery Health", command=lambda: subprocess.Popen('"%CD%/ProgFiles/batteryinfoview/BatteryInfoView.exe"', shell=True))
-		PageThreeButton2 = tk.Button(self, compound="top", image=self.PageThreeImage2, text="Keyboard", command=lambda: subprocess.Popen('""', shell=True))
+		PageThreeButton2 = tk.Button(self, compound="top", image=self.PageThreeImage2, text="Keyboard", command=lambda: os.system('"%CD%/ProgFiles/keyboardtester.exe"'))
 		PageThreeButton3 = tk.Button(self, compound="top", image=self.PageThreeImage3, text="WebCam", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Camera.exe"', shell=True))
 
 		PageThreeButton4 = tk.Button(self, compound="top", image=self.PageThreeImage4, text="Left Speaker", command=lambda: subprocess.Popen('"%CD%/ProgFiles/cmdmp3/cmdmp3.exe" "%CD%/ProgFiles/cmdmp3/Left.mp3"', shell=True))
@@ -194,9 +196,9 @@ class HardwareTester(tk.Frame):
 		PageThreeButton5.grid(row=2, column=2, padx=20, pady=10)
 		PageThreeButton6.grid(row=2, column=3, padx=20, pady=10)
 
-		PageThreeButton7.grid(row=3, column=1, padx=20, pady=(65,5))
-		PageThreeButton7A.grid(row=3, column=1, padx=20, pady=(5,65))
-		PageThreeButton8.grid(row=3, column=2, padx=20, pady=10)
+		PageThreeButton8.grid(row=3, column=1, padx=20, pady=10)
+		PageThreeButton7.grid(row=3, column=2, padx=20, pady=(65,5))
+		PageThreeButton7A.grid(row=3, column=2, padx=20, pady=(5,65))
 		PageThreeButton9.grid(row=3, column=3, padx=20, pady=10)
 
 		# CHECK DRIVERS
@@ -214,4 +216,5 @@ class HardwareTester(tk.Frame):
 if __name__ == "__main__":
 	app = MainApp()
 	app.title("B.L.D.Z.R                                                                                ")
+	app.iconbitmap(icondirectory + 'BLDZR.ico')
 	app.mainloop()
