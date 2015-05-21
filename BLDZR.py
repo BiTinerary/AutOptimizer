@@ -164,7 +164,8 @@ class HardwareTester(tk.Frame):
 		self.PageThreeImage4 = ImageTk.PhotoImage(file=icondirectory + 'SpeakerIconLeft.png')
 		self.PageThreeImage5 = ImageTk.PhotoImage(file=icondirectory + 'CrystalDiskInfo.png')
 		self.PageThreeImage6 = ImageTk.PhotoImage(file=icondirectory + 'SpeakerIconRight.png')
-		self.PageThreeImage7 = ImageTk.PhotoImage(file=icondirectory + 'WiFi.png')
+		self.PageThreeImage7A = ImageTk.PhotoImage(file=icondirectory + 'wifitophalf.png')
+		self.PageThreeImage7 = ImageTk.PhotoImage(file=icondirectory + 'wifibottomhalf.png')
 		self.PageThreeImage8 = ImageTk.PhotoImage(file=icondirectory + 'Folding@Home.png')
 		self.PageThreeImage9 = ImageTk.PhotoImage(file=icondirectory + 'activation.png')
 
@@ -178,7 +179,8 @@ class HardwareTester(tk.Frame):
 		PageThreeButton5 = tk.Button(self, compound="top", image=self.PageThreeImage5, text="S.M.A.R.T Tester", command=lambda: subprocess.Popen('"%CD%/ProgFiles/crystaldiskinfo/DiskInfo.exe"', shell=True))
 		PageThreeButton6 = tk.Button(self, compound="top", image=self.PageThreeImage6, text="Right Speaker", command=lambda: subprocess.Popen('"%CD%/ProgFiles/cmdmp3/cmdmp3.exe" "%CD%/ProgFiles/cmdmp3/Right.mp3"', shell=True))
 
-		PageThreeButton7 = tk.Button(self, compound="top", image=self.PageThreeImage7, text="WiFi Import/Export", command=lambda: subprocess.Popen('""', shell=True))
+		PageThreeButton7 = tk.Button(self, compound="top", image=self.PageThreeImage7, text="WiFi Export", command=lambda: subprocess.Popen('cd "%CD%/ProgFiles/wirelesskeyview" && WirelessKeyView.exe /export "%CD%/ProgFiles/wirelesskeyview/WiFiKeysBackup.txt"', shell=True))
+		PageThreeButton7A = tk.Button(self, compound="bottom", image=self.PageThreeImage7A, text="WiFi Import", command=lambda: subprocess.Popen('cd "%CD%/ProgFiles/wirelesskeyview" && WirelessKeyView.exe /import "%CD%/ProgFiles/wirelesskeyview/WiFiKeysBackup.txt"', shell=True))
 		PageThreeButton8 = tk.Button(self, compound="top", image=self.PageThreeImage8, text="Stress Tester", command=lambda: subprocess.Popen('', shell=True))
 		PageThreeButton9 = tk.Button(self, compound="top", image=self.PageThreeImage9, text="Activation", command=lambda: subprocess.Popen('slmgr /xpr', shell=True))
 
@@ -192,7 +194,8 @@ class HardwareTester(tk.Frame):
 		PageThreeButton5.grid(row=2, column=2, padx=20, pady=10)
 		PageThreeButton6.grid(row=2, column=3, padx=20, pady=10)
 
-		PageThreeButton7.grid(row=3, column=1, padx=20, pady=10)
+		PageThreeButton7.grid(row=3, column=1, padx=20, pady=(65,5))
+		PageThreeButton7A.grid(row=3, column=1, padx=20, pady=(5,65))
 		PageThreeButton8.grid(row=3, column=2, padx=20, pady=10)
 		PageThreeButton9.grid(row=3, column=3, padx=20, pady=10)
 
