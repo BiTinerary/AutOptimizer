@@ -176,7 +176,7 @@ class HardwareTester(tk.Frame):
 
 		BackButton0 = tk.Button(self, width=60, height=2, text="Go Back", command=lambda: controller.show_frame(StartPage))
 
-		PageThreeButton1 = tk.Button(self, compound="top", image=self.PageThreeImage1, text="Battery Health", command=lambda: os.system('powercfg /batteryreport /output %userprofile%/Desktop/batteryreport.html'))
+		PageThreeButton1 = tk.Button(self, compound="top", image=self.PageThreeImage1, text="Battery Health", command=lambda: os.system('%CD%/ProgFiles/batteryinfoview/batteryinfoview.exe'))
 		PageThreeButton2 = tk.Button(self, compound="top", image=self.PageThreeImage2, text="Keyboard", command=lambda: subprocess.Popen('"%CD%/ProgFiles/keyboardtester.exe"', shell=True))
 		PageThreeButton3 = tk.Button(self, compound="top", image=self.PageThreeImage3, text="WebCam", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Camera.exe"', shell=True))
 
