@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 import os
 import subprocess
 import Tkinter as tk
 from PIL import ImageTk
+=======
+import Tkinter as tk
+from PIL import ImageTk
+import subprocess
+import os
+>>>>>>> origin/master
 
 global icondirectory
-icondirectory = "./ProgFiles/Icons/"
+icondirectory = "./ProgFiles/Icons/" # As guessed, static directory where all icons are stored.
 
 TITLE_FONT = ("Helvetica", 18, "bold")
 
@@ -30,15 +37,21 @@ class MainApp(tk.Tk):
 		frame = self.frames[c]
 		frame.tkraise()
 
-class StartPage(tk.Frame):
+class StartPage(tk.Frame): # First initial frame.
 
 	def __init__(self, parent, controller):
 
 		tk.Frame.__init__(self, parent)
 
-		TopAutOptimizerButton0 = tk.Button(self, width=15, height=2, text="Quick Start AutOptimizer", command=lambda: subprocess.Popen('""'))
-		TopAutoHardwareButton1 = tk.Button(self, width=15, height=2, text="Quick Start Hardware Tester", command=lambda: subprocess.Popen('""'))
+		def autooptimizer(): # Supposed to be an automatic, sequential execution of AutOptimizer buttons. Work in progress.
+			subprocess.call('devmgmt.msc', shell=True)
+			subprocess.call('diskmgmt.msc', shell=True)
+			subprocess.call('taskmgr', shell=True)
 
+		TopAutOptimizerButton0 = tk.Button(self, width=15, height=2, text="Quick Start AutOptimizer", command=lambda: autooptimizer()) # Auto All button
+		TopAutoHardwareButton1 = tk.Button(self, width=15, height=2, text="Quick Start Hardware Tester", command=lambda: subprocess.Popen('""')) # Auto All button
+
+<<<<<<< HEAD
 		self.StartImage0 = ImageTk.PhotoImage(file=icondirectory + 'repairprogs.png')
 		self.StartImage1 = ImageTk.PhotoImage(file=icondirectory + 'optimize.png')
 		self.StartImage2 = ImageTk.PhotoImage(file=icondirectory + 'hardware.png')
@@ -53,63 +66,83 @@ class StartPage(tk.Frame):
 		StartPageButton2 = tk.Button(self, compound="top", image=self.StartImage2, text="Hardware Tester", fg="black", command=lambda: controller.show_frame(HardwareTester))
 		StartPageButton3 = tk.Button(self, compound="top", image=self.StartImage3, text="Eject USB", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/RemoveDrive.exe" . -l -b -e', shell=True))
 		StartPageButton4 = tk.Button(self, compound="top", image=self.StartImage4, text="Close All Windows", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/CloseAll.exe"', shell=True))
+=======
+		self.StartImage0 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png') # Images
+		self.StartImage1 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png') #
+		self.StartImage2 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png') #
+		self.StartImage3 = ImageTk.PhotoImage(file=icondirectory + 'diskejectorz.png') #
+		self.StartImage4 = ImageTk.PhotoImage(file=icondirectory + 'closeallz.png') #
+
+		StartPageLabel0 = tk.Label(self, width=1, height=2) # seperation labels
+		StartPageLabel1 = tk.Label(self, width=1, height=2) #
+
+		StartPageButton0 = tk.Button(self, compound="top", image=self.StartImage0, text="Repair Programs", fg="black", bg="orange", command=lambda: controller.show_frame(DiagnosticRepairProgs)) # Initial batch of buttons on first screen.
+		StartPageButton1 = tk.Button(self, compound="top", image=self.StartImage1, text="AutOptimizer", fg="black", command=lambda: controller.show_frame(AutOptimizer)) #
+		StartPageButton2 = tk.Button(self, compound="top", image=self.StartImage2, text="Hardware Tester", fg="black", command=lambda: controller.show_frame(HardwareTester)) #
+		StartPageButton3 = tk.Button(self, compound="top", image=self.StartImage3, text="Eject USB", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/USBDiskEject.exe" /NOSAVE /REMOVETHIS', shell=True)) #
+		StartPageButton4 = tk.Button(self, compound="top", image=self.StartImage4, text="Close All Windows", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/CloseAll.exe"', shell=True)) #
+>>>>>>> origin/master
 
 		TopAutOptimizerButton0.grid(row=0, columnspan=3, ipadx=50, padx=(0,60), pady=0)
 		TopAutoHardwareButton1.grid(row=0, column=2, columnspan=2, ipadx=50, padx=(60,0), pady=0)
 
+<<<<<<< HEAD
 		#StartPageLabel0.grid(row=0, column=2, padx=0, pady=3)
 		StartPageLabel1.grid(row=2, column=2, padx=0, pady=60)
+=======
+		StartPageLabel1.grid(row=2, column=2, padx=0, pady=58) # A label that seperates the buttons by a row.
+>>>>>>> origin/master
 
-		StartPageButton0.grid(row=3, column=2, padx=20, pady=10)
-		StartPageButton1.grid(row=3, column=1, padx=20, pady=10)
-		StartPageButton2.grid(row=3, column=3, padx=20, pady=10)
-		StartPageButton3.grid(row=1, column=1, padx=20, pady=10)
-		StartPageButton4.grid(row=1, column=3, padx=20, pady=10)
+		StartPageButton0.grid(row=3, column=2, padx=20, pady=10) # .Grid() function which easily places buttons symetrically.
+		StartPageButton1.grid(row=3, column=1, padx=20, pady=10) #
+		StartPageButton2.grid(row=3, column=3, padx=20, pady=10) #
+		StartPageButton3.grid(row=1, column=1, padx=20, pady=10) #
+		StartPageButton4.grid(row=1, column=3, padx=20, pady=10) #
 
-class DiagnosticRepairProgs(tk.Frame):
+class DiagnosticRepairProgs(tk.Frame): # secondary frame.
 
 	def __init__(self, parent, controller):
 		tk.Frame.__init__(self, parent)
 
-		self.PageOneImage1 = ImageTk.PhotoImage(file=icondirectory + 'MalwareBytes.png')
-		self.PageOneImage2 = ImageTk.PhotoImage(file=icondirectory + 'aswMBR.png')
-		self.PageOneImage3 = ImageTk.PhotoImage(file=icondirectory + 'SuperAntiSpyware.png')
-		self.PageOneImage4 = ImageTk.PhotoImage(file=icondirectory + 'Rkill.png')
-		self.PageOneImage5 = ImageTk.PhotoImage(file=icondirectory + 'TweakingsWindowsRepair.png')
-		self.PageOneImage6 = ImageTk.PhotoImage(file=icondirectory + 'ShadowExplorer.png')
-		self.PageOneImage7 = ImageTk.PhotoImage(file=icondirectory + 'DriverIdentifier.png')
-		self.PageOneImage8 = ImageTk.PhotoImage(file=icondirectory + 'DoubleDriver.png')
-		self.PageOneImage9 = ImageTk.PhotoImage(file=icondirectory + 'PCI-Z.png')
+		self.PageOneImage1 = ImageTk.PhotoImage(file=icondirectory + 'MalwareBytes.png') # More icons tied to specific buttons.
+		self.PageOneImage2 = ImageTk.PhotoImage(file=icondirectory + 'aswMBR.png') #
+		self.PageOneImage3 = ImageTk.PhotoImage(file=icondirectory + 'SuperAntiSpyware.png') #
+		self.PageOneImage4 = ImageTk.PhotoImage(file=icondirectory + 'Rkill.png') #
+		self.PageOneImage5 = ImageTk.PhotoImage(file=icondirectory + 'TweakingsWindowsRepair.png') #
+		self.PageOneImage6 = ImageTk.PhotoImage(file=icondirectory + 'ShadowExplorer.png') #
+		self.PageOneImage7 = ImageTk.PhotoImage(file=icondirectory + 'DriverIdentifier.png') #
+		self.PageOneImage8 = ImageTk.PhotoImage(file=icondirectory + 'DoubleDriver.png') #
+		self.PageOneImage9 = ImageTk.PhotoImage(file=icondirectory + 'PCI-Z.png') #
 
-		BackButton0 = tk.Button(self, width=60, height=2, text="Go Back", command=lambda: controller.show_frame(StartPage))
+		BackButton0 = tk.Button(self, width=60, height=2, text="Go Back", command=lambda: controller.show_frame(StartPage)) # Back button allowing for seemless navigation between frames.
 
-		PageOneButton1 = tk.Button(self, compound="top", image=self.PageOneImage1, text="MalwareBytes", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Malwarebytes.cameyo.exe" -SafeMode', shell=True))
-		PageOneButton2 = tk.Button(self, compound="top", image=self.PageOneImage2, text="Rootkit Scanner", command=lambda: subprocess.Popen('"%CD%/ProgFiles/aswMBR.exe"', shell=True))
-		PageOneButton3 = tk.Button(self, compound="top", image=self.PageOneImage3, text="SuperAntiSpyware", command=lambda: subprocess.Popen('"%CD%/ProgFiles/SuperAntiSpyware.cameyo.exe" -SafeMode', shell=True))
+		PageOneButton1 = tk.Button(self, compound="top", image=self.PageOneImage1, text="MalwareBytes", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Malwarebytes.cameyo.exe" -SafeMode', shell=True)) # More buttons specifying programs, flags, icons and position.
+		PageOneButton2 = tk.Button(self, compound="top", image=self.PageOneImage2, text="Rootkit Scanner", command=lambda: subprocess.Popen('"%CD%/ProgFiles/aswMBR.exe"', shell=True)) #
+		PageOneButton3 = tk.Button(self, compound="top", image=self.PageOneImage3, text="SuperAntiSpyware", command=lambda: subprocess.Popen('"%CD%/ProgFiles/SuperAntiSpyware.cameyo.exe" -SafeMode', shell=True)) #
 
-		PageOneButton4 = tk.Button(self, compound="top", image=self.PageOneImage4, text="Rkill (Wait for Log)", command=lambda: subprocess.Popen('"%CD%/ProgFiles/rkill.exe"', shell=True))
-		PageOneButton5 = tk.Button(self, compound="top", image=self.PageOneImage5, text="AIO Windows Repair", command=lambda: subprocess.Popen('"%CD%/ProgFiles/tweaking/Repair_Windows.exe"', shell=True))
-		PageOneButton6 = tk.Button(self, compound="top", image=self.PageOneImage6, text="Shadow Explorer", command=lambda: subprocess.Popen('"%CD%/ProgFiles/shadowexplorer/ShadowExplorerPortable.exe"', shell=True))
+		PageOneButton4 = tk.Button(self, compound="top", image=self.PageOneImage4, text="Rkill (Wait for Log)", command=lambda: subprocess.Popen('"%CD%/ProgFiles/rkill.exe"', shell=True)) #
+		PageOneButton5 = tk.Button(self, compound="top", image=self.PageOneImage5, text="AIO Windows Repair", command=lambda: subprocess.Popen('"%CD%/ProgFiles/tweaking/Repair_Windows.exe"', shell=True)) #
+		PageOneButton6 = tk.Button(self, compound="top", image=self.PageOneImage6, text="Shadow Explorer", command=lambda: subprocess.Popen('"%CD%/ProgFiles/shadowexplorer/ShadowExplorerPortable.exe"', shell=True)) #
 
-		PageOneButton7 = tk.Button(self, compound="top", image=self.PageOneImage7, text="Driver Identifier", command=lambda: subprocess.Popen('"%CD%/ProgFiles/driveridentifierportable.exe"', shell=True))
-		PageOneButton8 = tk.Button(self, compound="top", image=self.PageOneImage8, text="Backup Drivers", command=lambda: subprocess.Popen('"%CD%/ProgFiles/doubledriver/dd.exe"', shell=True))
-		PageOneButton9 = tk.Button(self, compound="top", image=self.PageOneImage9, text="PCI-Z Driver Lookup", command=lambda: subprocess.Popen('"%CD%/ProgFiles/PCI-Z.exe"', shell=True))
+		PageOneButton7 = tk.Button(self, compound="top", image=self.PageOneImage7, text="Driver Identifier", command=lambda: subprocess.Popen('"%CD%/ProgFiles/driveridentifierportable.exe"', shell=True)) #
+		PageOneButton8 = tk.Button(self, compound="top", image=self.PageOneImage8, text="Backup Drivers", command=lambda: subprocess.Popen('"%CD%/ProgFiles/doubledriver/dd.exe"', shell=True)) #
+		PageOneButton9 = tk.Button(self, compound="top", image=self.PageOneImage9, text="PCI-Z Driver Lookup", command=lambda: subprocess.Popen('"%CD%/ProgFiles/PCI-Z.exe"', shell=True)) #
 
-		BackButton0.grid(row=0, column=0, columnspan=4)
+		BackButton0.grid(row=0, column=0, columnspan=4) # positioning buttons for frame 2
 
-		PageOneButton1.grid(row=1, column=1, padx=20, pady=10)
-		PageOneButton2.grid(row=1, column=2, padx=20, pady=10)
-		PageOneButton3.grid(row=1, column=3, padx=20, pady=10)
+		PageOneButton1.grid(row=1, column=1, padx=20, pady=10) #
+		PageOneButton2.grid(row=1, column=2, padx=20, pady=10) #
+		PageOneButton3.grid(row=1, column=3, padx=20, pady=10) #
 
-		PageOneButton4.grid(row=2, column=1, padx=20, pady=10)
-		PageOneButton5.grid(row=2, column=2, padx=20, pady=10)
-		PageOneButton6.grid(row=2, column=3, padx=20, pady=10)
+		PageOneButton4.grid(row=2, column=1, padx=20, pady=10) #
+		PageOneButton5.grid(row=2, column=2, padx=20, pady=10) #
+		PageOneButton6.grid(row=2, column=3, padx=20, pady=10) #
 
-		PageOneButton7.grid(row=3, column=1, padx=20, pady=10)
-		PageOneButton8.grid(row=3, column=2, padx=20, pady=10)
-		PageOneButton9.grid(row=3, column=3, padx=20, pady=10)
+		PageOneButton7.grid(row=3, column=1, padx=20, pady=10) #
+		PageOneButton8.grid(row=3, column=2, padx=20, pady=10) #
+		PageOneButton9.grid(row=3, column=3, padx=20, pady=10) #
 
-class AutOptimizer(tk.Frame):
+class AutOptimizer(tk.Frame): # frame 3
 
 	def __init__(self, parent, controller):
 		tk.Frame.__init__(self, parent)
@@ -213,8 +246,8 @@ class HardwareTester(tk.Frame):
 		#Unhide
 		#AntiVirusProg Removal
 
-if __name__ == "__main__":
+if __name__ == "__main__": # Executes the main app (which then executes the other classes) and ties everyting together.
 	app = MainApp()
-	app.title("B.L.D.Z.R                                                                                ")
-	app.iconbitmap(icondirectory + 'BLDZR.ico')
-	app.mainloop()
+	app.title("B.L.D.Z.R                                                                                ") # Title seen in top bar
+	app.iconbitmap(icondirectory + 'BLDZR.ico') # icon seen in top left hand corner of prog window
+	app.mainloop() # ties together
