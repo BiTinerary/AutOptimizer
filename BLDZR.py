@@ -88,7 +88,7 @@ class DiagnosticRepairProgs(tk.Frame): # secondary frame.
 
 		PageOneButton1 = tk.Button(self, compound="top", image=self.PageOneImage1, text="MalwareBytes", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Malwarebytes.cameyo.exe" -SafeMode', shell=True)) # More buttons specifying programs, flags, icons and position.
 		PageOneButton2 = tk.Button(self, compound="top", image=self.PageOneImage2, text="Rootkit Scanner", command=lambda: subprocess.Popen('"%CD%/ProgFiles/aswMBR.exe"', shell=True)) #
-		PageOneButton3 = tk.Button(self, compound="top", image=self.PageOneImage3, text="SuperAntiSpyware", command=lambda: subprocess.Popen('"%CD%/ProgFiles/SuperAntiSpyware.cameyo.exe" -SafeMode', shell=True)) #
+		PageOneButton3 = tk.Button(self, compound="top", image=self.PageOneImage3, text="SuperAntiSpyware", command=lambda: subprocess.Popen('"%CD%/ProgFiles/superantispyware/superantispyware.exe"', shell=True)) #
 
 		PageOneButton4 = tk.Button(self, compound="top", image=self.PageOneImage4, text="Rkill (Wait for Log)", command=lambda: subprocess.Popen('"%CD%/ProgFiles/rkill.exe"', shell=True)) #
 		PageOneButton5 = tk.Button(self, compound="top", image=self.PageOneImage5, text="AIO Windows Repair", command=lambda: subprocess.Popen('"%CD%/ProgFiles/tweaking/Repair_Windows.exe"', shell=True)) #
@@ -176,7 +176,7 @@ class HardwareTester(tk.Frame):
 
 		BackButton0 = tk.Button(self, width=60, height=2, text="Go Back", command=lambda: controller.show_frame(StartPage))
 
-		PageThreeButton1 = tk.Button(self, compound="top", image=self.PageThreeImage1, text="Battery Health", command=lambda: subprocess.Popen('"%CD%/ProgFiles/batteryinfoview/BatteryInfoView.exe"', shell=True))
+		PageThreeButton1 = tk.Button(self, compound="top", image=self.PageThreeImage1, text="Battery Health", command=lambda: os.system('powercfg /batteryreport /output %userprofile%/Desktop/batteryreport.html'))
 		PageThreeButton2 = tk.Button(self, compound="top", image=self.PageThreeImage2, text="Keyboard", command=lambda: subprocess.Popen('"%CD%/ProgFiles/keyboardtester.exe"', shell=True))
 		PageThreeButton3 = tk.Button(self, compound="top", image=self.PageThreeImage3, text="WebCam", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Camera.exe"', shell=True))
 
