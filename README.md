@@ -9,7 +9,7 @@ Intended to be used by computer repair technicians that use a select number of t
 
 It will be later expanded to include other projects like my Hardware tester, Auto Listing process, Diagnostic/Repair progs, I'm considering even a possible Symbaloo style GUI + Portable Firefox (Adblock, Selenium, LastPass...) Combo.
 
-<u>Example of My Current process:</u>
+<u>Example of the standard process:</u>
 
 Having an 'offline' library of known portable progs organized into individual folders, on a Jump Drive. <br>
 * `Win+E` (My Computer), `double click` external USB.
