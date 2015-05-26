@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import os
 import subprocess
 import Tkinter as tk
 from PIL import ImageTk
-=======
-import Tkinter as tk
-from PIL import ImageTk
-import subprocess
-import os
->>>>>>> origin/master
 
 global icondirectory
 icondirectory = "./ProgFiles/Icons/" # As guessed, static directory where all icons are stored.
@@ -51,47 +44,24 @@ class StartPage(tk.Frame): # First initial frame.
 		TopAutOptimizerButton0 = tk.Button(self, width=15, height=2, text="Quick Start AutOptimizer", command=lambda: autooptimizer()) # Auto All button
 		TopAutoHardwareButton1 = tk.Button(self, width=15, height=2, text="Quick Start Hardware Tester", command=lambda: subprocess.Popen('""')) # Auto All button
 
-<<<<<<< HEAD
 		self.StartImage0 = ImageTk.PhotoImage(file=icondirectory + 'repairprogs.png')
 		self.StartImage1 = ImageTk.PhotoImage(file=icondirectory + 'optimize.png')
 		self.StartImage2 = ImageTk.PhotoImage(file=icondirectory + 'hardware.png')
 		self.StartImage3 = ImageTk.PhotoImage(file=icondirectory + 'removedrive.png')
 		self.StartImage4 = ImageTk.PhotoImage(file=icondirectory + 'closeallz.png')
 
-		#StartPageLabel0 = tk.Label(self, width=1, height=2)
 		StartPageLabel1 = tk.Label(self, width=1, height=2)
 
-		StartPageButton0 = tk.Button(self, compound="top", image=self.StartImage0, text="Repair Programs", fg="black", command=lambda: controller.show_frame(DiagnosticRepairProgs)) # width=20, height=5,
+		StartPageButton0 = tk.Button(self, compound="top", image=self.StartImage0, text="Repair Programs", fg="black", command=lambda: controller.show_frame(DiagnosticRepairProgs))
 		StartPageButton1 = tk.Button(self, compound="top", image=self.StartImage1, text="AutOptimizer", fg="black", command=lambda: controller.show_frame(AutOptimizer))
 		StartPageButton2 = tk.Button(self, compound="top", image=self.StartImage2, text="Hardware Tester", fg="black", command=lambda: controller.show_frame(HardwareTester))
 		StartPageButton3 = tk.Button(self, compound="top", image=self.StartImage3, text="Eject USB", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/RemoveDrive.exe" . -l -b -e', shell=True))
 		StartPageButton4 = tk.Button(self, compound="top", image=self.StartImage4, text="Close All Windows", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/CloseAll.exe"', shell=True))
-=======
-		self.StartImage0 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png') # Images
-		self.StartImage1 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png') #
-		self.StartImage2 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png') #
-		self.StartImage3 = ImageTk.PhotoImage(file=icondirectory + 'diskejectorz.png') #
-		self.StartImage4 = ImageTk.PhotoImage(file=icondirectory + 'closeallz.png') #
-
-		StartPageLabel0 = tk.Label(self, width=1, height=2) # seperation labels
-		StartPageLabel1 = tk.Label(self, width=1, height=2) #
-
-		StartPageButton0 = tk.Button(self, compound="top", image=self.StartImage0, text="Repair Programs", fg="black", bg="orange", command=lambda: controller.show_frame(DiagnosticRepairProgs)) # Initial batch of buttons on first screen.
-		StartPageButton1 = tk.Button(self, compound="top", image=self.StartImage1, text="AutOptimizer", fg="black", command=lambda: controller.show_frame(AutOptimizer)) #
-		StartPageButton2 = tk.Button(self, compound="top", image=self.StartImage2, text="Hardware Tester", fg="black", command=lambda: controller.show_frame(HardwareTester)) #
-		StartPageButton3 = tk.Button(self, compound="top", image=self.StartImage3, text="Eject USB", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/USBDiskEject.exe" /NOSAVE /REMOVETHIS', shell=True)) #
-		StartPageButton4 = tk.Button(self, compound="top", image=self.StartImage4, text="Close All Windows", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/CloseAll.exe"', shell=True)) #
->>>>>>> origin/master
 
 		TopAutOptimizerButton0.grid(row=0, columnspan=3, ipadx=50, padx=(0,60), pady=0)
 		TopAutoHardwareButton1.grid(row=0, column=2, columnspan=2, ipadx=50, padx=(60,0), pady=0)
 
-<<<<<<< HEAD
-		#StartPageLabel0.grid(row=0, column=2, padx=0, pady=3)
 		StartPageLabel1.grid(row=2, column=2, padx=0, pady=60)
-=======
-		StartPageLabel1.grid(row=2, column=2, padx=0, pady=58) # A label that seperates the buttons by a row.
->>>>>>> origin/master
 
 		StartPageButton0.grid(row=3, column=2, padx=20, pady=10) # .Grid() function which easily places buttons symetrically.
 		StartPageButton1.grid(row=3, column=1, padx=20, pady=10) #
