@@ -1,6 +1,6 @@
-import Tkinter as tk
-import subprocess
 import os
+import subprocess
+import Tkinter as tk
 from PIL import ImageTk
 
 global icondirectory
@@ -39,26 +39,26 @@ class StartPage(tk.Frame):
 		TopAutOptimizerButton0 = tk.Button(self, width=15, height=2, text="Quick Start AutOptimizer", command=lambda: subprocess.Popen('""'))
 		TopAutoHardwareButton1 = tk.Button(self, width=15, height=2, text="Quick Start Hardware Tester", command=lambda: subprocess.Popen('""'))
 
-		self.StartImage0 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.StartImage1 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.StartImage2 = ImageTk.PhotoImage(file=icondirectory + 'emptybutton.png')
-		self.StartImage3 = ImageTk.PhotoImage(file=icondirectory + 'diskejectorz.png')
+		self.StartImage0 = ImageTk.PhotoImage(file=icondirectory + 'repairprogs.png')
+		self.StartImage1 = ImageTk.PhotoImage(file=icondirectory + 'optimize.png')
+		self.StartImage2 = ImageTk.PhotoImage(file=icondirectory + 'hardware.png')
+		self.StartImage3 = ImageTk.PhotoImage(file=icondirectory + 'removedrive.png')
 		self.StartImage4 = ImageTk.PhotoImage(file=icondirectory + 'closeallz.png')
 
-		StartPageLabel0 = tk.Label(self, width=1, height=2)
+		#StartPageLabel0 = tk.Label(self, width=1, height=2)
 		StartPageLabel1 = tk.Label(self, width=1, height=2)
 
-		StartPageButton0 = tk.Button(self, compound="top", image=self.StartImage0, text="Repair Programs", fg="black", bg="orange", command=lambda: controller.show_frame(DiagnosticRepairProgs)) # width=20, height=5,
+		StartPageButton0 = tk.Button(self, compound="top", image=self.StartImage0, text="Repair Programs", fg="black", command=lambda: controller.show_frame(DiagnosticRepairProgs)) # width=20, height=5,
 		StartPageButton1 = tk.Button(self, compound="top", image=self.StartImage1, text="AutOptimizer", fg="black", command=lambda: controller.show_frame(AutOptimizer))
 		StartPageButton2 = tk.Button(self, compound="top", image=self.StartImage2, text="Hardware Tester", fg="black", command=lambda: controller.show_frame(HardwareTester))
-		StartPageButton3 = tk.Button(self, compound="top", image=self.StartImage3, text="Eject USB", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/USBDiskEject.exe" /NOSAVE /REMOVETHIS', shell=True))
+		StartPageButton3 = tk.Button(self, compound="top", image=self.StartImage3, text="Eject USB", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/RemoveDrive.exe" . -l -b -e', shell=True))
 		StartPageButton4 = tk.Button(self, compound="top", image=self.StartImage4, text="Close All Windows", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/CloseAll.exe"', shell=True))
 
 		TopAutOptimizerButton0.grid(row=0, columnspan=3, ipadx=50, padx=(0,60), pady=0)
 		TopAutoHardwareButton1.grid(row=0, column=2, columnspan=2, ipadx=50, padx=(60,0), pady=0)
 
 		#StartPageLabel0.grid(row=0, column=2, padx=0, pady=3)
-		StartPageLabel1.grid(row=2, column=2, padx=0, pady=58)
+		StartPageLabel1.grid(row=2, column=2, padx=0, pady=60)
 
 		StartPageButton0.grid(row=3, column=2, padx=20, pady=10)
 		StartPageButton1.grid(row=3, column=1, padx=20, pady=10)
@@ -174,7 +174,7 @@ class HardwareTester(tk.Frame):
 		BackButton0 = tk.Button(self, width=60, height=2, text="Go Back", command=lambda: controller.show_frame(StartPage))
 
 		PageThreeButton1 = tk.Button(self, compound="top", image=self.PageThreeImage1, text="Battery Health", command=lambda: subprocess.Popen('"%CD%/ProgFiles/batteryinfoview/BatteryInfoView.exe"', shell=True))
-		PageThreeButton2 = tk.Button(self, compound="top", image=self.PageThreeImage2, text="Keyboard", command=lambda: os.system('"%CD%/ProgFiles/keyboardtester.exe"'))
+		PageThreeButton2 = tk.Button(self, compound="top", image=self.PageThreeImage2, text="Keyboard", command=lambda: subprocess.Popen('"%CD%/ProgFiles/keyboardtester.exe"', shell=True))
 		PageThreeButton3 = tk.Button(self, compound="top", image=self.PageThreeImage3, text="WebCam", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Camera.exe"', shell=True))
 
 		PageThreeButton4 = tk.Button(self, compound="top", image=self.PageThreeImage4, text="Left Speaker", command=lambda: subprocess.Popen('"%CD%/ProgFiles/cmdmp3/cmdmp3.exe" "%CD%/ProgFiles/cmdmp3/Left.mp3"', shell=True))
