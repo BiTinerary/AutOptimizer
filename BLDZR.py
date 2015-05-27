@@ -36,13 +36,34 @@ class StartPage(tk.Frame): # First initial frame.
 
 		tk.Frame.__init__(self, parent)
 
-		def autooptimizer(): # Supposed to be an automatic, sequential execution of AutOptimizer buttons. Work in progress.
-			subprocess.call('devmgmt.msc', shell=True)
-			subprocess.call('diskmgmt.msc', shell=True)
-			subprocess.call('taskmgr', shell=True)
+		def AllDiagnosticRepairButtons():
+			MALWAREBYTES = '"%CD%/ProgFiles/Malwarebytes.cameyo.exe" -SafeMode'
+			ASWMBR = "%CD%/ProgFiles/aswMBR.exe"
+			SHDWEXPLR = "%CD%/ProgFiles/shadowexplorer/ShadowExplorerPortable.exe"
+			DOUBLEDRVR = '"%CD%/ProgFiles/doubledriver/dd.exe"'
 
-		TopAutOptimizerButton0 = tk.Button(self, width=15, height=2, text="Quick Start AutOptimizer", command=lambda: autooptimizer()) # Auto All button
-		TopAutoHardwareButton1 = tk.Button(self, width=15, height=2, text="Quick Start Hardware Tester", command=lambda: subprocess.Popen('""')) # Auto All button
+			diagnosticcommands = [MALWAREBYTES, ASWMBR, SHDWEXPLR, DOUBLEDRVR]
+			
+			for command in diagnosticcommands:
+				subprocess.call(command, shell=True)
+
+		def AllAutOptimizerButtons():
+			TASKMGR = 'taskmgr /0 /startup'
+			TASKSCHD = '"taskschd.msc"'
+			SERVICES = '"services.msc"'
+			BULKUNINST = '"%CD%/ProgFiles/iobituninstaller/iobituninstaller.exe"'
+			WINDIRSTAT = '"%CD%/ProgFiles/WinDirStat.cameyo.exe" -SafeMode'
+			RMBROWSERADDONS = '"%CD%/ProgFiles/avastbrowsercleanup.exe"'
+			DIAGFLOWCHART = '"%CD%/ProgFiles/Icons/DiagnosticFlowChart.jpg"'
+			SYNERGY = '"%CD%/ProgFiles/Synergy.cameyo.exe"'
+
+			autoptcommands = [TASKMGR, TASKSCHD, SERVICES, BULKUNINST, WINDIRSTAT, RMBROWSERADDONS, DIAGFLOWCHART, SYNERGY]
+			
+			for command in autoptcommands:
+				subprocess.call(command, shell=True)
+
+		TopAutOptimizerButton0 = tk.Button(self, width=15, height=2, text="Quick Start AutOptimizer", command=lambda: AllAutOptimizerButtons()) # Auto All button
+		TopAutoHardwareButton1 = tk.Button(self, width=15, height=2, text="Quick Start Hardware Tester", command=lambda: AllDiagnosticRepairButtons()) # Auto All button
 
 		self.StartImage0 = ImageTk.PhotoImage(file=icondirectory + 'repairprogs.png')
 		self.StartImage1 = ImageTk.PhotoImage(file=icondirectory + 'optimize.png')
@@ -176,8 +197,8 @@ class HardwareTester(tk.Frame):
 
 		BackButton0 = tk.Button(self, width=60, height=2, text="Go Back", command=lambda: controller.show_frame(StartPage))
 
-		PageThreeButton1 = tk.Button(self, compound="top", image=self.PageThreeImage1, text="Battery Health", command=lambda: os.system('%CD%/ProgFiles/batteryinfoview/batteryinfoview.exe'))
-		PageThreeButton2 = tk.Button(self, compound="top", image=self.PageThreeImage2, text="Keyboard", command=lambda: subprocess.Popen('"%CD%/ProgFiles/keyboardtester.exe"', shell=True))
+		PageThreeButton1 = tk.Button(self, compound="top", image=self.PageThreeImage1, text="Battery Health", command=lambda: subprocess.Popen('%CD%/ProgFiles/batteryinfoview/batteryinfoview.exe', shell=True))
+		PageThreeButton2 = tk.Button(self, compound="top", image=self.PageThreeImage2, text="Keyboard", command=lambda: os.system('"%CD%/ProgFiles/keyboardtester.exe"'))
 		PageThreeButton3 = tk.Button(self, compound="top", image=self.PageThreeImage3, text="WebCam", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Camera.exe"', shell=True))
 
 		PageThreeButton4 = tk.Button(self, compound="top", image=self.PageThreeImage4, text="Left Speaker", command=lambda: subprocess.Popen('"%CD%/ProgFiles/cmdmp3/cmdmp3.exe" "%CD%/ProgFiles/cmdmp3/Left.mp3"', shell=True))
