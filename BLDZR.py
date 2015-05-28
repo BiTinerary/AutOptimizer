@@ -36,34 +36,40 @@ class StartPage(tk.Frame): # First initial frame.
 
 		tk.Frame.__init__(self, parent)
 
-		def AllDiagnosticRepairButtons():
-			MALWAREBYTES = '"%CD%/ProgFiles/Malwarebytes.cameyo.exe" -SafeMode'
-			ASWMBR = "%CD%/ProgFiles/aswMBR.exe"
-			SHDWEXPLR = "%CD%/ProgFiles/shadowexplorer/ShadowExplorerPortable.exe"
-			DOUBLEDRVR = '"%CD%/ProgFiles/doubledriver/dd.exe"'
+		def AllHardwareTesterButtons():
+			BATTERY = '"%CD%/ProgFiles/batteryinfoview/batteryinfoview.exe"'
+			KEYBRD = '"%CD%/ProgFiles/keyboardtester.exe"'
+			CAMERA = '"%CD%/ProgFiles/Camera.exe"'
+			LEFTSPKR = '"%CD%/ProgFiles/cmdmp3/cmdmp3.exe" "%CD%/ProgFiles/cmdmp3/Left.mp3"'
+			RIGHTSPKR = '"%CD%/ProgFiles/cmdmp3/cmdmp3.exe" "%CD%/ProgFiles/cmdmp3/Right.mp3"'
+			HDDSMART = '"%CD%/ProgFiles/crystaldiskinfo/DiskInfo.exe"'
+			IMPORTWIFI = 'cd "%CD%/ProgFiles/wirelesskeyview" && WirelessKeyView.exe /import "%CD%/ProgFiles/wirelesskeyview/WiFiKeysBackup.txt"'
+			ACTIVATION = 'slmgr /xpr'
 
-			diagnosticcommands = [MALWAREBYTES, ASWMBR, SHDWEXPLR, DOUBLEDRVR]
+			hardwaretestingcommands = [IMPORTWIFI, LEFTSPKR, RIGHTSPKR, ACTIVATION, HDDSMART, BATTERY, CAMERA, KEYBRD]
 			
-			for command in diagnosticcommands:
+			for command in hardwaretestingcommands:
+				print command
+				#subprocess.check_call((command), shell=True)
 				subprocess.call(command, shell=True)
 
 		def AllAutOptimizerButtons():
 			TASKMGR = 'taskmgr /0 /startup'
-			TASKSCHD = '"taskschd.msc"'
-			SERVICES = '"services.msc"'
+			TASKSCHD = 'taskschd.msc'
+			SERVICES = 'services.msc'
 			BULKUNINST = '"%CD%/ProgFiles/iobituninstaller/iobituninstaller.exe"'
 			WINDIRSTAT = '"%CD%/ProgFiles/WinDirStat.cameyo.exe" -SafeMode'
 			RMBROWSERADDONS = '"%CD%/ProgFiles/avastbrowsercleanup.exe"'
-			DIAGFLOWCHART = '"%CD%/ProgFiles/Icons/DiagnosticFlowChart.jpg"'
-			SYNERGY = '"%CD%/ProgFiles/Synergy.cameyo.exe"'
 
-			autoptcommands = [TASKMGR, TASKSCHD, SERVICES, BULKUNINST, WINDIRSTAT, RMBROWSERADDONS, DIAGFLOWCHART, SYNERGY]
+			autoptcommands = [TASKMGR, BULKUNINST, TASKSCHD, RMBROWSERADDONS, WINDIRSTAT, SERVICES]
 			
 			for command in autoptcommands:
+				print command
+				#subprocess.check_call((command), shell=True)
 				subprocess.call(command, shell=True)
 
 		TopAutOptimizerButton0 = tk.Button(self, width=15, height=2, text="Quick Start AutOptimizer", command=lambda: AllAutOptimizerButtons()) # Auto All button
-		TopAutoHardwareButton1 = tk.Button(self, width=15, height=2, text="Quick Start Hardware Tester", command=lambda: AllDiagnosticRepairButtons()) # Auto All button
+		TopAutoHardwareButton1 = tk.Button(self, width=15, height=2, text="Quick Start Hardware Tester", command=lambda: AllHardwareTesterButtons()) # Auto All button
 
 		self.StartImage0 = ImageTk.PhotoImage(file=icondirectory + 'repairprogs.png')
 		self.StartImage1 = ImageTk.PhotoImage(file=icondirectory + 'optimize.png')
@@ -197,7 +203,7 @@ class HardwareTester(tk.Frame):
 
 		BackButton0 = tk.Button(self, width=60, height=2, text="Go Back", command=lambda: controller.show_frame(StartPage))
 
-		PageThreeButton1 = tk.Button(self, compound="top", image=self.PageThreeImage1, text="Battery Health", command=lambda: subprocess.Popen('%CD%/ProgFiles/batteryinfoview/batteryinfoview.exe', shell=True))
+		PageThreeButton1 = tk.Button(self, compound="top", image=self.PageThreeImage1, text="Battery Health", command=lambda: subprocess.Popen('"%CD%/ProgFiles/batteryinfoview/batteryinfoview.exe"', shell=True))
 		PageThreeButton2 = tk.Button(self, compound="top", image=self.PageThreeImage2, text="Keyboard", command=lambda: os.system('"%CD%/ProgFiles/keyboardtester.exe"'))
 		PageThreeButton3 = tk.Button(self, compound="top", image=self.PageThreeImage3, text="WebCam", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Camera.exe"', shell=True))
 
