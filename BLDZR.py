@@ -8,6 +8,7 @@ icondirectory = "./ProgFiles/Icons/" # As guessed, static directory where all ic
 
 TITLE_FONT = ("Helvetica", 18, "bold")
 
+
 class MainApp(tk.Tk):
 
 	def __init__(self, *args, **kwargs): # Container is where the Windows are stacked on top of each other. As one Winodow is selected/executed, it is raised above the others.
@@ -38,7 +39,6 @@ class StartPage(tk.Frame): # First initial frame.
 
 		def AllHardwareTesterButtons():
 			BATTERY = '"%CD%/ProgFiles/batteryinfoview/batteryinfoview.exe"'
-			KEYBRD = '"%CD%/ProgFiles/keyboardtester.exe"'
 			CAMERA = '"%CD%/ProgFiles/Camera.exe"'
 			LEFTSPKR = '"%CD%/ProgFiles/cmdmp3/cmdmp3.exe" "%CD%/ProgFiles/cmdmp3/Left.mp3"'
 			RIGHTSPKR = '"%CD%/ProgFiles/cmdmp3/cmdmp3.exe" "%CD%/ProgFiles/cmdmp3/Right.mp3"'
@@ -46,12 +46,19 @@ class StartPage(tk.Frame): # First initial frame.
 			IMPORTWIFI = 'cd "%CD%/ProgFiles/wirelesskeyview" && WirelessKeyView.exe /import "%CD%/ProgFiles/wirelesskeyview/WiFiKeysBackup.txt"'
 			ACTIVATION = 'slmgr /xpr'
 
-			hardwaretestingcommands = [IMPORTWIFI, LEFTSPKR, RIGHTSPKR, ACTIVATION, HDDSMART, BATTERY, CAMERA, KEYBRD]
+			hardwaretestingcommands = [IMPORTWIFI, LEFTSPKR, RIGHTSPKR, ACTIVATION, HDDSMART, BATTERY, CAMERA]
 			
 			for command in hardwaretestingcommands:
 				print command
-				#subprocess.check_call((command), shell=True)
-				subprocess.call(command, shell=True)
+				subprocess.call(command, shell=True) #subprocess.check_call((command), shell=True)
+			def KeyboardTester():
+				top = tk.Tk()
+				KEYBRDFUNCTLABEL = tk.Label(top, text="Put Stuff here 1234567890")
+				KEYBRDFUNCTLABEL.grid()
+				KEYBRDFUNCTENTRY = tk.Entry(top, bd=5)
+				KEYBRDFUNCTENTRY.grid()
+				top.mainloop()
+			KeyboardTester()
 
 		def AllAutOptimizerButtons():
 			TASKMGR = 'taskmgr /0 /startup'
@@ -65,8 +72,7 @@ class StartPage(tk.Frame): # First initial frame.
 			
 			for command in autoptcommands:
 				print command
-				#subprocess.check_call((command), shell=True)
-				subprocess.call(command, shell=True)
+				subprocess.call(command, shell=True) #subprocess.check_call((command), shell=True)
 
 		TopAutOptimizerButton0 = tk.Button(self, width=15, height=2, text="Quick Start AutOptimizer", command=lambda: AllAutOptimizerButtons()) # Auto All button
 		TopAutoHardwareButton1 = tk.Button(self, width=15, height=2, text="Quick Start Hardware Tester", command=lambda: AllHardwareTesterButtons()) # Auto All button
