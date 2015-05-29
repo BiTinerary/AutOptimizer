@@ -1,7 +1,7 @@
 # Automated_Optimizer
 <p align="center">
-<img src='http://s7.postimg.org/r084rz257/Capture1.png'><br>
-<img src='http://s7.postimg.org/jzk4z70d7/The_BLDZR.jpg'></br>
+<img src='http://s9.postimg.org/e89ls5mwv/5291515.png'><br>
+<img src='http://s9.postimg.org/kah8inbcv/5_29_15.png'></br>
 </p>
 A Tkinter GUI for quickly running basic optimization/cleanup programs. It's still a work in progress but the premise is to combine several powerful opensource/freeware tools into <b>one</b> location. Make that software conveniently executable by cutting down on overall clicks, window navigation and HID swapping. While maintaining the utmost concern for portability, offline access and minimalism to performance ratio. The top priorities when tasked with repairing systems/setups that are always changing.
 
