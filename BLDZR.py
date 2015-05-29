@@ -144,9 +144,9 @@ class AutOptimizer(tk.Frame): # frame 3
 		self.PageTwoImage1 = ImageTk.PhotoImage(file=icondirectory + 'TaskManager.png')
 		self.PageTwoImage2 = ImageTk.PhotoImage(file=icondirectory + 'TaskScheduler.png')
 		self.PageTwoImage3 = ImageTk.PhotoImage(file=icondirectory + 'Services.png')
-		self.PageTwoImage4 = ImageTk.PhotoImage(file=icondirectory + 'iobituninstaller.png')
+		self.PageTwoImage4 = ImageTk.PhotoImage(file=icondirectory + 'ccleaner.png')
 		self.PageTwoImage5 = ImageTk.PhotoImage(file=icondirectory + 'WinDirStat.png')
-		self.PageTwoImage6 = ImageTk.PhotoImage(file=icondirectory + 'grayduck.png')
+		self.PageTwoImage6 = ImageTk.PhotoImage(file=icondirectory + 'nirsoft.png')
 		self.PageTwoImage7 = ImageTk.PhotoImage(file=icondirectory + 'AvastBrowserCleanup.png')
 		self.PageTwoImage8 = ImageTk.PhotoImage(file=icondirectory + 'DiagFlowIcon.png')
 		self.PageTwoImage9 = ImageTk.PhotoImage(file=icondirectory + 'synergy.png')
@@ -159,9 +159,9 @@ class AutOptimizer(tk.Frame): # frame 3
 		PageTwoButton2 = tk.Button(self, compound="top", image=self.PageTwoImage2, text="Scheduled Tasks", command=lambda: subprocess.Popen('"taskschd.msc"', shell=True))
 		PageTwoButton3 = tk.Button(self, compound="top", image=self.PageTwoImage3, text="Services", command=lambda: subprocess.Popen('"services.msc"', shell=True))
 
-		PageTwoButton4 = tk.Button(self, compound="top", image=self.PageTwoImage4, text="Bulk Uninstall", command=lambda: subprocess.Popen('"%CD%/ProgFiles/iobituninstaller/iobituninstaller.exe"', shell=True))
+		PageTwoButton4 = tk.Button(self, compound="top", image=self.PageTwoImage4, text="Ccleaner", command=lambda: subprocess.Popen('"%CD%/ProgFiles/ccleaner/Ccleaner.exe"', shell=True))
 		PageTwoButton5 = tk.Button(self, compound="top", image=self.PageTwoImage5, text="WinDirStat", command=lambda: subprocess.Popen('"%CD%/ProgFiles/WinDirStat.cameyo.exe" -SafeMode', shell=True))
-		PageTwoButton6 = tk.Button(self, compound="top", image=self.PageTwoImage6, text="Mr. GrayDuck", command=lambda: subprocess.Popen('""', shell=True))
+		PageTwoButton6 = tk.Button(self, compound="top", image=self.PageTwoImage6, text="Bulk Uninstaller", command=lambda: subprocess.Popen('"%CD%/ProgFiles/myuninstaller/myuninst.exe"', shell=True))
 
 		PageTwoButton7 = tk.Button(self, compound="top", image=self.PageTwoImage7, text="Browser Addons", command=lambda: subprocess.Popen('"%CD%/ProgFiles/avastbrowsercleanup.exe"', shell=True))
 		PageTwoButton8 = tk.Button(self, compound="top", image=self.PageTwoImage8, text="Diagnostic Chart", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Icons/DiagnosticFlowChart.jpg"', shell=True))
