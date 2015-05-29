@@ -1,4 +1,3 @@
-import os
 import subprocess
 import Tkinter as tk
 from PIL import ImageTk
@@ -48,7 +47,7 @@ class StartPage(tk.Frame): # First initial frame.
 			HardwareTestingCommands = [IMPORTWIFI, LEFTSPKR, RIGHTSPKR, ACTIVATION, HDDSMART, BATTERY, CAMERA]
 			
 			for Command in HardwareTestingCommands:
-				print Command
+				#print Command
 				subprocess.call(Command, shell=True) #subprocess.check_call((command), shell=True)
 			KeyboardTester()
 
@@ -63,7 +62,7 @@ class StartPage(tk.Frame): # First initial frame.
 			AutOptCommands = [TASKMGR, BULKUNINST, TASKSCHD, RMBROWSERADDONS, WINDIRSTAT, SERVICES]
 			
 			for Command in AutOptCommands:
-				print Command
+				#print Command
 				subprocess.call(Command, shell=True) #subprocess.check_call((command), shell=True)
 
 		TopAutOptimizerButton0 = tk.Button(self, width=15, height=2, text="Quick Start AutOptimizer", command=lambda: AllAutOptimizerButtons()) # Auto All button
@@ -115,7 +114,7 @@ class DiagnosticRepairProgs(tk.Frame): # secondary frame.
 		PageOneButton2 = tk.Button(self, compound="top", image=self.PageOneImage2, text="Rootkit Scanner", command=lambda: subprocess.Popen('"%CD%/ProgFiles/aswMBR.exe"', shell=True)) #
 		PageOneButton3 = tk.Button(self, compound="top", image=self.PageOneImage3, text="SuperAntiSpyware", command=lambda: subprocess.Popen('"%CD%/ProgFiles/superantispyware/superantispyware.exe"', shell=True)) #
 
-		PageOneButton4 = tk.Button(self, compound="top", image=self.PageOneImage4, text="Rkill (Wait for Log)", command=lambda: subprocess.Popen('"%CD%/ProgFiles/rkill.exe"', shell=True)) #
+		PageOneButton4 = tk.Button(self, compound="top", image=self.PageOneImage4, text="Rkill (Wait for Log)", command=lambda: subprocess.Popen('"%CD%/ProgFiles/rkill.exe" -w "%CD%/ProgFiles/whitelist.txt"', shell=True)) #
 		PageOneButton5 = tk.Button(self, compound="top", image=self.PageOneImage5, text="AIO Windows Repair", command=lambda: subprocess.Popen('"%CD%/ProgFiles/tweaking/Repair_Windows.exe"', shell=True)) #
 		PageOneButton6 = tk.Button(self, compound="top", image=self.PageOneImage6, text="Shadow Explorer", command=lambda: subprocess.Popen('"%CD%/ProgFiles/shadowexplorer/ShadowExplorerPortable.exe"', shell=True)) #
 
@@ -202,15 +201,15 @@ class KeyboardTester(tk.Tk):
 			qwertyuiop = "1234567890qwertyuiopasdfghjklzxcvbnm"
 
 			if VERIFICATION.lower() == qwertyuiop:
-				print "VERIFIED"
+				#print "VERIFIED"
 				self.destroy()
 
 			else:
-				print "TRY AGAIN!!"
+				#print "TRY AGAIN!!"
 				self.destroy()
 				KeyboardTester()
 
-		BUTTON = tk.Button(self, width=50, height=2, text="Get", command=lambda: ButtonPressVerification())
+		BUTTON = tk.Button(self, width=50, height=2, text="Click or Press Enter", command=lambda: ButtonPressVerification())
 		BUTTON.grid(row=3, column=0, columnspan=3)
 
 		self.bind('<Return>',(lambda event: ButtonPressVerification(INPUTRETURN.get())))
