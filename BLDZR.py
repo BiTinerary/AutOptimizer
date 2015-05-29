@@ -8,7 +8,6 @@ icondirectory = "./ProgFiles/Icons/" # As guessed, static directory where all ic
 
 TITLE_FONT = ("Helvetica", 18, "bold")
 
-
 class MainApp(tk.Tk):
 
 	def __init__(self, *args, **kwargs): # Container is where the Windows are stacked on top of each other. As one Winodow is selected/executed, it is raised above the others.
@@ -46,11 +45,11 @@ class StartPage(tk.Frame): # First initial frame.
 			IMPORTWIFI = 'cd "%CD%/ProgFiles/wirelesskeyview" && WirelessKeyView.exe /import "%CD%/ProgFiles/wirelesskeyview/WiFiKeysBackup.txt"'
 			ACTIVATION = 'slmgr /xpr'
 
-			hardwaretestingcommands = [IMPORTWIFI, LEFTSPKR, RIGHTSPKR, ACTIVATION, HDDSMART, BATTERY, CAMERA]
+			HardwareTestingCommands = [IMPORTWIFI, LEFTSPKR, RIGHTSPKR, ACTIVATION, HDDSMART, BATTERY, CAMERA]
 			
-			for command in hardwaretestingcommands:
-				print command
-				subprocess.call(command, shell=True) #subprocess.check_call((command), shell=True)
+			for Command in HardwareTestingCommands:
+				print Command
+				subprocess.call(Command, shell=True) #subprocess.check_call((command), shell=True)
 			KeyboardTester()
 
 		def AllAutOptimizerButtons():
@@ -61,11 +60,11 @@ class StartPage(tk.Frame): # First initial frame.
 			WINDIRSTAT = '"%CD%/ProgFiles/WinDirStat.cameyo.exe" -SafeMode'
 			RMBROWSERADDONS = '"%CD%/ProgFiles/avastbrowsercleanup.exe"'
 
-			autoptcommands = [TASKMGR, BULKUNINST, TASKSCHD, RMBROWSERADDONS, WINDIRSTAT, SERVICES]
+			AutOptCommands = [TASKMGR, BULKUNINST, TASKSCHD, RMBROWSERADDONS, WINDIRSTAT, SERVICES]
 			
-			for command in autoptcommands:
-				print command
-				subprocess.call(command, shell=True) #subprocess.check_call((command), shell=True)
+			for Command in AutOptCommands:
+				print Command
+				subprocess.call(Command, shell=True) #subprocess.check_call((command), shell=True)
 
 		TopAutOptimizerButton0 = tk.Button(self, width=15, height=2, text="Quick Start AutOptimizer", command=lambda: AllAutOptimizerButtons()) # Auto All button
 		TopAutoHardwareButton1 = tk.Button(self, width=15, height=2, text="Quick Start Hardware Tester", command=lambda: AllHardwareTesterButtons()) # Auto All button
@@ -74,7 +73,7 @@ class StartPage(tk.Frame): # First initial frame.
 		self.StartImage1 = ImageTk.PhotoImage(file=icondirectory + 'optimize.png')
 		self.StartImage2 = ImageTk.PhotoImage(file=icondirectory + 'hardware.png')
 		self.StartImage3 = ImageTk.PhotoImage(file=icondirectory + 'removedrive.png')
-		self.StartImage4 = ImageTk.PhotoImage(file=icondirectory + 'closeallz.png')
+		self.StartImage4 = ImageTk.PhotoImage(file=icondirectory + 'closeall.png')
 
 		StartPageLabel1 = tk.Label(self, width=1, height=2)
 
@@ -187,23 +186,22 @@ class KeyboardTester(tk.Tk):
 	def __init__(self):
 		tk.Tk.__init__(self)
 
-		#root = tk.Tk()
-		#root.title("KeyBoard Testing")
+		self.title("KeyBoard Testing")
 
-		LABELZ = tk.Label(self, compound="left", text="Test the keyboard using the four main rows of ASCII characters 0-9 and a-z.")
-		LABELZ.grid(row=0, column=0, columnspan=3)
+		LABEL1 = tk.Label(self, compound="left", text="Test the keyboard using the four main rows of ASCII characters 0-9 and a-z.")
+		LABEL1.grid(row=0, column=0, columnspan=3)
 
-		LABELZ2 = tk.Label(self, compound="left", text="ie: 1234567890qwertyuiopasdfghjklzxcvbnm                               ")
-		LABELZ2.grid(row=1, column=0, columnspan=2)
+		LABEL2 = tk.Label(self, compound="left", text="ie: 1234567890qwertyuiopasdfghjklzxcvbnm                               ")
+		LABEL2.grid(row=1, column=0, columnspan=2)
 
-		ENTRIEZ = tk.Entry(self, bd=5, width=58)
-		ENTRIEZ.grid(row=2, column=0, columnspan=3)
+		INPUTRETURN = tk.Entry(self, bd=5, width=58)
+		INPUTRETURN.grid(row=2, column=0, columnspan=3)
 
-		def buttonpressverification(input):
-			VERIFICATIONZ = ENTRIEZ.get()
+		def ButtonPressVerification(input):
+			VERIFICATION = INPUTRETURN.get()
 			qwertyuiop = "1234567890qwertyuiopasdfghjklzxcvbnm"
 
-			if VERIFICATIONZ.lower() == qwertyuiop:
+			if VERIFICATION.lower() == qwertyuiop:
 				print "VERIFIED"
 				self.destroy()
 
@@ -212,14 +210,13 @@ class KeyboardTester(tk.Tk):
 				self.destroy()
 				KeyboardTester()
 
-		BUTTONZ = tk.Button(self, width=50, height=2, text="Get", command=lambda: buttonpressverification())
-		BUTTONZ.grid(row=3, column=0, columnspan=3)
+		BUTTON = tk.Button(self, width=50, height=2, text="Get", command=lambda: ButtonPressVerification())
+		BUTTON.grid(row=3, column=0, columnspan=3)
 
-		self.bind('<Return>',(lambda event: buttonpressverification(ENTRIEZ.get())))
+		self.bind('<Return>',(lambda event: ButtonPressVerification(INPUTRETURN.get())))
 		self.mainloop
 
 class HardwareTester(tk.Frame):
-
 	def __init__(self, parent, controller):
 		tk.Frame.__init__(self, parent)
 		label = tk.Label(self, text="Page 3", font=TITLE_FONT)
@@ -279,6 +276,6 @@ class HardwareTester(tk.Frame):
 
 if __name__ == "__main__": # Executes the main app (which then executes the other classes) and ties everyting together.
 	app = MainApp()
-	app.title("B.L.D.Z.R                                                                                ") # Title seen in top bar
+	app.title("B.L.D.Z.R                                                                         ") # Title seen in top bar
 	app.iconbitmap(icondirectory + 'BLDZR.ico') # icon seen in top left hand corner of prog window
 	app.mainloop() # ties together
