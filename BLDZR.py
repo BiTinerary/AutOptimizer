@@ -51,13 +51,39 @@ class StartPage(tk.Frame): # First initial frame.
 			for command in hardwaretestingcommands:
 				print command
 				subprocess.call(command, shell=True) #subprocess.check_call((command), shell=True)
+				
 			def KeyboardTester():
-				top = tk.Tk()
-				KEYBRDFUNCTLABEL = tk.Label(top, text="Put Stuff here 1234567890")
-				KEYBRDFUNCTLABEL.grid()
-				KEYBRDFUNCTENTRY = tk.Entry(top, bd=5)
-				KEYBRDFUNCTENTRY.grid()
-				top.mainloop()
+
+				root = tk.Tk()
+				root.title("KeyBoard Testing")
+
+				LABELZ = tk.Label(root, compound="left", text="Test the four main rows of the keyboard (0-9 & a-z)")
+				LABELZ.grid(row=0, column=0, columnspan=3)
+
+				LABELZ2 = tk.Label(root, compound="left", text="ie: 1234567890qwertyuiopasdfghjklzxcvbnm                               ")
+				LABELZ2.grid(row=1, column=0, columnspan=2)
+
+				ENTRIEZ = tk.Entry(root, bd=5, width=58)
+				ENTRIEZ.grid(row=2, column=0, columnspan=3)
+
+				def buttonpressverification(input):
+					VERIFICATIONZ = ENTRIEZ.get()
+					qwertyuiop = "1234567890qwertyuiopasdfghjklzxcvbnm"
+
+					if VERIFICATIONZ.lower() == qwertyuiop:
+						print "VERIFIED"
+						root.destroy()
+
+					else:
+						print "TRY AGAIN!!"
+						root.destroy()
+						KeyboardTester()
+
+				BUTTONZ = tk.Button(root, width=50, height=2, text="Click or Press Enter", command=lambda: buttonpressverification())
+				BUTTONZ.grid(row=3, column=0, columnspan=3)
+
+				root.bind('<Return>',(lambda event: buttonpressverification(ENTRIEZ.get())))
+				root.mainloop
 			KeyboardTester()
 
 		def AllAutOptimizerButtons():
@@ -196,6 +222,39 @@ class HardwareTester(tk.Frame):
 		tk.Frame.__init__(self, parent)
 		label = tk.Label(self, text="Page 3", font=TITLE_FONT)
 
+		def KeyboardTester():
+
+			root = tk.Tk()
+			root.title("KeyBoard Testing")
+
+			LABELZ = tk.Label(root, compound="left", text="Test the keyboard using the four main rows of ASCII characters 0-9 and a-z.")
+			LABELZ.grid(row=0, column=0, columnspan=3)
+
+			LABELZ2 = tk.Label(root, compound="left", text="ie: 1234567890qwertyuiopasdfghjklzxcvbnm                               ")
+			LABELZ2.grid(row=1, column=0, columnspan=2)
+
+			ENTRIEZ = tk.Entry(root, bd=5, width=58)
+			ENTRIEZ.grid(row=2, column=0, columnspan=3)
+
+			def buttonpressverification(input):
+				VERIFICATIONZ = ENTRIEZ.get()
+				qwertyuiop = "1234567890qwertyuiopasdfghjklzxcvbnm"
+
+				if VERIFICATIONZ.lower() == qwertyuiop:
+					print "VERIFIED"
+					root.destroy()
+
+				else:
+					print "TRY AGAIN!!"
+					root.destroy()
+					KeyboardTester()
+
+			BUTTONZ = tk.Button(root, width=50, height=2, text="Get", command=lambda: buttonpressverification())
+			BUTTONZ.grid(row=3, column=0, columnspan=3)
+
+			root.bind('<Return>',(lambda event: buttonpressverification(ENTRIEZ.get())))
+			root.mainloop
+
 		self.PageThreeImage1 = ImageTk.PhotoImage(file=icondirectory + 'BatteryInfoView.png')
 		self.PageThreeImage2 = ImageTk.PhotoImage(file=icondirectory + 'keyboard.png')
 		self.PageThreeImage3 = ImageTk.PhotoImage(file=icondirectory + 'Camera.png')
@@ -210,7 +269,7 @@ class HardwareTester(tk.Frame):
 		BackButton0 = tk.Button(self, width=60, height=2, text="Go Back", command=lambda: controller.show_frame(StartPage))
 
 		PageThreeButton1 = tk.Button(self, compound="top", image=self.PageThreeImage1, text="Battery Health", command=lambda: subprocess.Popen('"%CD%/ProgFiles/batteryinfoview/batteryinfoview.exe"', shell=True))
-		PageThreeButton2 = tk.Button(self, compound="top", image=self.PageThreeImage2, text="Keyboard", command=lambda: os.system('"%CD%/ProgFiles/keyboardtester.exe"'))
+		PageThreeButton2 = tk.Button(self, compound="top", image=self.PageThreeImage2, text="Keyboard", command=lambda: controller.show_frame(KeyboardTester()))
 		PageThreeButton3 = tk.Button(self, compound="top", image=self.PageThreeImage3, text="WebCam", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Camera.exe"', shell=True))
 
 		PageThreeButton4 = tk.Button(self, compound="top", image=self.PageThreeImage4, text="Left Speaker", command=lambda: subprocess.Popen('"%CD%/ProgFiles/cmdmp3/cmdmp3.exe" "%CD%/ProgFiles/cmdmp3/Left.mp3"', shell=True))
