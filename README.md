@@ -23,7 +23,7 @@ or<br>
 ~ Python w/ Tinter, Subprocess, PIL (ImageTk) modules. In order to customize.<br>
 To later convert to an `.exe` see <a href=https://github.com/pyinstaller/pyinstaller>PyInstaller</a>
 
-* I apolgize. Such is the definition of "github". I intend to provide a direct setup/requirements installation script later on but lets be real, I don't know when that going to happen
+* I apologize. Such is the definition of "github". I intend to provide a direct setup/requirements installation script later on but lets be real, I don't know when that going to happen
 
 ## Credits
 
