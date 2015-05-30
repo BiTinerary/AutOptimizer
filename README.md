@@ -13,7 +13,7 @@ Intended to be used by computer repair technicians that use a select number of t
 ## Source Code License: NFG
 a.k.a: No f***s given
 
-I'm not going to bother assigning a 'legit' GNU/MIT/Freeware/OpenSource license to my source code. It's free, as in the <b>word</b> free. Free to distribute, free to sell, free to modify, free as if you had created it yourself. Take complete recognition or refer the source, IDGAF. The only exception being, reinforcement of the NFG mentality. ie: Don't come wining to me if you make your own problems worse. NO WARRANTY. I only ask that you take in consideration that this repo, depending on the version, may contain programs that do not conform to the NFG mentality. However, the Python source code provided is entirely customizeable to your needs and <b>encouraged</b> to be altered. Use this repo as a GUI template to "plug and play" your own icons, progs, scripts, commands, etc...
+I'm not going to bother assigning a 'legit' GNU/MIT/Freeware/OpenSource license to my source code. It's free, as in the <b>word</b> free. Free to distribute, free to sell, free to modify, free as if you had created it yourself. The Python source code provided is entirely customizeable and <b>encouraged</b> to be altered. Use this repo as a GUI template to "plug and play" your own icons, progs, scripts, commands, etc...
 
 If you feel the need to contribute or offer appreciation, I emplore you to do so by contacting/donating to a [truly opensource] program of your choosing. More specifically, one of the progs being used in this repo because I don't personally make enough money to donate what is right. Consider also that most other people, mainly businesses that directly profit from Open Source programs, do <b>not</b> choose to do so.
 
