@@ -15,7 +15,7 @@ a.k.a: No f***s given
 
 I'm not going to bother assigning a 'legit' GNU/MIT/Freeware/OpenSource license to my source code. It's free, as in the word <b>free</b>. Free to distribute, free to sell, free to modify, free as if you had created it yourself. Take complete recognition or refer the source, IDGAF. The only exception being reinforcement of the NFG mentality. ie: Don't come wining to me if you make your problems worse. NO WARRANTY. I only ask that you take in consideration that this repo, depending on the version, may contain programs that do not conform to the NFG mentality. However, the Python source code provided is entirely customizeable to your needs and <b>encouraged</b> to be altered. Use this repo as a GUI template to "plug and play" your own icons, progs, scripts, commands, etc...
 
-If you feel the need to contribute or even offer appreciation I emplore you to do so by contacting/donating to a [truly opensource] program of your choosing. More specifically, one of the progs being used in this repo.
+If you feel the need to contribute or offer appreciation I emplore you to do so by contacting/donating to a [truly opensource] program of your choosing. More specifically, one of the progs being used in this repo.
 
 <u>Example of my [previous] standard process:</u>
 
