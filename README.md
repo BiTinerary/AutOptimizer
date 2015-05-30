@@ -21,3 +21,5 @@ If you feel the need to contribute or offer appreciation, I emplore you to do so
 ~ Windows OS<br>
 or<br>
 ~ Python w/ Tinter, Subprocess, PIL (ImageTk) modules.
+
+`choco install python -version 2.7.6`
