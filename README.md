@@ -15,27 +15,4 @@ a.k.a: No f***s given
 
 I'm not going to bother assigning a 'legit' GNU/MIT/Freeware/OpenSource license to my source code. It's free, as in the word <b>free</b>. Free to distribute, free to sell, free to modify, free as if you had created it yourself. Take complete recognition or refer the source, IDGAF. The only exception being reinforcement of the NFG mentality. ie: Don't come wining to me if you make your problems worse. NO WARRANTY. I only ask that you take in consideration that this repo, depending on the version, may contain programs that do not conform to the NFG mentality. However, the Python source code provided is entirely customizeable to your needs and <b>encouraged</b> to be altered. Use this repo as a GUI template to "plug and play" your own icons, progs, scripts, commands, etc...
 
-If you feel the need to contribute or offer appreciation I emplore you to do so by contacting/donating to a [truly opensource] program of your choosing. More specifically, one of the progs being used in this repo.
-
-<u>Example of my [previous] standard process:</u>
-
-Offline library of known portaprogs organized into individual folders, on a Jump Drive. <br>
-* `Win+E` (My Computer), `double click` external USB.
-* `doubleclick` the specific prog folder<br>
-* `doubleclick` the executable to load the desired prog.<br>
-* `exit` prog, `back` in the folder directory.
-* `double click` secondary diagnostic prog folder
-* `double click` executable
-* then rinse and repeat for each additional task. <br>
-[12 clicks + 2 keystrokes + 4 Window/Directory Changes]
-
-<u>Compared to what this repo offers:</u><br>
-
-* `Win+E` > `Double Click` Jump Drive
-* `double click` Main .Py/.EXE script.
-* `single click` desired diagnostic prog.
-* `exit` (no need to `back` out of the directory)
-* `single click` secondary diag prog.<br>
-[7 clicks + 2 Keystrokes + 2 Window/Directory Changes + Consolidates HID swapping]
-
-It's worth mentioning that if AutOptimizer is burned to a CD (B.L.D.Z.R compat. implied) then a simple `autorun.inf` file will subtract 4 clicks and 2 keystrokes.
+If you feel the need to contribute or offer appreciation I emplore you to do so by contacting/donating to a [truly opensource] program of your choosing. More specifically, one of the progs being used in this repo. if AutOptimizer is burned to a CD (B.L.D.Z.R compat. implied) then a simple `autorun.inf` file will subtract 4 clicks and 2 keystrokes.
