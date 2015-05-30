@@ -21,3 +21,7 @@ If you feel the need to contribute or offer appreciation, I emplore you to do so
 ~ Windows OS<br>
 or<br>
 ~ Python w/ Tinter, Subprocess, PIL (ImageTk) modules.
+
+## Credits
+
+Special mention to James Munsch for jump starting my knowledge of Python and programming languages in general. Most importantly, thank you <b>Joziah Corbett</b> for inspiring me to stick with this general "project" over the years and reminding me of it practical uses for the average user.
