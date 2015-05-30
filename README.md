@@ -4,7 +4,7 @@
 <img src='http://s9.postimg.org/kah8inbcv/5_29_15.png'></br>
 </p>
 
-## Explaination
+## Explanation
 
 A Tkinter GUI for quickly running basic optimization/cleanup programs. It's still a work in progress but the premise is to combine several powerful opensource/freeware tools into <b>one</b> location. Make that software conveniently executable by cutting down on overall clicks, window navigation and HID swapping. While maintaining the utmost concern for portability, offline access and minimalism to performance ratio. Top priorities when tasked with repairing systems/setups that are always changing, in various states of repair and/or not always accesible to the internet as we know it.
 
