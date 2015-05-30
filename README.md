@@ -24,4 +24,4 @@ or<br>
 
 ## Credits
 
-Special mention to James Munsch for jump starting my knowledge of Python and programming languages in general despite years of procrastination, misinformation and confusion. Most importantly, thank you <b>Joziah Corbett</b> for inspiring me to stick with the B.L.D.Z.R project over the years and reminding me of it practical uses for the average user. In addition, allowing me to come to the realization that is BiTinerary.
+Special mention to <a href=https://github.com/jmunsch>James Munsch</a> for jump starting my knowledge of Python and programming languages in general despite years of procrastination, misinformation and confusion. Most importantly, thank you <b>Joziah Corbett</b> for inspiring me to stick with the B.L.D.Z.R project over the years and reminding me of it practical uses for the average user. In addition, allowing me to come to the realization that is BiTinerary.
