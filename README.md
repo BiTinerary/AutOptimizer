@@ -18,6 +18,6 @@ I'm not going to bother assigning a 'legit' GNU/MIT/Freeware/OpenSource license 
 If you feel the need to contribute or offer appreciation, I emplore you to do so by contacting/donating to a [truly opensource] program of your choosing. More specifically, one of the progs being used in this repo because I don't personally make enough money to donate what is right. Consider also that most other people, mainly businesses that directly profit from Open Source programs, do <b>not</b> choose to do so.
 
 ## Requirements
-~ Windows OS
-or
+~ Windows OS<br>
+or<br>
 ~ Python w/ Tinter, Subprocess, PIL (ImageTk) modules.
