@@ -20,8 +20,8 @@ If you feel the need to contribute or offer appreciation, I emplore you to do so
 ## Requirements
 ~ Windows OS<br>
 or<br>
-~ Python w/ Tinter, Subprocess, PIL (ImageTk) modules. In order to customize.
-To convert to an `.exe` see <a href=https://github.com/pyinstaller/pyinstaller>PyInstaller</a>
+~ Python w/ Tinter, Subprocess, PIL (ImageTk) modules. In order to customize.<br>
+To later convert to an `.exe` see <a href=https://github.com/pyinstaller/pyinstaller>PyInstaller</a>
 
 ## Credits
 
