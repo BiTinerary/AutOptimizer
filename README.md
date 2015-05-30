@@ -23,6 +23,8 @@ or<br>
 ~ Python w/ Tinter, Subprocess, PIL (ImageTk) modules. In order to customize.<br>
 To later convert to an `.exe` see <a href=https://github.com/pyinstaller/pyinstaller>PyInstaller</a>
 
+* I apolgize. Such is the definition of "github". I intend to provide a direct setup/requirements installation script later on but lets be real, I don't know when that going to happen
+
 ## Credits
 
 Special mention to <a href=https://github.com/jmunsch>James Munsch</a> for jump starting my knowledge of Python and programming languages in general despite years of procrastination and misinformation. Most importantly, thank you <b>Joziah Corbett</b> for inspiring me to stick with the B.L.D.Z.R project over the years and reminding me of it practical uses for the average user. In addition, allowing me to come to the realization that is BiTinerary.
