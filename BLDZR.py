@@ -53,13 +53,13 @@ class StartPage(tk.Frame): # First initial frame.
 
 		def AllAutOptimizerButtons():
 			TASKMGR = 'taskmgr /0 /startup'
-			TASKSCHD = 'taskschd.msc'
 			SERVICES = 'services.msc'
-			BULKUNINST = '"%CD%/ProgFiles/iobituninstaller/iobituninstaller.exe"'
-			WINDIRSTAT = '"%CD%/ProgFiles/WinDirStat.cameyo.exe" -SafeMode'
+			TASKSCHD = 'taskschd.msc'
+			BULKUNINST = '"%CD%/ProgFiles/myuninstaller/myuninst.exe"'
 			RMBROWSERADDONS = '"%CD%/ProgFiles/avastbrowsercleanup.exe"'
+			CLEANMGR = 'cleanmgr /sageset99 && cleanmgr /sagerun99'
 
-			AutOptCommands = [TASKMGR, BULKUNINST, TASKSCHD, RMBROWSERADDONS, WINDIRSTAT, SERVICES]
+			AutOptCommands = [TASKMGR, RMBROWSERADDONS, BULKUNINST, SERVICES, TASKSCHD, CLEANMGR]
 			
 			for Command in AutOptCommands:
 				#print Command
