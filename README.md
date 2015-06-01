@@ -3,31 +3,28 @@
 <img src='http://s9.postimg.org/e89ls5mwv/5291515.png'><br>
 <img src='http://s9.postimg.org/kah8inbcv/5_29_15.png'></br>
 </p>
-A Tkinter GUI for quickly running basic optimization/cleanup programs. It's still a work in progress but the premise is to combine several powerful opensource/freeware tools into <b>one</b> location. Make that software conveniently executable by cutting down on overall clicks, window navigation and HID swapping. While maintaining the utmost concern for portability, offline access and minimalism to performance ratio. The top priorities when tasked with repairing systems/setups that are always changing.
 
-Intended to be used by computer repair technicians that use a select number of tools and services to perform a repetative series of repairs. Ultimately, resulting in saving countless labor hours over time and faster turn around time for clients. Furthermore cutting client costs when hiring a Tech for onsite (by the [$100+] hour) work.
+## Explanation
 
-It will be later expanded to include other projects like my Hardware tester, Auto Listing process, Diagnostic/Repair progs, I'm considering even a possible Symbaloo style GUI + Portable Firefox (Adblock, Selenium, LastPass...) Combo.
+A Tkinter GUI for quickly running basic optimization/cleanup programs. It's still a work in progress but the premise is to combine several powerful opensource/freeware tools into <b>one</b> location. Make that software conveniently executable by cutting down on overall clicks, window navigation and HID swapping. While maintaining the utmost concern for portability, offline access and minimalism to performance ratio. Top priorities when tasked with repairing systems/setups that are always changing, in various states of repair and/or not always accesible to the internet as we know it.
 
-<u>Example of the standard process:</u>
+Intended to be used by computer repair technicians that use a select number of tools and services to perform a repetative series of repairs. Resulting in saving countless labor hours over time and faster turn around time for clients. Furthermore, cutting client costs when hiring a Tech for onsite (by the [$100+] hour) work.
 
-Having an 'offline' library of known portable progs organized into individual folders, on a Jump Drive. <br>
-* `Win+E` (My Computer), `double click` external USB.
-* `doubleclick` the specific prog folder<br>
-* `doubleclick` the executable to load the desired prog.<br>
-* `exit` prog, `back` in the folder directory.
-* `double click` secondary diagnostic prog folder
-* `double click` executable
-* then rinse and repeat for each additional task. <br>
-[12 clicks + 2 keystrokes + 4 Window/Directory Changes]
+## Source Code License: NFG
+a.k.a: No f***s given
 
-<u>Compared to what this repo offers:</u><br>
+I'm not going to bother assigning a 'legit' GNU/MIT/Freeware/OpenSource license to my source code. It's free, as in the <b>word</b> free. Free to distribute, free to sell, free to modify, free as if you had created it yourself. The Python source code provided is entirely customizeable and <b>encouraged</b> to be altered. Use this repo as a GUI template to "plug and play" your own icons, progs, scripts, commands, etc...
 
-* `Win+E` > `Double Click` Jump Drive
-* `double click` Main .Py/.EXE script.
-* `single click` desired diagnostic prog.
-* `exit` (no need to `back` out of the directory)
-* `single click` secondary diag prog.<br>
-[7 clicks + 2 Keystrokes + 2 Window/Directory Changes + Consolidates HID swapping]
+If you feel the need to contribute or offer appreciation, I emplore you to do so by contacting/donating to a [truly opensource] program of your choosing. More specifically, one of the progs being used in this repo because I don't personally make enough money to donate what is right. Consider also that most other people, mainly businesses that directly profit from Open Source programs, do <b>not</b> choose to do so.
 
-It's worth mentioning that if AutOptimizer is burned to a CD (B.L.D.Z.R compat. implied) then a simple `autorun.inf` file will subtract 4 clicks and 2 keystrokes.
+## Requirements
+~ Windows OS<br>
+or<br>
+~ Python w/ Tinter, Subprocess, PIL (ImageTk) modules. In order to customize.<br>
+To later convert to an `.exe` see <a href=https://github.com/pyinstaller/pyinstaller>PyInstaller</a>
+
+* I apologize. Such is the definition of "github". I intend to provide a direct setup/requirements installation script later on but lets be real, I don't know when that going to happen
+
+## Credits
+
+Special mention to <a href=https://github.com/jmunsch>James Munsch</a> for jump starting my knowledge of Python and programming languages in general despite years of procrastination and misinformation. Most importantly, thank you <b>Joziah Corbett</b> for inspiring me to stick with the B.L.D.Z.R project over the years and reminding me of it practical uses for the average user. In addition, allowing me to come to the realization that is, BiTinerary.
