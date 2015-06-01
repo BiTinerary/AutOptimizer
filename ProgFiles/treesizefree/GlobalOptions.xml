@@ -1,0 +1,1365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalOptions Version="2" AppVersion="3.32" Type="TGlobalOptions">
+	<MainFormWindowPlacement.length>44</MainFormWindowPlacement.length>
+	<MainFormWindowPlacement.flags>0</MainFormWindowPlacement.flags>
+	<MainFormWindowPlacement.showCmd>1</MainFormWindowPlacement.showCmd>
+	<MainFormWindowPlacement.ptMinPosition>
+		<X>-1</X>
+		<Y>-1</Y>
+	</MainFormWindowPlacement.ptMinPosition>
+	<MainFormWindowPlacement.ptMaxPosition>
+		<X>-1</X>
+		<Y>-1</Y>
+	</MainFormWindowPlacement.ptMaxPosition>
+	<MainFormWindowPlacement.rcNormalPosition>
+		<Left>2102</Left>
+		<Top>182</Top>
+		<Right>2893</Right>
+		<Bottom>933</Bottom>
+	</MainFormWindowPlacement.rcNormalPosition>
+	<ShowDetailsColumnsInTree>True</ShowDetailsColumnsInTree>
+	<SortColumnInDetailedView>3</SortColumnInDetailedView>
+	<ViewTypeInDetailedView>3</ViewTypeInDetailedView>
+	<SortDirection>1</SortDirection>
+	<Columns Type="TColumns">
+		<Items11 Type="TColumn">
+			<Alignment>0</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>85</Width>
+					<Order>15</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>85</Width>
+					<Order>15</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>85</Width>
+					<Order>15</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>170</Width>
+					<Order>15</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>85</Width>
+					<Order>15</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>85</Width>
+					<Order>15</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>85</Width>
+					<Order>15</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>85</Width>
+					<Order>15</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>136</Width>
+					<Order>15</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>11</ViewType>
+		</Items11>
+		<Items20 Type="TColumn">
+			<Alignment>1</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>90</Width>
+					<Order>17</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>90</Width>
+					<Order>17</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>90</Width>
+					<Order>17</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>180</Width>
+					<Order>17</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>90</Width>
+					<Order>17</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>90</Width>
+					<Order>17</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>90</Width>
+					<Order>17</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>90</Width>
+					<Order>17</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>144</Width>
+					<Order>17</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>20</ViewType>
+		</Items20>
+		<Items18 Type="TColumn">
+			<Alignment>0</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>500</Width>
+					<Order>18</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>500</Width>
+					<Order>18</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>500</Width>
+					<Order>18</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>1000</Width>
+					<Order>18</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>500</Width>
+					<Order>18</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>500</Width>
+					<Order>18</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>500</Width>
+					<Order>18</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>500</Width>
+					<Order>18</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>800</Width>
+					<Order>18</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>18</ViewType>
+		</Items18>
+		<Items37 Type="TColumn">
+			<Alignment>1</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>100</Width>
+					<Order>22</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>100</Width>
+					<Order>22</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>100</Width>
+					<Order>22</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>200</Width>
+					<Order>22</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>100</Width>
+					<Order>22</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>100</Width>
+					<Order>22</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>100</Width>
+					<Order>22</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>100</Width>
+					<Order>22</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>160</Width>
+					<Order>22</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>37</ViewType>
+		</Items37>
+		<Items2 Type="TColumn">
+			<Alignment>1</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>90</Width>
+					<Order>2</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>90</Width>
+					<Order>2</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>90</Width>
+					<Order>2</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>180</Width>
+					<Order>2</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>90</Width>
+					<Order>2</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>90</Width>
+					<Order>2</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>90</Width>
+					<Order>2</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>90</Width>
+					<Order>2</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>144</Width>
+					<Order>2</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>2</ViewType>
+		</Items2>
+		<Items48 Type="TColumn">
+			<Alignment>0</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>150</Width>
+					<Order>23</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>150</Width>
+					<Order>23</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>150</Width>
+					<Order>23</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>300</Width>
+					<Order>23</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>150</Width>
+					<Order>23</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>150</Width>
+					<Order>23</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>150</Width>
+					<Order>23</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>150</Width>
+					<Order>23</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>240</Width>
+					<Order>23</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>48</ViewType>
+		</Items48>
+		<Items8 Type="TColumn">
+			<Alignment>1</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>50</Width>
+					<Order>5</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>50</Width>
+					<Order>5</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>50</Width>
+					<Order>5</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>100</Width>
+					<Order>5</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>50</Width>
+					<Order>5</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>50</Width>
+					<Order>5</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>50</Width>
+					<Order>5</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>50</Width>
+					<Order>5</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>80</Width>
+					<Order>5</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>8</ViewType>
+		</Items8>
+		<Items9 Type="TColumn">
+			<Alignment>0</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>96</Width>
+					<Order>7</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>96</Width>
+					<Order>7</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>96</Width>
+					<Order>7</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>192</Width>
+					<Order>7</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>96</Width>
+					<Order>7</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>96</Width>
+					<Order>7</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>96</Width>
+					<Order>7</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>96</Width>
+					<Order>7</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>154</Width>
+					<Order>7</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>9</ViewType>
+		</Items9>
+		<Items3 Type="TColumn">
+			<Alignment>1</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>90</Width>
+					<Order>3</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>90</Width>
+					<Order>3</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>90</Width>
+					<Order>3</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>180</Width>
+					<Order>3</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>90</Width>
+					<Order>3</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>90</Width>
+					<Order>3</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>90</Width>
+					<Order>3</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>90</Width>
+					<Order>3</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>144</Width>
+					<Order>3</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>3</ViewType>
+		</Items3>
+		<Items32 Type="TColumn">
+			<Alignment>0</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>96</Width>
+					<Order>21</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>96</Width>
+					<Order>21</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>96</Width>
+					<Order>21</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>192</Width>
+					<Order>21</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>96</Width>
+					<Order>21</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>96</Width>
+					<Order>21</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>96</Width>
+					<Order>21</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>96</Width>
+					<Order>21</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>154</Width>
+					<Order>21</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>32</ViewType>
+		</Items32>
+		<Items7 Type="TColumn">
+			<Alignment>1</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>58</Width>
+					<Order>4</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>58</Width>
+					<Order>4</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>58</Width>
+					<Order>4</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>116</Width>
+					<Order>4</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>58</Width>
+					<Order>4</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>58</Width>
+					<Order>4</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>58</Width>
+					<Order>4</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>58</Width>
+					<Order>4</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>93</Width>
+					<Order>4</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>7</ViewType>
+		</Items7>
+		<Items1 Type="TColumn">
+			<Alignment>0</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>180</Width>
+					<Order>1</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>180</Width>
+					<Order>1</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>180</Width>
+					<Order>1</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>720</Width>
+					<Order>1</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>180</Width>
+					<Order>1</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>180</Width>
+					<Order>1</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>180</Width>
+					<Order>1</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>180</Width>
+					<Order>1</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>288</Width>
+					<Order>1</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>1</ViewType>
+		</Items1>
+		<Items13 Type="TColumn">
+			<Alignment>0</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>70</Width>
+					<Order>12</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>70</Width>
+					<Order>12</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>70</Width>
+					<Order>12</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>140</Width>
+					<Order>12</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>70</Width>
+					<Order>12</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>70</Width>
+					<Order>12</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>70</Width>
+					<Order>12</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>70</Width>
+					<Order>12</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>112</Width>
+					<Order>12</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>13</ViewType>
+		</Items13>
+		<Items16 Type="TColumn">
+			<Alignment>0</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>180</Width>
+					<Order>16</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>180</Width>
+					<Order>16</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>180</Width>
+					<Order>16</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>720</Width>
+					<Order>16</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>180</Width>
+					<Order>16</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>180</Width>
+					<Order>16</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>180</Width>
+					<Order>16</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>180</Width>
+					<Order>16</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>288</Width>
+					<Order>16</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>16</ViewType>
+		</Items16>
+		<Items21 Type="TColumn">
+			<Alignment>0</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>115</Width>
+					<Order>19</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>115</Width>
+					<Order>19</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>115</Width>
+					<Order>19</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>230</Width>
+					<Order>19</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>115</Width>
+					<Order>19</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>115</Width>
+					<Order>19</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>115</Width>
+					<Order>19</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>115</Width>
+					<Order>19</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>184</Width>
+					<Order>19</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>21</ViewType>
+		</Items21>
+		<Items17 Type="TColumn">
+			<Alignment>2</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>45</Width>
+					<Order>9</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>45</Width>
+					<Order>9</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>45</Width>
+					<Order>9</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>90</Width>
+					<Order>9</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>45</Width>
+					<Order>9</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>45</Width>
+					<Order>9</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>45</Width>
+					<Order>9</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>45</Width>
+					<Order>9</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>72</Width>
+					<Order>9</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>17</ViewType>
+		</Items17>
+		<Items31 Type="TColumn">
+			<Alignment>0</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>160</Width>
+					<Order>20</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>160</Width>
+					<Order>20</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>160</Width>
+					<Order>20</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>320</Width>
+					<Order>20</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>160</Width>
+					<Order>20</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>160</Width>
+					<Order>20</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>160</Width>
+					<Order>20</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>160</Width>
+					<Order>20</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>256</Width>
+					<Order>20</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>31</ViewType>
+		</Items31>
+		<Items4 Type="TColumn">
+			<Alignment>2</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>80</Width>
+					<Order>6</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>80</Width>
+					<Order>6</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>80</Width>
+					<Order>6</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>160</Width>
+					<Order>6</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>80</Width>
+					<Order>6</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>80</Width>
+					<Order>6</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>80</Width>
+					<Order>6</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>80</Width>
+					<Order>6</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>128</Width>
+					<Order>6</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>4</ViewType>
+		</Items4>
+		<Items10 Type="TColumn">
+			<Alignment>0</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>96</Width>
+					<Order>8</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>96</Width>
+					<Order>8</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>96</Width>
+					<Order>8</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>192</Width>
+					<Order>8</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>96</Width>
+					<Order>8</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>96</Width>
+					<Order>8</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>96</Width>
+					<Order>8</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>96</Width>
+					<Order>8</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>154</Width>
+					<Order>8</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>10</ViewType>
+		</Items10>
+		<Items19 Type="TColumn">
+			<Alignment>1</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>50</Width>
+					<Order>14</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>50</Width>
+					<Order>14</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>50</Width>
+					<Order>14</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>100</Width>
+					<Order>14</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>50</Width>
+					<Order>14</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>50</Width>
+					<Order>14</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>50</Width>
+					<Order>14</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>50</Width>
+					<Order>14</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>80</Width>
+					<Order>14</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>19</ViewType>
+		</Items19>
+		<Items0 Type="TColumn">
+			<Alignment>0</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>300</Width>
+					<Order>0</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>300</Width>
+					<Order>0</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>300</Width>
+					<Order>0</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>1200</Width>
+					<Order>0</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>300</Width>
+					<Order>0</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>300</Width>
+					<Order>0</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>300</Width>
+					<Order>0</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>300</Width>
+					<Order>0</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>480</Width>
+					<Order>0</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>0</ViewType>
+		</Items0>
+		<Items14 Type="TColumn">
+			<Alignment>0</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>140</Width>
+					<Order>13</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>140</Width>
+					<Order>13</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>140</Width>
+					<Order>13</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>280</Width>
+					<Order>13</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>140</Width>
+					<Order>13</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>140</Width>
+					<Order>13</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>140</Width>
+					<Order>13</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>140</Width>
+					<Order>13</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>224</Width>
+					<Order>13</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>14</ViewType>
+		</Items14>
+		<Items12 Type="TColumn">
+			<Alignment>0</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>125</Width>
+					<Order>10</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>125</Width>
+					<Order>10</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>125</Width>
+					<Order>10</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>250</Width>
+					<Order>10</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>125</Width>
+					<Order>10</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>125</Width>
+					<Order>10</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>125</Width>
+					<Order>10</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>125</Width>
+					<Order>10</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>200</Width>
+					<Order>10</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>12</ViewType>
+		</Items12>
+		<Items6 Type="TColumn">
+			<Alignment>1</Alignment>
+			<Media Type="TColumnInfoCollection">
+				<CollectionItem0 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>85</Width>
+					<Order>11</Order>
+				</CollectionItem0>
+				<CollectionItem1 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>85</Width>
+					<Order>11</Order>
+				</CollectionItem1>
+				<CollectionItem2 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>85</Width>
+					<Order>11</Order>
+				</CollectionItem2>
+				<CollectionItem3 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>170</Width>
+					<Order>11</Order>
+				</CollectionItem3>
+				<CollectionItem4 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>85</Width>
+					<Order>11</Order>
+				</CollectionItem4>
+				<CollectionItem5 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>85</Width>
+					<Order>11</Order>
+				</CollectionItem5>
+				<CollectionItem6 Type="TColumnInfo">
+					<Visible>True</Visible>
+					<Width>85</Width>
+					<Order>11</Order>
+				</CollectionItem6>
+				<CollectionItem7 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>85</Width>
+					<Order>11</Order>
+				</CollectionItem7>
+				<CollectionItem8 Type="TColumnInfo">
+					<Visible>False</Visible>
+					<Width>136</Width>
+					<Order>11</Order>
+				</CollectionItem8>
+			</Media>
+			<ViewType>6</ViewType>
+		</Items6>
+	</Columns>
+	<DefaultScreenMediaType>0</DefaultScreenMediaType>
+	<FilesInTree>True</FilesInTree>
+	<ExpandFilesItems>False</ExpandFilesItems>
+	<UsageCount>3</UsageCount>
+	<StartMetroMode>False</StartMetroMode>
+	<OptionsDoNotAskAgainSelection>0</OptionsDoNotAskAgainSelection>
+	<BoldForPrinting>False</BoldForPrinting>
+	<BoldFactor>15</BoldFactor>
+	<BoldFactorType>0</BoldFactorType>
+	<DetermineIconsOnFileExt>True</DetermineIconsOnFileExt>
+	<Patterns Type="TPatternList">
+		<EmptyPatternListMatchesAll>True</EmptyPatternListMatchesAll>
+	</Patterns>
+	<ColorForCompressed>True</ColorForCompressed>
+	<ColorFullCompressed>16719904</ColorFullCompressed>
+	<ColorPartialCompressed>10485760</ColorPartialCompressed>
+	<GroupBackgroundColor>16765136</GroupBackgroundColor>
+	<MaximumThreads>2</MaximumThreads>
+	<UseLegacyEnumerator>False</UseLegacyEnumerator>
+	<ShowLongTooltips>True</ShowLongTooltips>
+	<ShowInidcatorBarsInTree>True</ShowInidcatorBarsInTree>
+	<IndicatorBarColor1>13432063</IndicatorBarColor1>
+	<IndicatorBarColor2>52479</IndicatorBarColor2>
+	<ViewType>3</ViewType>
+	<RecentlyScannedPaths Type="TRecentlyUsedPaths">
+		<Item0>
+			<Path>C:\</Path>
+			<TimeStamp>42156.7125425</TimeStamp>
+		</Item0>
+	</RecentlyScannedPaths>
+	<MRUMaximum>16</MRUMaximum>
+	<SortType>1</SortType>
+	<ShowErrors>False</ShowErrors>
+	<IndentSizeIndicators>True</IndentSizeIndicators>
+	<GridLinesInDirectoryTree>False</GridLinesInDirectoryTree>
+	<CompareAdjustView>3</CompareAdjustView>
+	<ShowLongScanHint>True</ShowLongScanHint>
+	<AlwaysStartAsAdministrator>False</AlwaysStartAsAdministrator>
+	<AskForRestartAsAdministrator>True</AskForRestartAsAdministrator>
+	<RecentlyUsedFilePaths Type="TRecentlyUsedPaths">
+	</RecentlyUsedFilePaths>
+	<LastListExportType>21</LastListExportType>
+	<LastReportType>2</LastReportType>
+	<EmailTransportType>0</EmailTransportType>
+	<Mail Type="TCdoMessage">
+		<MailFrom></MailFrom>
+		<MailTo></MailTo>
+		<Subject>TreeSize Free Report</Subject>
+		<Body></Body>
+		<Format>0</Format>
+	</Mail>
+	<CdoTransportSettings Type="TCdoTransportSettings">
+		<ServerAddress></ServerAddress>
+		<ServerPort>25</ServerPort>
+		<SenderPort>2</SenderPort>
+		<UseSSL>False</UseSSL>
+		<Username></Username>
+		<Password></Password>
+		<ConnectionTimeout>60</ConnectionTimeout>
+		<AuthenticationType>0</AuthenticationType>
+	</CdoTransportSettings>
+	<ChartColor Type="TJamColorList">
+		<Item0>15764545</Item0>
+		<Item1>4306172</Item1>
+		<Item2>671968</Item2>
+		<Item3>9593861</Item3>
+		<Item4>12566463</Item4>
+		<Item5>6896410</Item5>
+		<Item6>8578047</Item6>
+		<Item7>14523410</Item7>
+		<Item8>4942794</Item8>
+		<Item9>14375936</Item9>
+		<Item10>8966899</Item10>
+		<Item11>8479568</Item11>
+		<Item12>11057649</Item12>
+		<Item13>689120</Item13>
+		<Item14>12489592</Item14>
+		<Item15>2306051</Item15>
+		<Item16>755384</Item16>
+		<Item17>16576</Item17>
+		<Item18>2330219</Item18>
+		<Item19>4163021</Item19>
+		<Item20>49344</Item20>
+		<Item21>2263842</Item21>
+		<Item22>1993170</Item22>
+		<Item23>32896</Item23>
+		<Item24>11186720</Item24>
+		<Item25>6333684</Item25>
+		<Item26>49152</Item26>
+		<Item27>9157775</Item27>
+		<Item28>2237106</Item28>
+		<Item29>342660</Item29>
+		<Item30>192</Item30>
+	</ChartColor>
+	<UniChartColor>15764545</UniChartColor>
+	<ChartFreeSpaceColor>12583104</ChartFreeSpaceColor>
+	<ChartOtherSliceColor>12632256</ChartOtherSliceColor>
+	<ShowDrivesPanel>True</ShowDrivesPanel>
+	<DateTimeFormat>0</DateTimeFormat>
+	<SizeUnit>5</SizeUnit>
+	<Decimals>1</Decimals>
+	<IncludeUnit>1</IncludeUnit>
+	<AclStringFormat>0</AclStringFormat>
+	<DoNotAskAgainList Type="TSerializableStringIntDictionary">
+	</DoNotAskAgainList>
+	<MessageLevel>0</MessageLevel>
+	<ThreadPriority>2</ThreadPriority>
+	<PrinterName></PrinterName>
+	<PrinterOrientation>0</PrinterOrientation>
+	<CheckForUpdateOptions Type="TCheckForUpdateOptions">
+		<LatestOnlineVersion>-1</LatestOnlineVersion>
+		<LastAutomaticCheckForUpdate>0</LastAutomaticCheckForUpdate>
+		<CheckForUpdatesAutomatically>True</CheckForUpdatesAutomatically>
+	</CheckForUpdateOptions>
+	<Tag>0</Tag>
+</GlobalOptions>

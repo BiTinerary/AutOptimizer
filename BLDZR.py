@@ -55,11 +55,12 @@ class StartPage(tk.Frame): # First initial frame.
 			TASKMGR = 'taskmgr /0 /startup'
 			SERVICES = 'services.msc'
 			TASKSCHD = 'taskschd.msc'
+			TREESIZEFREE = '"%CD%/ProgFiles/treesizefree/treesizefree.exe"'
 			BULKUNINST = '"%CD%/ProgFiles/myuninstaller/myuninst.exe"'
 			RMBROWSERADDONS = '"%CD%/ProgFiles/avastbrowsercleanup.exe"'
 			CLEANMGR = 'cleanmgr /sageset99 && cleanmgr /sagerun99'
 
-			AutOptCommands = [TASKMGR, RMBROWSERADDONS, BULKUNINST, SERVICES, TASKSCHD, CLEANMGR]
+			AutOptCommands = [TASKMGR, RMBROWSERADDONS, BULKUNINST, SERVICES, TREESIZEFREE, TASKSCHD, CLEANMGR]
 			
 			for Command in AutOptCommands:
 				#print Command
@@ -148,7 +149,7 @@ class AutOptimizer(tk.Frame): # frame 3
 		self.PageTwoImage5 = ImageTk.PhotoImage(file=icondirectory + 'cleanmgr.png')
 		self.PageTwoImage6 = ImageTk.PhotoImage(file=icondirectory + 'nirsoft.png')
 		self.PageTwoImage7 = ImageTk.PhotoImage(file=icondirectory + 'AvastBrowserCleanup.png')
-		self.PageTwoImage8 = ImageTk.PhotoImage(file=icondirectory + 'WinDirStat.png')
+		self.PageTwoImage8 = ImageTk.PhotoImage(file=icondirectory + 'treesizefree.png')
 		self.PageTwoImage9 = ImageTk.PhotoImage(file=icondirectory + 'synergy.png')
 
 		label = tk.Label(self, text="Page 2", bg="orange", font=TITLE_FONT)
@@ -164,7 +165,7 @@ class AutOptimizer(tk.Frame): # frame 3
 		PageTwoButton6 = tk.Button(self, compound="top", image=self.PageTwoImage6, text="Bulk Uninstaller", command=lambda: subprocess.Popen('"%CD%/ProgFiles/myuninstaller/myuninst.exe"', shell=True))
 
 		PageTwoButton7 = tk.Button(self, compound="top", image=self.PageTwoImage7, text="Browser Addons", command=lambda: subprocess.Popen('"%CD%/ProgFiles/avastbrowsercleanup.exe"', shell=True))
-		PageTwoButton8 = tk.Button(self, compound="top", image=self.PageTwoImage8, text="WinDirStat", command=lambda: subprocess.Popen('"%CD%/ProgFiles/WinDirStat.cameyo.exe" -SafeMode', shell=True))
+		PageTwoButton8 = tk.Button(self, compound="top", image=self.PageTwoImage8, text="TreeSizeFree", command=lambda: subprocess.Popen('"%CD%/ProgFiles/treesizefree/treesizefree.exe"', shell=True))
 		PageTwoButton9 = tk.Button(self, compound="top", image=self.PageTwoImage9, text="Synergy", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Synergy.cameyo.exe"', shell=True))
 
 		BackButton0.grid(row=0, column=0, columnspan=4)
