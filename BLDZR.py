@@ -6,17 +6,6 @@ from PIL import ImageTk
 global icondirectory
 icondirectory = "./ProgFiles/Icons/" # As guessed, static directory where all icons are stored.
 
-TITLE_FONT = ("Helvetica", 18, "bold")
-
-def center(toplevel):
-    toplevel.update_idletasks()
-    w = toplevel.winfo_screenwidth()
-    h = toplevel.winfo_screenheight()
-    size = tuple(int(_) for _ in toplevel.geometry().split('+')[0].split('x'))
-    x = w/2 - size[0]/2
-    y = h/2 - size[1]/2
-    toplevel.geometry("%dx%d+%d+%d" % (size + (x, y)))
-
 class MainApp(tk.Tk):
 
 	def __init__(self, *args, **kwargs): # Container is where the Windows are stacked on top of each other. As one Winodow is selected/executed, it is raised above the others.
@@ -27,7 +16,7 @@ class MainApp(tk.Tk):
 		container.grid_rowconfigure(0)
 		container.grid_columnconfigure(0)
 
-		self.frames = {} # Put pages into the same location (where you can open it on center screen?) and the selected one is made visible.
+		self.frames = {} # Put pages into the same location and the selected one is made visible.
 		for F in (StartPage, DiagnosticRepairProgs, AutOptimizer, HardwareTester, ChocolateyAndInstall):
 			frame = F(container, self)
 			self.frames[F] = frame
@@ -39,13 +28,13 @@ class MainApp(tk.Tk):
 		frame = self.frames[c]
 		frame.tkraise()
 
-class StartPage(tk.Frame): # First initial frame.
+class StartPage(tk.Frame): # First initial frame. Which contains primary classes/functions.
 
 	def __init__(self, parent, controller):
 
 		tk.Frame.__init__(self, parent)
 
-		def AllHardwareTesterButtons():
+		def AllHardwareTesterButtons(): # Sequentially run hardware diagnostic programs.
 			BATTERY = '"%CD%/ProgFiles/batteryinfoview/batteryinfoview.exe"'
 			CAMERA = '"%CD%/ProgFiles/Camera.exe"'
 			LEFTSPKR = '"%CD%/ProgFiles/cmdmp3/cmdmp3.exe" "%CD%/ProgFiles/cmdmp3/Left.mp3"'
@@ -54,14 +43,14 @@ class StartPage(tk.Frame): # First initial frame.
 			IMPORTWIFI = 'cd "%CD%/ProgFiles/wirelesskeyview" && WirelessKeyView.exe /import "%CD%/ProgFiles/wirelesskeyview/WiFiKeysBackup.txt"'
 			ACTIVATION = 'slmgr /xpr'
 
-			HardwareTestingCommands = [IMPORTWIFI, LEFTSPKR, RIGHTSPKR, ACTIVATION, HDDSMART, BATTERY, CAMERA]
+			HardwareTestingCommands = [IMPORTWIFI, LEFTSPKR, RIGHTSPKR, ACTIVATION, HDDSMART, BATTERY, CAMERA] #Above commands stored in list
 			
-			for Command in HardwareTestingCommands:
+			KeyboardTester() # Call the keyboard class
+			for Command in HardwareTestingCommands: # Sequentially execute each variable stored in HardwareTestingCommands list.
 				#print Command
 				subprocess.call(Command, shell=True) #subprocess.check_call((command), shell=True)
-			KeyboardTester()
 
-		def AllAutOptimizerButtons():
+		def AllAutOptimizerButtons(): # Sequentially run hardware diagnostic programs.
 			TASKMGR = 'taskmgr /0 /startup'
 			SERVICES = 'services.msc'
 			TASKSCHD = 'taskschd.msc'
@@ -72,7 +61,7 @@ class StartPage(tk.Frame): # First initial frame.
 
 			AutOptCommands = [TASKMGR, JUNKREMTOOL, BULKUNINST, TREESIZEFREE, TASKSCHD, CLEANMGR, SERVICES]
 			
-			for Command in AutOptCommands:
+			for Command in AutOptCommands: # Sequentially execute each variable stored in AutOptCommands list.
 				#print Command
 				subprocess.call(Command, shell=True) #subprocess.check_call((command), shell=True)
 
@@ -85,12 +74,12 @@ class StartPage(tk.Frame): # First initial frame.
 		StartPageLabel1 = tk.Label(self, width=1, height=2)
 		StartPageLabel1.grid(row=2, column=2, padx=0, pady=60)
 
-		self.StartImage0 = ImageTk.PhotoImage(file=icondirectory + 'removedrive.png')
-		self.StartImage1 = ImageTk.PhotoImage(file=icondirectory + 'closeall.png')
-		self.StartImage2 = ImageTk.PhotoImage(file=icondirectory + 'optimize.png')
-		self.StartImage3 = ImageTk.PhotoImage(file=icondirectory + 'repairprogs.png')
-		self.StartImage4 = ImageTk.PhotoImage(file=icondirectory + 'hardware.png')
-		self.StartImage5 = ImageTk.PhotoImage(file=icondirectory + 'install.png')
+		self.StartImage0 = ImageTk.PhotoImage(file=icondirectory + 'removedrive.png') # More icons tied to specific buttons.
+		self.StartImage1 = ImageTk.PhotoImage(file=icondirectory + 'closeall.png') #
+		self.StartImage2 = ImageTk.PhotoImage(file=icondirectory + 'optimize.png') #
+		self.StartImage3 = ImageTk.PhotoImage(file=icondirectory + 'repairprogs.png') #
+		self.StartImage4 = ImageTk.PhotoImage(file=icondirectory + 'hardware.png') #
+		self.StartImage5 = ImageTk.PhotoImage(file=icondirectory + 'install.png') #
 
 		StartPageButton0 = tk.Button(self, compound="top", image=self.StartImage0, text="Eject USB", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/RemoveDrive.exe" . -l -b -e', shell=True))
 		StartPageButton1 = tk.Button(self, compound="top", image=self.StartImage1, text="Close All Windows", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/CloseAll.exe"', shell=True))
@@ -164,8 +153,6 @@ class AutOptimizer(tk.Frame): # frame 3
 		self.PageTwoImage8 = ImageTk.PhotoImage(file=icondirectory + 'treesizefree.png')
 		self.PageTwoImage9 = ImageTk.PhotoImage(file=icondirectory + 'synergy.png')
 
-		label = tk.Label(self, text="Page 2", bg="orange", font=TITLE_FONT)
-
 		BackButton0 = tk.Button(self, width=60, height=2, text="Go Back", command=lambda: controller.show_frame(StartPage))
 
 		PageTwoButton1 = tk.Button(self, compound="top", image=self.PageTwoImage1, text="Startup Progams", command=lambda: subprocess.Popen('taskmgr /0 /startup', shell=True)) # "%CD%/ProgFiles/whatinstartup/whatinstartup.exe" && taskmgr /0 /startup
@@ -194,44 +181,9 @@ class AutOptimizer(tk.Frame): # frame 3
 		PageTwoButton8.grid(row=3, column=2, padx=20, pady=10)
 		PageTwoButton9.grid(row=3, column=3, padx=20, pady=10)
 
-class KeyboardTester(tk.Tk):
-	def __init__(self):
-		tk.Tk.__init__(self)
-
-		self.title("KeyBoard Testing")
-
-		LABEL1 = tk.Label(self, compound="left", text="Test the keyboard using the four main rows of ASCII characters 0-9 and a-z.")
-		LABEL1.grid(row=0, column=0, columnspan=3)
-
-		LABEL2 = tk.Label(self, compound="left", text="ie: 1234567890qwertyuiopasdfghjklzxcvbnm                               ")
-		LABEL2.grid(row=1, column=0, columnspan=2)
-
-		INPUTRETURN = tk.Entry(self, bd=5, width=58)
-		INPUTRETURN.grid(row=2, column=0, columnspan=3)
-
-		def ButtonPressVerification(input):
-			VERIFICATION = INPUTRETURN.get()
-			qwertyuiop = "1234567890qwertyuiopasdfghjklzxcvbnm"
-
-			if VERIFICATION.lower() == qwertyuiop:
-				#print "VERIFIED"
-				self.destroy()
-
-			else:
-				#print "TRY AGAIN!!"
-				self.destroy()
-				KeyboardTester()
-
-		BUTTON = tk.Button(self, width=50, height=2, text="Click or Press Enter", command=lambda: ButtonPressVerification())
-		BUTTON.grid(row=3, column=0, columnspan=3)
-
-		self.bind('<Return>',(lambda event: ButtonPressVerification(INPUTRETURN.get())))
-		self.mainloop
-
 class HardwareTester(tk.Frame):
 	def __init__(self, parent, controller):
 		tk.Frame.__init__(self, parent)
-		label = tk.Label(self, text="Page 3", font=TITLE_FONT)
 
 		self.PageThreeImage1 = ImageTk.PhotoImage(file=icondirectory + 'BatteryInfoView.png')
 		self.PageThreeImage2 = ImageTk.PhotoImage(file=icondirectory + 'keyboard.png')
@@ -277,7 +229,6 @@ class HardwareTester(tk.Frame):
 class ChocolateyAndInstall(tk.Frame):
 	def __init__(self, parent, controller):
 		tk.Frame.__init__(self, parent)
-		label = tk.Label(self, text="Page 3", font=TITLE_FONT)
 
 		self.PageThreeImage1 = ImageTk.PhotoImage(file=icondirectory + 'python.png')
 		self.PageThreeImage2 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
@@ -317,14 +268,59 @@ class ChocolateyAndInstall(tk.Frame):
 		PageThreeButton8.grid(row=3, column=1, padx=20, pady=10)
 		PageThreeButton9.grid(row=3, column=3, padx=20, pady=10)
 
+class KeyboardTester(tk.Tk): # Custom keyboard tester.
+	def __init__(self):
+		tk.Tk.__init__(self)
+
+		self.title("KeyBoard Testing")
+
+		LABEL1 = tk.Label(self, compound="left", text="Test the keyboard using the four main rows of ASCII characters 0-9 and a-z.")
+		LABEL1.grid(row=0, column=0, columnspan=3)
+
+		LABEL2 = tk.Label(self, compound="left", text="ie: 1234567890qwertyuiopasdfghjklzxcvbnm                               ")
+		LABEL2.grid(row=1, column=0, columnspan=2)
+
+		INPUTRETURN = tk.Entry(self, bd=5, width=58) # create GUI prompt for end user/character input
+		INPUTRETURN.grid(row=2, column=0, columnspan=3) # create ^ and store in a grid
+
+		def ButtonPressVerification(input):
+			VERIFICATION = INPUTRETURN.get() # grabs whatever input provided by enduser and assigns it as "VERIFICATION" variable
+			qwertyuiop = "1234567890qwertyuiopasdfghjklzxcvbnm" # dynamic/hardcoded string for cross referencing enduser input.
+
+			if VERIFICATION.lower() == qwertyuiop: # decapitalize all characters in VERIFICATION string (end user input) and `IF` it's exactly equal to `qwertyuiop` string...
+				#print "VERIFIED"
+				self.destroy() #.... allow the end user access to initial window by "destroying" keyboard tester window. Similar to the exit() command but for individual child/GUI windows.
+
+			else:
+				#print "TRY AGAIN!!"
+				self.destroy() #... destroy current keyboard tester window (for visual notification)
+				KeyboardTester() #.... and restart the entire function.
+
+		BUTTON = tk.Button(self, width=50, height=2, text="Click or Press Enter", command=lambda: ButtonPressVerification()) # button for Enduser to "submit" characters to `VERIFICATION` variable
+		BUTTON.grid(row=3, column=0, columnspan=3) # creates this button and assigns to grid placement
+
+		self.bind('<Return>',(lambda event: ButtonPressVerification(INPUTRETURN.get()))) # connect/BIND the "Return" (aka enter) key with the previously mentioned button. 
+		self.mainloop
+
+def center(toplevel): # Function for centering all windows upon execution
+    toplevel.update_idletasks()
+    w = toplevel.winfo_screenwidth() #function for finding resolution
+    h = toplevel.winfo_screenheight() #function for finding resolution
+    size = tuple(int(_) for _ in toplevel.geometry().split('+')[0].split('x'))
+    x = w/2 - size[0]/2 # find the middle of current resolution
+    y = h/2 - size[1]/2 # find the middle of current resolution
+    toplevel.geometry("%dx%d+%d+%d" % (size + (x, y)))
+
 if __name__ == "__main__": # Executes the main app (which then executes the other classes) and ties everyting together.
 	app = MainApp()
 	app.title("B.L.D.Z.R                                                                         ") # Title seen in top bar
 	app.iconbitmap(icondirectory + 'BLDZR.ico') # icon seen in top left hand corner of prog window
-	center(app) # Center all windows
-	app.mainloop() # ties together
+	center(app) # Call Center all windows function
+	app.mainloop() # ties all GUI windows/classes together
 
 
+	#TODO#
+	
 		# CHECK DRIVERS
 		# "Keyboard" gets it's own Class so as to load Keyboard input window within same window as other classes
 		#Synergy
