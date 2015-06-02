@@ -242,8 +242,8 @@ class ChocolateyAndInstall(tk.Frame):
 
 		BackButton0 = tk.Button(self, width=60, height=2, text="Go Back", command=lambda: controller.show_frame(StartPage))
 
-		PageThreeButton1 = tk.Button(self, compound="top", image=self.PageThreeImage1, text="Python EnVars", command=lambda: os.system("@powershell -NoProfile -ExecutionPolicy Bypass -Command " + "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" + "&& SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"))
-		PageThreeButton2 = tk.Button(self, compound="top", image=self.PageThreeImage2, text="Chocolatey", command=lambda: subprocess.Popen())
+		PageThreeButton1 = tk.Button(self, compound="top", image=self.PageThreeImage1, text="Python EnVars", command=lambda: os.system("%CD%/ProgFiles/batch/addpythonvars.bat"))
+		PageThreeButton2 = tk.Button(self, compound="top", image=self.PageThreeImage2, text="Chocolatey", command=lambda: subprocess.Popen("@powershell -NoProfile -ExecutionPolicy Bypass -Command " + "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" + "&& SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin", shell=True))
 		PageThreeButton3 = tk.Button(self, compound="top", image=self.PageThreeImage3, text="Choco Script", command=lambda: os.system('%CD%/ProgFiles/batch/chocoinstall.bat'))
 
 		PageThreeButton4 = tk.Button(self, compound="top", image=self.PageThreeImage4, text="Vbox Guest", command=lambda: subprocess.Popen('', shell=True))
