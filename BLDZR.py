@@ -8,6 +8,15 @@ icondirectory = "./ProgFiles/Icons/" # As guessed, static directory where all ic
 
 TITLE_FONT = ("Helvetica", 18, "bold")
 
+def center(toplevel):
+    toplevel.update_idletasks()
+    w = toplevel.winfo_screenwidth()
+    h = toplevel.winfo_screenheight()
+    size = tuple(int(_) for _ in toplevel.geometry().split('+')[0].split('x'))
+    x = w/2 - size[0]/2
+    y = h/2 - size[1]/2
+    toplevel.geometry("%dx%d+%d+%d" % (size + (x, y)))
+
 class MainApp(tk.Tk):
 
 	def __init__(self, *args, **kwargs): # Container is where the Windows are stacked on top of each other. As one Winodow is selected/executed, it is raised above the others.
@@ -81,7 +90,7 @@ class StartPage(tk.Frame): # First initial frame.
 		self.StartImage2 = ImageTk.PhotoImage(file=icondirectory + 'optimize.png')
 		self.StartImage3 = ImageTk.PhotoImage(file=icondirectory + 'repairprogs.png')
 		self.StartImage4 = ImageTk.PhotoImage(file=icondirectory + 'hardware.png')
-		self.StartImage5 = ImageTk.PhotoImage(file=icondirectory + 'hardware.png')
+		self.StartImage5 = ImageTk.PhotoImage(file=icondirectory + 'install.png')
 
 		StartPageButton0 = tk.Button(self, compound="top", image=self.StartImage0, text="Eject USB", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/RemoveDrive.exe" . -l -b -e', shell=True))
 		StartPageButton1 = tk.Button(self, compound="top", image=self.StartImage1, text="Close All Windows", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/CloseAll.exe"', shell=True))
@@ -270,7 +279,7 @@ class ChocolateyAndInstall(tk.Frame):
 		tk.Frame.__init__(self, parent)
 		label = tk.Label(self, text="Page 3", font=TITLE_FONT)
 
-		self.PageThreeImage1 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageThreeImage1 = ImageTk.PhotoImage(file=icondirectory + 'python.png')
 		self.PageThreeImage2 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
 		self.PageThreeImage3 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
 		self.PageThreeImage4 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
@@ -312,6 +321,7 @@ if __name__ == "__main__": # Executes the main app (which then executes the othe
 	app = MainApp()
 	app.title("B.L.D.Z.R                                                                         ") # Title seen in top bar
 	app.iconbitmap(icondirectory + 'BLDZR.ico') # icon seen in top left hand corner of prog window
+	center(app) # Center all windows
 	app.mainloop() # ties together
 
 
