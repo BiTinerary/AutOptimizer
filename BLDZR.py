@@ -1,3 +1,4 @@
+import os
 import subprocess
 import Tkinter as tk
 from PIL import ImageTk
@@ -18,7 +19,7 @@ class MainApp(tk.Tk):
 		container.grid_columnconfigure(0)
 
 		self.frames = {} # Put pages into the same location (where you can open it on center screen?) and the selected one is made visible.
-		for F in (StartPage, DiagnosticRepairProgs, AutOptimizer, HardwareTester):
+		for F in (StartPage, DiagnosticRepairProgs, AutOptimizer, HardwareTester, ChocolateyAndInstall):
 			frame = F(container, self)
 			self.frames[F] = frame
 			frame.grid(row=0, column=0, sticky="nswe")
@@ -57,10 +58,10 @@ class StartPage(tk.Frame): # First initial frame.
 			TASKSCHD = 'taskschd.msc'
 			TREESIZEFREE = '"%CD%/ProgFiles/treesizefree/treesizefree.exe"'
 			BULKUNINST = '"%CD%/ProgFiles/myuninstaller/myuninst.exe"'
-			RMBROWSERADDONS = '"%CD%/ProgFiles/avastbrowsercleanup.exe"'
+			JUNKREMTOOL = '"%CD%/ProgFiles/JRT.exe"'
 			CLEANMGR = 'cleanmgr /sageset99 && cleanmgr /sagerun99'
 
-			AutOptCommands = [TASKMGR, RMBROWSERADDONS, BULKUNINST, SERVICES, TREESIZEFREE, TASKSCHD, CLEANMGR]
+			AutOptCommands = [TASKMGR, JUNKREMTOOL, BULKUNINST, TREESIZEFREE, TASKSCHD, CLEANMGR, SERVICES]
 			
 			for Command in AutOptCommands:
 				#print Command
@@ -69,30 +70,32 @@ class StartPage(tk.Frame): # First initial frame.
 		TopAutOptimizerButton0 = tk.Button(self, width=15, height=2, text="Quick Start AutOptimizer", command=lambda: AllAutOptimizerButtons()) # Auto All button
 		TopAutoHardwareButton1 = tk.Button(self, width=15, height=2, text="Quick Start Hardware Tester", command=lambda: AllHardwareTesterButtons()) # Auto All button
 
-		self.StartImage0 = ImageTk.PhotoImage(file=icondirectory + 'repairprogs.png')
-		self.StartImage1 = ImageTk.PhotoImage(file=icondirectory + 'optimize.png')
-		self.StartImage2 = ImageTk.PhotoImage(file=icondirectory + 'hardware.png')
-		self.StartImage3 = ImageTk.PhotoImage(file=icondirectory + 'removedrive.png')
-		self.StartImage4 = ImageTk.PhotoImage(file=icondirectory + 'closeall.png')
-
-		StartPageLabel1 = tk.Label(self, width=1, height=2)
-
-		StartPageButton0 = tk.Button(self, compound="top", image=self.StartImage0, text="Repair Programs", fg="black", command=lambda: controller.show_frame(DiagnosticRepairProgs))
-		StartPageButton1 = tk.Button(self, compound="top", image=self.StartImage1, text="AutOptimizer", fg="black", command=lambda: controller.show_frame(AutOptimizer))
-		StartPageButton2 = tk.Button(self, compound="top", image=self.StartImage2, text="Hardware Tester", fg="black", command=lambda: controller.show_frame(HardwareTester))
-		StartPageButton3 = tk.Button(self, compound="top", image=self.StartImage3, text="Eject USB", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/RemoveDrive.exe" . -l -b -e', shell=True))
-		StartPageButton4 = tk.Button(self, compound="top", image=self.StartImage4, text="Close All Windows", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/CloseAll.exe"', shell=True))
-
 		TopAutOptimizerButton0.grid(row=0, columnspan=3, ipadx=50, padx=(0,60), pady=0)
 		TopAutoHardwareButton1.grid(row=0, column=2, columnspan=2, ipadx=50, padx=(60,0), pady=0)
 
+		StartPageLabel1 = tk.Label(self, width=1, height=2)
 		StartPageLabel1.grid(row=2, column=2, padx=0, pady=60)
 
-		StartPageButton0.grid(row=3, column=2, padx=20, pady=10) # .Grid() function which easily places buttons symetrically.
-		StartPageButton1.grid(row=3, column=1, padx=20, pady=10) #
-		StartPageButton2.grid(row=3, column=3, padx=20, pady=10) #
-		StartPageButton3.grid(row=1, column=1, padx=20, pady=10) #
-		StartPageButton4.grid(row=1, column=3, padx=20, pady=10) #
+		self.StartImage0 = ImageTk.PhotoImage(file=icondirectory + 'removedrive.png')
+		self.StartImage1 = ImageTk.PhotoImage(file=icondirectory + 'closeall.png')
+		self.StartImage2 = ImageTk.PhotoImage(file=icondirectory + 'optimize.png')
+		self.StartImage3 = ImageTk.PhotoImage(file=icondirectory + 'repairprogs.png')
+		self.StartImage4 = ImageTk.PhotoImage(file=icondirectory + 'hardware.png')
+		self.StartImage5 = ImageTk.PhotoImage(file=icondirectory + 'hardware.png')
+
+		StartPageButton0 = tk.Button(self, compound="top", image=self.StartImage0, text="Eject USB", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/RemoveDrive.exe" . -l -b -e', shell=True))
+		StartPageButton1 = tk.Button(self, compound="top", image=self.StartImage1, text="Close All Windows", fg="black", command=lambda: subprocess.Popen('"%CD%/ProgFiles/CloseAll.exe"', shell=True))
+		StartPageButton2 = tk.Button(self, compound="top", image=self.StartImage2, text="AutOptimizer", fg="black", command=lambda: controller.show_frame(AutOptimizer))
+		StartPageButton3 = tk.Button(self, compound="top", image=self.StartImage3, text="Repair Programs", fg="black", command=lambda: controller.show_frame(DiagnosticRepairProgs))
+		StartPageButton4 = tk.Button(self, compound="top", image=self.StartImage4, text="Hardware Tester", fg="black", command=lambda: controller.show_frame(HardwareTester))
+		StartPageButton5 = tk.Button(self, compound="top", image=self.StartImage5, text="Misc. Install", fg="black", command=lambda: controller.show_frame(ChocolateyAndInstall))
+
+		StartPageButton0.grid(row=1, column=1, padx=20, pady=10) #
+		StartPageButton1.grid(row=1, column=3, padx=20, pady=10) #
+		StartPageButton2.grid(row=3, column=1, padx=20, pady=10) #
+		StartPageButton3.grid(row=2, column=2, padx=20, pady=10) # .Grid() function which easily places buttons symetrically as opposed to .pack()
+		StartPageButton4.grid(row=3, column=3, padx=20, pady=10) #
+		StartPageButton5.grid(row=3, column=2, padx=20, pady=10) #
 
 class DiagnosticRepairProgs(tk.Frame): # secondary frame.
 
@@ -115,7 +118,7 @@ class DiagnosticRepairProgs(tk.Frame): # secondary frame.
 		PageOneButton2 = tk.Button(self, compound="top", image=self.PageOneImage2, text="Rootkit Scanner", command=lambda: subprocess.Popen('"%CD%/ProgFiles/aswMBR.exe"', shell=True)) #
 		PageOneButton3 = tk.Button(self, compound="top", image=self.PageOneImage3, text="SuperAntiSpyware", command=lambda: subprocess.Popen('"%CD%/ProgFiles/superantispyware/superantispyware.exe"', shell=True)) #
 
-		PageOneButton4 = tk.Button(self, compound="top", image=self.PageOneImage4, text="Rkill (Wait for Log)", command=lambda: subprocess.Popen('"%CD%/ProgFiles/rkill.exe" -w "%CD%/ProgFiles/whitelist.txt"', shell=True)) #
+		PageOneButton4 = tk.Button(self, compound="top", image=self.PageOneImage4, text="Rkill (Wait for Log)", command=lambda: subprocess.Popen('"%CD%/ProgFiles/rkill.exe" -w "%CD%/ProgFiles/batch/whitelist.txt"', shell=True)) #
 		PageOneButton5 = tk.Button(self, compound="top", image=self.PageOneImage5, text="AIO Windows Repair", command=lambda: subprocess.Popen('"%CD%/ProgFiles/tweaking/Repair_Windows.exe"', shell=True)) #
 		PageOneButton6 = tk.Button(self, compound="top", image=self.PageOneImage6, text="Shadow Explorer", command=lambda: subprocess.Popen('"%CD%/ProgFiles/shadowexplorer/ShadowExplorerPortable.exe"', shell=True)) #
 
@@ -148,7 +151,7 @@ class AutOptimizer(tk.Frame): # frame 3
 		self.PageTwoImage4 = ImageTk.PhotoImage(file=icondirectory + 'bleachbit.png')
 		self.PageTwoImage5 = ImageTk.PhotoImage(file=icondirectory + 'cleanmgr.png')
 		self.PageTwoImage6 = ImageTk.PhotoImage(file=icondirectory + 'nirsoft.png')
-		self.PageTwoImage7 = ImageTk.PhotoImage(file=icondirectory + 'AvastBrowserCleanup.png')
+		self.PageTwoImage7 = ImageTk.PhotoImage(file=icondirectory + 'JRT.png')
 		self.PageTwoImage8 = ImageTk.PhotoImage(file=icondirectory + 'treesizefree.png')
 		self.PageTwoImage9 = ImageTk.PhotoImage(file=icondirectory + 'synergy.png')
 
@@ -164,7 +167,7 @@ class AutOptimizer(tk.Frame): # frame 3
 		PageTwoButton5 = tk.Button(self, compound="top", image=self.PageTwoImage5, text="CleanMgr", command=lambda: subprocess.Popen('cleanmgr /sageset99 && cleanmgr /sagerun99' , shell=True))
 		PageTwoButton6 = tk.Button(self, compound="top", image=self.PageTwoImage6, text="Bulk Uninstaller", command=lambda: subprocess.Popen('"%CD%/ProgFiles/myuninstaller/myuninst.exe"', shell=True))
 
-		PageTwoButton7 = tk.Button(self, compound="top", image=self.PageTwoImage7, text="Browser Addons", command=lambda: subprocess.Popen('"%CD%/ProgFiles/avastbrowsercleanup.exe"', shell=True))
+		PageTwoButton7 = tk.Button(self, compound="top", image=self.PageTwoImage7, text="Junkware Removal", command=lambda: subprocess.Popen('"%CD%/ProgFiles/JRT.exe"', shell=True))
 		PageTwoButton8 = tk.Button(self, compound="top", image=self.PageTwoImage8, text="TreeSizeFree", command=lambda: subprocess.Popen('"%CD%/ProgFiles/treesizefree/treesizefree.exe"', shell=True))
 		PageTwoButton9 = tk.Button(self, compound="top", image=self.PageTwoImage9, text="Synergy", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Synergy.cameyo.exe"', shell=True))
 
@@ -262,6 +265,56 @@ class HardwareTester(tk.Frame):
 		PageThreeButton7A.grid(row=3, column=2, padx=20, pady=(5,65))
 		PageThreeButton9.grid(row=3, column=3, padx=20, pady=10)
 
+class ChocolateyAndInstall(tk.Frame):
+	def __init__(self, parent, controller):
+		tk.Frame.__init__(self, parent)
+		label = tk.Label(self, text="Page 3", font=TITLE_FONT)
+
+		self.PageThreeImage1 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageThreeImage2 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageThreeImage3 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageThreeImage4 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageThreeImage5 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageThreeImage6 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageThreeImage7 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageThreeImage8 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageThreeImage9 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+
+		BackButton0 = tk.Button(self, width=60, height=2, text="Go Back", command=lambda: controller.show_frame(StartPage))
+
+		PageThreeButton1 = tk.Button(self, compound="top", image=self.PageThreeImage1, text="Python EnVars", command=lambda: os.system("@powershell -NoProfile -ExecutionPolicy Bypass -Command " + "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" + "&& SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"))
+		PageThreeButton2 = tk.Button(self, compound="top", image=self.PageThreeImage2, text="Chocolatey", command=lambda: subprocess.Popen())
+		PageThreeButton3 = tk.Button(self, compound="top", image=self.PageThreeImage3, text="Choco Script", command=lambda: os.system('%CD%/ProgFiles/batch/chocoinstall.bat'))
+
+		PageThreeButton4 = tk.Button(self, compound="top", image=self.PageThreeImage4, text="Vbox Guest", command=lambda: subprocess.Popen('', shell=True))
+		PageThreeButton5 = tk.Button(self, compound="top", image=self.PageThreeImage5, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
+		PageThreeButton6 = tk.Button(self, compound="top", image=self.PageThreeImage6, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
+
+		PageThreeButton7 = tk.Button(self, compound="top", image=self.PageThreeImage7, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
+		PageThreeButton8 = tk.Button(self, compound="top", image=self.PageThreeImage8, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
+		PageThreeButton9 = tk.Button(self, compound="top", image=self.PageThreeImage9, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
+
+		BackButton0.grid(row=0, column=0, columnspan=4)
+
+		PageThreeButton1.grid(row=1, column=1, padx=20, pady=10)
+		PageThreeButton2.grid(row=1, column=2, padx=20, pady=10)
+		PageThreeButton3.grid(row=1, column=3, padx=20, pady=10)
+
+		PageThreeButton4.grid(row=2, column=1, padx=20, pady=10)
+		PageThreeButton5.grid(row=2, column=2, padx=20, pady=10)
+		PageThreeButton6.grid(row=2, column=3, padx=20, pady=10)
+
+		PageThreeButton7.grid(row=3, column=2, padx=20, pady=10)
+		PageThreeButton8.grid(row=3, column=1, padx=20, pady=10)
+		PageThreeButton9.grid(row=3, column=3, padx=20, pady=10)
+
+if __name__ == "__main__": # Executes the main app (which then executes the other classes) and ties everyting together.
+	app = MainApp()
+	app.title("B.L.D.Z.R                                                                         ") # Title seen in top bar
+	app.iconbitmap(icondirectory + 'BLDZR.ico') # icon seen in top left hand corner of prog window
+	app.mainloop() # ties together
+
+
 		# CHECK DRIVERS
 		# "Keyboard" gets it's own Class so as to load Keyboard input window within same window as other classes
 		#Synergy
@@ -273,9 +326,4 @@ class HardwareTester(tk.Frame):
 		#Chocolatey
 		#Unhide
 		#AntiVirusProg Removal
-
-if __name__ == "__main__": # Executes the main app (which then executes the other classes) and ties everyting together.
-	app = MainApp()
-	app.title("B.L.D.Z.R                                                                         ") # Title seen in top bar
-	app.iconbitmap(icondirectory + 'BLDZR.ico') # icon seen in top left hand corner of prog window
-	app.mainloop() # ties together
+		#Comodo (rm proc hacker)
