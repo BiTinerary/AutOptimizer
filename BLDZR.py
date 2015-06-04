@@ -6,8 +6,16 @@ from PIL import ImageTk
 global icondirectory
 icondirectory = "./ProgFiles/Icons/" # As guessed, static directory where all icons are stored.
 
-class MainApp(tk.Tk):
+def center(toplevel): # Function for centering all windows upon execution. This is first so that it is loaded before the creation of windows to minimize window 'flicker' upon execution.
+    toplevel.update_idletasks()
+    w = toplevel.winfo_screenwidth() #function for finding resolution
+    h = toplevel.winfo_screenheight() #function for finding resolution
+    size = tuple(int(_) for _ in toplevel.geometry().split('+')[0].split('x'))
+    x = w/2 - size[0]/2 # find the middle of current resolution
+    y = h/2 - size[1]/2 # find the middle of current resolution
+    toplevel.geometry("%dx%d+%d+%d" % (size + (x, y)))
 
+class MainApp(tk.Tk):
 	def __init__(self, *args, **kwargs): # Container is where the Windows are stacked on top of each other. As one Winodow is selected/executed, it is raised above the others.
 		tk.Tk.__init__(self, *args, **kwargs)
 
@@ -23,15 +31,20 @@ class MainApp(tk.Tk):
 			frame.grid(row=0, column=0, sticky="nswe")
 
 		self.show_frame(StartPage)
+		self.bind('0',(lambda event: self.show_frame(StartPage)))
+		self.bind('1',(lambda event: self.show_frame(AutOptimizer)))
+		self.bind('2',(lambda event: self.show_frame(ChocolateyAndInstall)))
+		self.bind('3',(lambda event: self.show_frame(HardwareTester)))
+		self.bind('5',(lambda event: self.show_frame(DiagnosticRepairProgs)))
+		#self.bind('7',(lambda event: subprocess.Popen('"%CD%/ProgFiles/RemoveDrive.exe" . -l -b -e', shell=True)))
+		#self.bind('9',(lambda event: subprocess.Popen('"%CD%/ProgFiles/CloseAll.exe"', shell=True)))
 
 	def show_frame(self, c):
 		frame = self.frames[c]
 		frame.tkraise()
 
 class StartPage(tk.Frame): # First initial frame. Which contains primary classes/functions.
-
 	def __init__(self, parent, controller):
-
 		tk.Frame.__init__(self, parent)
 
 		def AllHardwareTesterButtons(): # Sequentially run hardware diagnostic programs.
@@ -96,7 +109,6 @@ class StartPage(tk.Frame): # First initial frame. Which contains primary classes
 		StartPageButton5.grid(row=3, column=2, padx=20, pady=10) #
 
 class DiagnosticRepairProgs(tk.Frame): # secondary frame.
-
 	def __init__(self, parent, controller):
 		tk.Frame.__init__(self, parent)
 
@@ -139,7 +151,6 @@ class DiagnosticRepairProgs(tk.Frame): # secondary frame.
 		PageOneButton9.grid(row=3, column=3, padx=20, pady=10) #
 
 class AutOptimizer(tk.Frame): # frame 3
-
 	def __init__(self, parent, controller):
 		tk.Frame.__init__(self, parent)
 
@@ -230,43 +241,43 @@ class ChocolateyAndInstall(tk.Frame):
 	def __init__(self, parent, controller):
 		tk.Frame.__init__(self, parent)
 
-		self.PageThreeImage1 = ImageTk.PhotoImage(file=icondirectory + 'python.png')
-		self.PageThreeImage2 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
-		self.PageThreeImage3 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
-		self.PageThreeImage4 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
-		self.PageThreeImage5 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
-		self.PageThreeImage6 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
-		self.PageThreeImage7 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
-		self.PageThreeImage8 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
-		self.PageThreeImage9 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageFourImage1 = ImageTk.PhotoImage(file=icondirectory + 'python.png')
+		self.PageFourImage2 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageFourImage3 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageFourImage4 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageFourImage5 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageFourImage6 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageFourImage7 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageFourImage8 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageFourImage9 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
 
 		BackButton0 = tk.Button(self, width=60, height=2, text="Go Back", command=lambda: controller.show_frame(StartPage))
 
-		PageThreeButton1 = tk.Button(self, compound="top", image=self.PageThreeImage1, text="Python EnVars", command=lambda: os.system("%CD%/ProgFiles/batch/addpythonvars.bat"))
-		PageThreeButton2 = tk.Button(self, compound="top", image=self.PageThreeImage2, text="Chocolatey", command=lambda: subprocess.Popen("@powershell -NoProfile -ExecutionPolicy Bypass -Command " + "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" + "&& SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin", shell=True))
-		PageThreeButton3 = tk.Button(self, compound="top", image=self.PageThreeImage3, text="Choco Script", command=lambda: os.system('%CD%/ProgFiles/batch/chocoinstall.bat'))
+		PageFourButton1 = tk.Button(self, compound="top", image=self.PageFourImage1, text="Python EnVars", command=lambda: os.system("%CD%/ProgFiles/batch/addpythonvars.bat"))
+		PageFourButton2 = tk.Button(self, compound="top", image=self.PageFourImage2, text="Chocolatey", command=lambda: subprocess.Popen("@powershell -NoProfile -ExecutionPolicy Bypass -Command " + "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" + "&& SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin", shell=True))
+		PageFourButton3 = tk.Button(self, compound="top", image=self.PageFourImage3, text="Choco Script", command=lambda: os.system('%CD%/ProgFiles/batch/chocoinstall.bat'))
 
-		PageThreeButton4 = tk.Button(self, compound="top", image=self.PageThreeImage4, text="Vbox Guest", command=lambda: subprocess.Popen('', shell=True))
-		PageThreeButton5 = tk.Button(self, compound="top", image=self.PageThreeImage5, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
-		PageThreeButton6 = tk.Button(self, compound="top", image=self.PageThreeImage6, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
+		PageFourButton4 = tk.Button(self, compound="top", image=self.PageFourImage4, text="Vbox Guest", command=lambda: subprocess.Popen('', shell=True))
+		PageFourButton5 = tk.Button(self, compound="top", image=self.PageFourImage5, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
+		PageFourButton6 = tk.Button(self, compound="top", image=self.PageFourImage6, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
 
-		PageThreeButton7 = tk.Button(self, compound="top", image=self.PageThreeImage7, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
-		PageThreeButton8 = tk.Button(self, compound="top", image=self.PageThreeImage8, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
-		PageThreeButton9 = tk.Button(self, compound="top", image=self.PageThreeImage9, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
+		PageFourButton7 = tk.Button(self, compound="top", image=self.PageFourImage7, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
+		PageFourButton8 = tk.Button(self, compound="top", image=self.PageFourImage8, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
+		PageFourButton9 = tk.Button(self, compound="top", image=self.PageFourImage9, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
 
 		BackButton0.grid(row=0, column=0, columnspan=4)
 
-		PageThreeButton1.grid(row=1, column=1, padx=20, pady=10)
-		PageThreeButton2.grid(row=1, column=2, padx=20, pady=10)
-		PageThreeButton3.grid(row=1, column=3, padx=20, pady=10)
+		PageFourButton1.grid(row=1, column=1, padx=20, pady=10)
+		PageFourButton2.grid(row=1, column=2, padx=20, pady=10)
+		PageFourButton3.grid(row=1, column=3, padx=20, pady=10)
 
-		PageThreeButton4.grid(row=2, column=1, padx=20, pady=10)
-		PageThreeButton5.grid(row=2, column=2, padx=20, pady=10)
-		PageThreeButton6.grid(row=2, column=3, padx=20, pady=10)
+		PageFourButton4.grid(row=2, column=1, padx=20, pady=10)
+		PageFourButton5.grid(row=2, column=2, padx=20, pady=10)
+		PageFourButton6.grid(row=2, column=3, padx=20, pady=10)
 
-		PageThreeButton7.grid(row=3, column=2, padx=20, pady=10)
-		PageThreeButton8.grid(row=3, column=1, padx=20, pady=10)
-		PageThreeButton9.grid(row=3, column=3, padx=20, pady=10)
+		PageFourButton7.grid(row=3, column=2, padx=20, pady=10)
+		PageFourButton8.grid(row=3, column=1, padx=20, pady=10)
+		PageFourButton9.grid(row=3, column=3, padx=20, pady=10)
 
 class KeyboardTester(tk.Tk): # Custom keyboard tester.
 	def __init__(self):
@@ -302,20 +313,11 @@ class KeyboardTester(tk.Tk): # Custom keyboard tester.
 		self.bind('<Return>',(lambda event: ButtonPressVerification(INPUTRETURN.get()))) # connect/BIND the "Return" (aka enter) key with the previously mentioned button. 
 		self.mainloop
 
-def center(toplevel): # Function for centering all windows upon execution
-    toplevel.update_idletasks()
-    w = toplevel.winfo_screenwidth() #function for finding resolution
-    h = toplevel.winfo_screenheight() #function for finding resolution
-    size = tuple(int(_) for _ in toplevel.geometry().split('+')[0].split('x'))
-    x = w/2 - size[0]/2 # find the middle of current resolution
-    y = h/2 - size[1]/2 # find the middle of current resolution
-    toplevel.geometry("%dx%d+%d+%d" % (size + (x, y)))
-
 if __name__ == "__main__": # Executes the main app (which then executes the other classes) and ties everyting together.
 	app = MainApp()
+	center(app) # Call Center all windows function
 	app.title("B.L.D.Z.R                                                                         ") # Title seen in top bar
 	app.iconbitmap(icondirectory + 'BLDZR.ico') # icon seen in top left hand corner of prog window
-	center(app) # Call Center all windows function
 	app.mainloop() # ties all GUI windows/classes together
 
 
