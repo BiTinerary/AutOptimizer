@@ -7,13 +7,13 @@ global icondirectory
 icondirectory = "./ProgFiles/Icons/" # As guessed, static directory where all icons are stored.
 
 def center(toplevel): # Function for centering all windows upon execution. This is first so that it is loaded before the creation of windows to minimize window 'flicker' upon execution.
-    toplevel.update_idletasks()
-    w = toplevel.winfo_screenwidth() #function for finding resolution
-    h = toplevel.winfo_screenheight() #function for finding resolution
-    size = tuple(int(_) for _ in toplevel.geometry().split('+')[0].split('x'))
-    x = w/2 - size[0]/2 # find the middle of current resolution
-    y = h/2 - size[1]/2 # find the middle of current resolution
-    toplevel.geometry("%dx%d+%d+%d" % (size + (x, y)))
+	toplevel.update_idletasks()
+	w = toplevel.winfo_screenwidth() #function for finding resolution
+	h = toplevel.winfo_screenheight() #function for finding resolution
+	size = tuple(int(_) for _ in toplevel.geometry().split('+')[0].split('x'))
+	x = w/2 - size[0]/2 # find the middle of current resolution
+	y = h/2 - size[1]/2 # find the middle of current resolution
+	toplevel.geometry("%dx%d+%d+%d" % (size + (x, y)))
 
 class MainApp(tk.Tk):
 	def __init__(self, *args, **kwargs): # Container is where the Windows are stacked on top of each other. As one Winodow is selected/executed, it is raised above the others.
@@ -219,7 +219,7 @@ class HardwareTester(tk.Frame):
 
 		PageThreeButton7 = tk.Button(self, compound="top", image=self.PageThreeImage7, text="WiFi Export", command=lambda: subprocess.Popen('cd "%CD%/ProgFiles/wirelesskeyview" && WirelessKeyView.exe /export "%CD%/ProgFiles/wirelesskeyview/WiFiKeysBackup.txt"', shell=True))
 		PageThreeButton7A = tk.Button(self, compound="bottom", image=self.PageThreeImage7A, text="WiFi Import", command=lambda: subprocess.Popen('cd "%CD%/ProgFiles/wirelesskeyview" && WirelessKeyView.exe /import "%CD%/ProgFiles/wirelesskeyview/WiFiKeysBackup.txt"', shell=True))
-		PageThreeButton8 = tk.Button(self, compound="top", image=self.PageThreeImage8, text="Stress Tester", command=lambda: subprocess.Popen('', shell=True))
+		PageThreeButton8 = tk.Button(self, compound="top", image=self.PageThreeImage8, text="Stress Tester", command=lambda: FAHTester())
 		PageThreeButton9 = tk.Button(self, compound="top", image=self.PageThreeImage9, text="Activation", command=lambda: subprocess.Popen('slmgr /xpr', shell=True))
 
 		BackButton0.grid(row=0, column=0, columnspan=4)
@@ -257,9 +257,9 @@ class ChocolateyAndInstall(tk.Frame):
 		PageFourButton2 = tk.Button(self, compound="top", image=self.PageFourImage2, text="Install Chocolatey", command=lambda: subprocess.Popen("@powershell -NoProfile -ExecutionPolicy Bypass -Command " + "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" + "&& SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin", shell=True))
 		PageFourButton3 = tk.Button(self, compound="top", image=self.PageFourImage3, text="Choco Script", command=lambda: os.system('%CD%/ProgFiles/batch/ChocoScript/ChocolateySublime.bat'))
 
-		PageFourButton4 = tk.Button(self, compound="top", image=self.PageFourImage4, text="Install Vbox Guest", command=lambda: subprocess.Popen('chocolatey install vboxguestadditions.install', shell=True))
-		PageFourButton5 = tk.Button(self, compound="top", image=self.PageFourImage5, text="Install VirtualBox", command=lambda: subprocess.Popen('chocolatey install virtualbox', shell=True))
-		PageFourButton6 = tk.Button(self, compound="top", image=self.PageFourImage6, text="Vagrant", command=lambda: subprocess.Popen('choco install vagrant', shell=True))
+		PageFourButton4 = tk.Button(self, compound="top", image=self.PageFourImage4, text="Install Vbox Guest", command=lambda: subprocess.Popen('chocolatey install vboxguestadditions.install -y', shell=True))
+		PageFourButton5 = tk.Button(self, compound="top", image=self.PageFourImage5, text="Install VirtualBox", command=lambda: subprocess.Popen('chocolatey install virtualbox -y', shell=True))
+		PageFourButton6 = tk.Button(self, compound="top", image=self.PageFourImage6, text="Vagrant", command=lambda: subprocess.Popen('choco install vagrant -y', shell=True))
 
 		PageFourButton7 = tk.Button(self, compound="top", image=self.PageFourImage7, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
 		PageFourButton8 = tk.Button(self, compound="top", image=self.PageFourImage8, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
@@ -313,13 +313,61 @@ class KeyboardTester(tk.Tk): # Custom keyboard tester.
 		self.bind('<Return>',(lambda event: ButtonPressVerification(INPUTRETURN.get()))) # connect/BIND the "Return" (aka enter) key with the previously mentioned button. 
 		self.mainloop
 
+class FAHTester(tk.Tk):
+	def __init__(self):
+		tk.Tk.__init__(self)
+
+		def robofah():
+			os.system('ROBOCOPY "%CD%/FAHClient" "%SYSTEMDRIVE%/Windows/FAHClient/" /S')
+
+		def buttononeHIGH():
+			os.system('schtasks /create /XML "%CD%/fahHIGHtask.xml" /TN "fahHIGHtask"')
+			global TASKCREATED
+			TASKCREATED = "fahHIGHtask"
+
+		def buttontwoMED():
+			os.system('schtasks /create /XML "%CD%/fahMEDtask.xml" /TN "fahMEDtask"')
+			global TASKCREATED
+			TASKCREATED = "fahMEDtask"
+
+		def buttonthreeLOW():
+			os.system('schtasks /create /XML "%CD%/fahLOWtask.xml" /TN "fahLOWtask"')
+			global TASKCREATED
+			TASKCREATED = "fahLOWtask"
+
+		def buttonfourRMTASK():
+			os.system('schtasks /delete /TN "' + TASKCREATED + '" /F')
+
+		Label1 = tk.Label(self, width = 80)
+		Label1.grid(row=0, column=0,columnspan=6, sticky = tk.E+tk.W)
+
+		Button1 = tk.Button(self, width=25, height=4, text="High: No Idle", command=lambda:buttononeHIGH())
+		Button2 = tk.Button(self, width=25, height=4, text="Med: High only while Idle", command=lambda:buttontwoMED())
+		Button3 = tk.Button(self, width=25, height=4, text="Low: No Idle", command=lambda:buttonthreeLOW())
+
+		Button1.grid(row=1, column=1, padx=5, pady=5)
+		Button2.grid(row=1, column=2, padx=5, pady=5)
+		Button3.grid(row=1, column=3, padx=5, pady=5)
+
+		Label2 = tk.Label(self, width = 80)
+		Label2.grid(row=2, column=0, columnspan=6, sticky = tk.E+tk.W )
+
+		Button4 = tk.Button(self, width = 80, height=3, text="Delete Created Tasks")
+		Button4.grid(row=3, column=1, columnspan=3)
+
+		Label3 = tk.Label(self, width = 80)
+		Label3.grid(row=4, column=0, columnspan=6, sticky = tk.E+tk.W )
+
+		self.mainloop
+			#root = tk.Tk()
+			#root.title('FAHClient Run Capacity')
+
 if __name__ == "__main__": # Executes the main app (which then executes the other classes) and ties everyting together.
 	app = MainApp()
 	center(app) # Call Center all windows function
 	app.title("B.L.D.Z.R                                                                         ") # Title seen in top bar
 	app.iconbitmap(icondirectory + 'BLDZR.ico') # icon seen in top left hand corner of prog window
 	app.mainloop() # ties all GUI windows/classes together
-
 
 	#TODO#
 	
