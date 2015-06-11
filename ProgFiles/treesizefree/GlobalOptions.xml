@@ -1250,7 +1250,7 @@
 	<DefaultScreenMediaType>0</DefaultScreenMediaType>
 	<FilesInTree>True</FilesInTree>
 	<ExpandFilesItems>False</ExpandFilesItems>
-	<UsageCount>8</UsageCount>
+	<UsageCount>0</UsageCount>
 	<StartMetroMode>False</StartMetroMode>
 	<OptionsDoNotAskAgainSelection>0</OptionsDoNotAskAgainSelection>
 	<BoldForPrinting>False</BoldForPrinting>
@@ -1354,7 +1354,7 @@
 	</DoNotAskAgainList>
 	<MessageLevel>0</MessageLevel>
 	<ThreadPriority>2</ThreadPriority>
-	<PrinterName></PrinterName>
+	<PrinterName>NPI077C58 (HP LaserJet Professional P1102w)</PrinterName>
 	<PrinterOrientation>0</PrinterOrientation>
 	<CheckForUpdateOptions Type="TCheckForUpdateOptions">
 		<LatestOnlineVersion>-1</LatestOnlineVersion>

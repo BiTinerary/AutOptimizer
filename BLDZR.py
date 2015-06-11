@@ -69,10 +69,10 @@ class StartPage(tk.Frame): # First initial frame. Which contains primary classes
 			TASKSCHD = 'taskschd.msc'
 			TREESIZEFREE = '"%CD%/ProgFiles/treesizefree/treesizefree.exe"'
 			BULKUNINST = '"%CD%/ProgFiles/myuninstaller/myuninst.exe"'
-			JUNKREMTOOL = '"%CD%/ProgFiles/JRT.exe"'
-			CLEANMGR = 'cleanmgr /sageset99 && cleanmgr /sagerun99'
+			ADWCLEANER = '"%CD%/ProgFiles/AdwCleaner.exe"'
+			#CLEANMGR = 'cleanmgr /sageset99 && cleanmgr /sagerun99'
 
-			AutOptCommands = [TASKMGR, JUNKREMTOOL, BULKUNINST, TREESIZEFREE, TASKSCHD, CLEANMGR, SERVICES]
+			AutOptCommands = [TASKMGR, ADWCLEANER, BULKUNINST, TREESIZEFREE, TASKSCHD, SERVICES]
 			
 			for Command in AutOptCommands: # Sequentially execute each variable stored in AutOptCommands list.
 				#print Command
@@ -99,7 +99,7 @@ class StartPage(tk.Frame): # First initial frame. Which contains primary classes
 		StartPageButton2 = tk.Button(self, compound="top", image=self.StartImage2, text="AutOptimizer", fg="black", command=lambda: controller.show_frame(AutOptimizer))
 		StartPageButton3 = tk.Button(self, compound="top", image=self.StartImage3, text="Repair Programs", fg="black", command=lambda: controller.show_frame(DiagnosticRepairProgs))
 		StartPageButton4 = tk.Button(self, compound="top", image=self.StartImage4, text="Hardware Tester", fg="black", command=lambda: controller.show_frame(HardwareTester))
-		StartPageButton5 = tk.Button(self, compound="top", image=self.StartImage5, text="Misc. Install", fg="black", command=lambda: controller.show_frame(ChocolateyAndInstall))
+		StartPageButton5 = tk.Button(self, compound="top", image=self.StartImage5, text="Misc & Install", fg="black", command=lambda: controller.show_frame(ChocolateyAndInstall))
 
 		StartPageButton0.grid(row=1, column=1, padx=20, pady=10) #
 		StartPageButton1.grid(row=1, column=3, padx=20, pady=10) #
@@ -160,7 +160,7 @@ class AutOptimizer(tk.Frame): # frame 3
 		self.PageTwoImage4 = ImageTk.PhotoImage(file=icondirectory + 'bleachbit.png')
 		self.PageTwoImage5 = ImageTk.PhotoImage(file=icondirectory + 'cleanmgr.png')
 		self.PageTwoImage6 = ImageTk.PhotoImage(file=icondirectory + 'nirsoft.png')
-		self.PageTwoImage7 = ImageTk.PhotoImage(file=icondirectory + 'JRT.png')
+		self.PageTwoImage7 = ImageTk.PhotoImage(file=icondirectory + 'adwCleaner.png')
 		self.PageTwoImage8 = ImageTk.PhotoImage(file=icondirectory + 'treesizefree.png')
 		self.PageTwoImage9 = ImageTk.PhotoImage(file=icondirectory + 'synergy.png')
 
@@ -174,7 +174,7 @@ class AutOptimizer(tk.Frame): # frame 3
 		PageTwoButton5 = tk.Button(self, compound="top", image=self.PageTwoImage5, text="CleanMgr", command=lambda: subprocess.Popen('cleanmgr /sageset99 && cleanmgr /sagerun99' , shell=True))
 		PageTwoButton6 = tk.Button(self, compound="top", image=self.PageTwoImage6, text="Bulk Uninstaller", command=lambda: subprocess.Popen('"%CD%/ProgFiles/myuninstaller/myuninst.exe"', shell=True))
 
-		PageTwoButton7 = tk.Button(self, compound="top", image=self.PageTwoImage7, text="Junkware Removal", command=lambda: subprocess.Popen('"%CD%/ProgFiles/JRT.exe"', shell=True))
+		PageTwoButton7 = tk.Button(self, compound="top", image=self.PageTwoImage7, text="AdwCleaner", command=lambda: subprocess.Popen('"%CD%/ProgFiles/AdwCleaner.exe"', shell=True))
 		PageTwoButton8 = tk.Button(self, compound="top", image=self.PageTwoImage8, text="TreeSizeFree", command=lambda: subprocess.Popen('"%CD%/ProgFiles/treesizefree/treesizefree.exe"', shell=True))
 		PageTwoButton9 = tk.Button(self, compound="top", image=self.PageTwoImage9, text="Synergy", command=lambda: subprocess.Popen('"%CD%/ProgFiles/Synergy.cameyo.exe"', shell=True))
 
@@ -241,29 +241,29 @@ class ChocolateyAndInstall(tk.Frame):
 	def __init__(self, parent, controller):
 		tk.Frame.__init__(self, parent)
 
-		self.PageFourImage1 = ImageTk.PhotoImage(file=icondirectory + 'python.png')
-		self.PageFourImage2 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageFourImage1 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageFourImage2 = ImageTk.PhotoImage(file=icondirectory + 'python.png')
 		self.PageFourImage3 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
-		self.PageFourImage4 = ImageTk.PhotoImage(file=icondirectory + 'vboxguest.png')
-		self.PageFourImage5 = ImageTk.PhotoImage(file=icondirectory + 'virtualbox.png')
-		self.PageFourImage6 = ImageTk.PhotoImage(file=icondirectory + 'vagrant.png')
-		self.PageFourImage7 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
-		self.PageFourImage8 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
-		self.PageFourImage9 = ImageTk.PhotoImage(file=icondirectory + 'chocolatey.png')
+		self.PageFourImage4 = ImageTk.PhotoImage(file=icondirectory + 'virtualbox.png')
+		self.PageFourImage5 = ImageTk.PhotoImage(file=icondirectory + 'vboxguest.png')
+		self.PageFourImage6 = ImageTk.PhotoImage(file=icondirectory + 'virtualbox.png')
+		self.PageFourImage7 = ImageTk.PhotoImage(file=icondirectory + 'disk2vhd.png')
+		self.PageFourImage8 = ImageTk.PhotoImage(file=icondirectory + 'vagrant.png')
+		self.PageFourImage9 = ImageTk.PhotoImage(file=icondirectory + 'disk2vhd.png')
 
 		BackButton0 = tk.Button(self, width=60, height=2, text="Go Back", command=lambda: controller.show_frame(StartPage))
 
-		PageFourButton1 = tk.Button(self, compound="top", image=self.PageFourImage1, text="Python EnVars", command=lambda: os.system("%CD%/ProgFiles/batch/addpythonvars.bat"))
-		PageFourButton2 = tk.Button(self, compound="top", image=self.PageFourImage2, text="Install Chocolatey", command=lambda: subprocess.Popen("@powershell -NoProfile -ExecutionPolicy Bypass -Command " + "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" + "&& SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin", shell=True))
+		PageFourButton1 = tk.Button(self, compound="top", image=self.PageFourImage1, text="Chocolatey", command=lambda: subprocess.Popen("@powershell -NoProfile -ExecutionPolicy Bypass -Command " + "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" + "&& SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin", shell=True))
+		PageFourButton2 = tk.Button(self, compound="top", image=self.PageFourImage2, text="Add Python Paths", command=lambda: os.system("%CD%/ProgFiles/batch/addpythonvars.bat"))
 		PageFourButton3 = tk.Button(self, compound="top", image=self.PageFourImage3, text="Choco Script", command=lambda: os.system('%CD%/ProgFiles/batch/ChocoScript/ChocolateySublime.bat'))
 
-		PageFourButton4 = tk.Button(self, compound="top", image=self.PageFourImage4, text="Install Vbox Guest", command=lambda: subprocess.Popen('chocolatey install vboxguestadditions.install -y', shell=True))
-		PageFourButton5 = tk.Button(self, compound="top", image=self.PageFourImage5, text="Install VirtualBox", command=lambda: subprocess.Popen('chocolatey install virtualbox -y', shell=True))
-		PageFourButton6 = tk.Button(self, compound="top", image=self.PageFourImage6, text="Vagrant", command=lambda: subprocess.Popen('choco install vagrant -y', shell=True))
+		PageFourButton4 = tk.Button(self, compound="top", image=self.PageFourImage4, text="Portable Vbox", command=lambda: subprocess.Popen('%CD%/ProgFiles/portablevirtualbox/portable-virtualbox.exe', shell=True))
+		PageFourButton5 = tk.Button(self, compound="top", image=self.PageFourImage5, text="Install Vbox Guest", command=lambda: subprocess.Popen('chocolatey install vboxguestadditions.install -y', shell=True)) 
+		PageFourButton6 = tk.Button(self, compound="top", image=self.PageFourImage6, text="Install VirtualBox", command=lambda: subprocess.Popen('chocolatey install virtualbox -y', shell=True))
 
-		PageFourButton7 = tk.Button(self, compound="top", image=self.PageFourImage7, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
-		PageFourButton8 = tk.Button(self, compound="top", image=self.PageFourImage8, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
-		PageFourButton9 = tk.Button(self, compound="top", image=self.PageFourImage9, text="VirtualBox", command=lambda: subprocess.Popen('', shell=True))
+		PageFourButton7 = tk.Button(self, compound="top", image=self.PageFourImage7, text="Disk2VHD", command=lambda: subprocess.Popen('%CD%/ProgFiles/sysinternals/Disk2VHD.exe -h', shell=True))
+		PageFourButton8 = tk.Button(self, compound="top", image=self.PageFourImage8, text="Vagrant", command=lambda: subprocess.Popen('choco install vagrant -y', shell=True))
+		PageFourButton9 = tk.Button(self, compound="top", image=self.PageFourImage9, text="VHD2Disk", command=lambda: subprocess.Popen('%CD%/ProgFiles/sysinternals/VHD2Disk.exe', shell=True))
 
 		BackButton0.grid(row=0, column=0, columnspan=4)
 
@@ -275,8 +275,8 @@ class ChocolateyAndInstall(tk.Frame):
 		PageFourButton5.grid(row=2, column=2, padx=20, pady=10)
 		PageFourButton6.grid(row=2, column=3, padx=20, pady=10)
 
-		PageFourButton7.grid(row=3, column=2, padx=20, pady=10)
-		PageFourButton8.grid(row=3, column=1, padx=20, pady=10)
+		PageFourButton7.grid(row=3, column=1, padx=20, pady=10)
+		PageFourButton8.grid(row=3, column=2, padx=20, pady=10)
 		PageFourButton9.grid(row=3, column=3, padx=20, pady=10)
 
 class KeyboardTester(tk.Tk): # Custom keyboard tester.
@@ -321,20 +321,20 @@ class FAHTester(tk.Tk):
 			os.system('ROBOCOPY "%CD%/ProgFiles/fahtester/FAHClient" "%SYSTEMDRIVE%/Windows/FAHClient/" /S')
 
 		def buttononeHIGH():
-			os.system('cd %CD%/ProgFiles/fahtester && COPY fahHIGHvbs.vbs "%SYSTEMDRIVE%/Windows/FAHClient/fahHIGHvbs.vbs"')
-			os.system('schtasks /create /XML "%CD%/ProgFiles/fahtester/fahHIGHtask.xml" /TN "fahHIGHtask"')
+			os.system('xcopy /Y "%CD%/ProgFiles/fahtester/fahHIGHvbs.vbs" "%SYSTEMDRIVE%/Windows/FAHClient/"')
+			os.system('schtasks /create /XML "%CD%/fahHIGHtask.xml" /TN "fahHIGHtask"')
 			global TASKCREATED
 			TASKCREATED = "fahHIGHtask"
 
 		def buttontwoMED():
-			os.system('cd %CD%/ProgFiles/fahtester && COPY fahMEDvbs.vbs "%SYSTEMDRIVE%/Windows/FAHClient/fahMEDvbs.vbs"')
-			os.system('schtasks /create /XML "%CD%/ProgFiles/fahtester/fahMEDtask.xml" /TN "fahMEDtask"')
+			os.system('xcopy /Y "%CD%/ProgFiles/fahtester/fahMEDvbs.vbs" "%SYSTEMDRIVE%/Windows/FAHClient/"')
+			os.system('schtasks /create /XML "%CD%/fahMEDtask.xml" /TN "fahMEDtask"')
 			global TASKCREATED
 			TASKCREATED = "fahMEDtask"
 
 		def buttonthreeLOW():
-			os.system('cd %CD%/ProgFiles/fahtester && COPY fahLOWvbs.vbs "%SYSTEMDRIVE%/Windows/FAHClient/fahLOWvbs.vbs" /Y')
-			os.system('schtasks /create /XML "%CD%/ProgFiles/fahtester/fahLOWtask.xml" /TN "fahLOWtask"')
+			os.system('xcopy /Y "%CD%/ProgFiles/fahtester/fahLOWvbs.vbs" "%SYSTEMDRIVE%/Windows/FAHClient/"')
+			os.system('schtasks /create /XML "%CD%/fahLOWtask.xml" /TN "fahLOWtask"')
 			global TASKCREATED
 			TASKCREATED = "fahLOWtask"
 
@@ -347,16 +347,16 @@ class FAHTester(tk.Tk):
 		Button1 = tk.Button(self, width=25, height=4, text="High: No Idle", command=lambda:buttononeHIGH())
 		Button2 = tk.Button(self, width=25, height=4, text="Med: High only while Idle", command=lambda:buttontwoMED())
 		Button3 = tk.Button(self, width=25, height=4, text="Low: No Idle", command=lambda:buttonthreeLOW())
-		Button4 = tk.Button(self, width = 80, height=3, text="Delete Created Tasks", command=lambda:buttonfourRMTASK())
 
 		Button1.grid(row=1, column=1, padx=5, pady=5)
 		Button2.grid(row=1, column=2, padx=5, pady=5)
 		Button3.grid(row=1, column=3, padx=5, pady=5)
-		Button4.grid(row=3, column=1, columnspan=3)
 
 		Label2 = tk.Label(self, width = 80)
 		Label2.grid(row=2, column=0, columnspan=6, sticky = tk.E+tk.W )
 
+		Button4 = tk.Button(self, width = 80, height=3, text="Delete Created Tasks")
+		Button4.grid(row=3, column=1, columnspan=3)
 
 		Label3 = tk.Label(self, width = 80)
 		Label3.grid(row=4, column=0, columnspan=6, sticky = tk.E+tk.W )
