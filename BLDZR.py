@@ -318,20 +318,23 @@ class FAHTester(tk.Tk):
 		tk.Tk.__init__(self)
 
 		def robofah():
-			os.system('ROBOCOPY "%CD%/FAHClient" "%SYSTEMDRIVE%/Windows/FAHClient/" /S')
+			os.system('ROBOCOPY "%CD%/ProgFiles/fahtester/FAHClient" "%SYSTEMDRIVE%/Windows/FAHClient/" /S')
 
 		def buttononeHIGH():
-			os.system('schtasks /create /XML "%CD%/fahHIGHtask.xml" /TN "fahHIGHtask"')
+			os.system('cd %CD%/ProgFiles/fahtester && COPY fahHIGHvbs.vbs "%SYSTEMDRIVE%/Windows/FAHClient/fahHIGHvbs.vbs"')
+			os.system('schtasks /create /XML "%CD%/ProgFiles/fahtester/fahHIGHtask.xml" /TN "fahHIGHtask"')
 			global TASKCREATED
 			TASKCREATED = "fahHIGHtask"
 
 		def buttontwoMED():
-			os.system('schtasks /create /XML "%CD%/fahMEDtask.xml" /TN "fahMEDtask"')
+			os.system('cd %CD%/ProgFiles/fahtester && COPY fahMEDvbs.vbs "%SYSTEMDRIVE%/Windows/FAHClient/fahMEDvbs.vbs"')
+			os.system('schtasks /create /XML "%CD%/ProgFiles/fahtester/fahMEDtask.xml" /TN "fahMEDtask"')
 			global TASKCREATED
 			TASKCREATED = "fahMEDtask"
 
 		def buttonthreeLOW():
-			os.system('schtasks /create /XML "%CD%/fahLOWtask.xml" /TN "fahLOWtask"')
+			os.system('cd %CD%/ProgFiles/fahtester && COPY fahLOWvbs.vbs "%SYSTEMDRIVE%/Windows/FAHClient/fahLOWvbs.vbs" /Y')
+			os.system('schtasks /create /XML "%CD%/ProgFiles/fahtester/fahLOWtask.xml" /TN "fahLOWtask"')
 			global TASKCREATED
 			TASKCREATED = "fahLOWtask"
 
@@ -344,16 +347,16 @@ class FAHTester(tk.Tk):
 		Button1 = tk.Button(self, width=25, height=4, text="High: No Idle", command=lambda:buttononeHIGH())
 		Button2 = tk.Button(self, width=25, height=4, text="Med: High only while Idle", command=lambda:buttontwoMED())
 		Button3 = tk.Button(self, width=25, height=4, text="Low: No Idle", command=lambda:buttonthreeLOW())
+		Button4 = tk.Button(self, width = 80, height=3, text="Delete Created Tasks", command=lambda:buttonfourRMTASK())
 
 		Button1.grid(row=1, column=1, padx=5, pady=5)
 		Button2.grid(row=1, column=2, padx=5, pady=5)
 		Button3.grid(row=1, column=3, padx=5, pady=5)
+		Button4.grid(row=3, column=1, columnspan=3)
 
 		Label2 = tk.Label(self, width = 80)
 		Label2.grid(row=2, column=0, columnspan=6, sticky = tk.E+tk.W )
 
-		Button4 = tk.Button(self, width = 80, height=3, text="Delete Created Tasks")
-		Button4.grid(row=3, column=1, columnspan=3)
 
 		Label3 = tk.Label(self, width = 80)
 		Label3.grid(row=4, column=0, columnspan=6, sticky = tk.E+tk.W )
