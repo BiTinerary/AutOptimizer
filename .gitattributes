@@ -21,3 +21,4 @@
 *.css linguist-vendored
 *.bat linguist-vendored
 *.nsh linguist-vendored
+*.au3 linguist-vendored
